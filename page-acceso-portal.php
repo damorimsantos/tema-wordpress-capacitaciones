@@ -23,6 +23,8 @@ if (! defined('ABSPATH')) {
 $assets_base_uri = get_template_directory_uri() . '/desenvolvimento_hashtag/assets';
 $logo_base       = $assets_base_uri . '/imgs/Global/logo-hashtag-portal';
 $consulta_url    = esc_url_raw(rest_url('hashtag/v1/consulta-portal'));
+$portal_destinos = function_exists('hashtag_portal_destinos') ? hashtag_portal_destinos() : array();
+$fallback_url    = ! empty($portal_destinos['antigo']) ? $portal_destinos['antigo'] : 'https://portalhashtag.com/login/es';
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -240,7 +242,7 @@ $consulta_url    = esc_url_raw(rest_url('hashtag/v1/consulta-portal'));
     <h1 class="ap-title">Ingresa tu correo electrónico registrado en el Portal</h1>
     <p class="ap-subtitle">Te dirigiremos al portal correcto del alumno.</p>
 
-    <form class="ap-form" id="ap-form" data-endpoint="<?php echo esc_url($consulta_url); ?>" novalidate>
+    <form class="ap-form" id="ap-form" data-endpoint="<?php echo esc_url($consulta_url); ?>" data-fallback="<?php echo esc_url($fallback_url); ?>" novalidate>
       <label class="ap-label" for="ap-email">Correo electrónico</label>
       <input
         class="ap-input"
@@ -280,7 +282,19 @@ $consulta_url    = esc_url_raw(rest_url('hashtag/v1/consulta-portal'));
       var button = document.getElementById('ap-submit');
       var message = document.getElementById('ap-message');
       var endpoint = form.getAttribute('data-endpoint');
+      var fallback = form.getAttribute('data-fallback');
       var busy = false;
+
+      // Ante cualquier falla de consulta, no dejar al alumno atascado: portal antiguo.
+      function goFallback() {
+        if (!fallback) {
+          setLoading(false);
+          setMessage('No fue posible consultar ahora. Intenta de nuevo.', 'error');
+          return;
+        }
+        setMessage('Redirigiendo...', 'success');
+        window.location.assign(fallback);
+      }
 
       function setMessage(text, type) {
         message.textContent = text || '';
@@ -342,12 +356,21 @@ $consulta_url    = esc_url_raw(rest_url('hashtag/v1/consulta-portal'));
               return;
             }
 
-            setLoading(false);
-            setMessage(data.message || 'No fue posible consultar ahora. Intenta de nuevo.', 'error');
+            // Correo invalido: deja que el usuario corrija (no manda al fallback).
+            if (data.error === 'email') {
+              setLoading(false);
+              input.setAttribute('aria-invalid', 'true');
+              setMessage(data.message || 'Ingresa un correo electrónico válido.', 'error');
+              input.focus();
+              return;
+            }
+
+            // Cualquier otra falla (consulta/servicio/bloqueo): fallback portal antiguo.
+            goFallback();
           })
           .catch(function () {
-            setLoading(false);
-            setMessage('Error de conexión. Verifica tu conexión e intenta de nuevo.', 'error');
+            // Red, timeout o respuesta no-JSON (ej.: bloqueo de bot): fallback.
+            goFallback();
           });
       });
     })();
