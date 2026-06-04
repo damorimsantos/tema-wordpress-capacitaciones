@@ -21,7 +21,7 @@ if (! defined('ABSPATH')) {
 }
 
 $assets_base_uri = get_template_directory_uri() . '/desenvolvimento_hashtag/assets';
-$logo_uri        = $assets_base_uri . '/imgs/Global/logo-hashtag.webp';
+$logo_base       = $assets_base_uri . '/imgs/Global/logo-hashtag-portal';
 $consulta_url    = esc_url_raw(rest_url('hashtag/v1/consulta-portal'));
 ?>
 <!DOCTYPE html>
@@ -69,7 +69,8 @@ $consulta_url    = esc_url_raw(rest_url('hashtag/v1/consulta-portal'));
     }
 
     .ap-logo {
-      width: 9.5rem;
+      width: 16rem;
+      max-width: 80%;
       height: auto;
       margin: 0 auto 1.75rem;
       display: block;
@@ -221,13 +222,19 @@ $consulta_url    = esc_url_raw(rest_url('hashtag/v1/consulta-portal'));
 <body <?php body_class('ap-page'); ?>>
   <main class="ap-card">
     <a href="<?php echo esc_url(home_url('/')); ?>">
-      <img
-        class="ap-logo"
-        src="<?php echo esc_url($logo_uri); ?>"
-        width="152"
-        height="42"
-        alt="Hashtag Capacitaciones"
-        decoding="async" />
+      <picture>
+        <source type="image/avif"
+          srcset="<?php echo esc_url($logo_base . '-256.avif'); ?> 1x, <?php echo esc_url($logo_base . '-512.avif'); ?> 2x, <?php echo esc_url($logo_base . '-768.avif'); ?> 3x" />
+        <source type="image/webp"
+          srcset="<?php echo esc_url($logo_base . '-256.webp'); ?> 1x, <?php echo esc_url($logo_base . '-512.webp'); ?> 2x, <?php echo esc_url($logo_base . '-768.webp'); ?> 3x" />
+        <img
+          class="ap-logo"
+          src="<?php echo esc_url($logo_base . '-256.png'); ?>"
+          width="256"
+          height="115"
+          alt="Hashtag Capacitaciones"
+          decoding="async" />
+      </picture>
     </a>
 
     <h1 class="ap-title">Ingresa tu correo electrónico registrado en el Portal</h1>
