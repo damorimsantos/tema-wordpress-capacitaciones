@@ -235,6 +235,8 @@ function sa_sanitize_spanish_chars($filename)
  **********************************************/
 //PAINEL
 require get_template_directory() . '/inc/painel/wp-admin-theme-cd.php';
+//PORTAL (pagina /acceso-portal — consulta de migracao)
+require get_template_directory() . '/inc/portal/consulta-migracao.php';
 //CPT
 include('inc/cpt/depoimentos.php');
 //include('inc/cpt/cursos.php');

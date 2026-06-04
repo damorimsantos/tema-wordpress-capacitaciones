@@ -47,7 +47,7 @@
     </nav>
 
     <div class="header__botoes">
-      <a href="https://portalhashtag.com/login/es" class="botao botao--sm botao--sem-fundo botao--login">Inicio de
+      <a href="<?php echo esc_url(home_url('/acceso-portal')); ?>" class="botao botao--sm botao--sem-fundo botao--login">Inicio de
         sesión</a>
       <a class="js-botaoOferta botao botao--sm url-curso-lancamento--excel botao-semana-excel"
         href="https://lp.hashtagcapacitaciones.com/excel/pg-inscripcion?fonte=lespera&utm_source=site&utm_medium=header&utm_content=header-matriculese&utm_campaign=capacitacion">Inscríbete</a>
