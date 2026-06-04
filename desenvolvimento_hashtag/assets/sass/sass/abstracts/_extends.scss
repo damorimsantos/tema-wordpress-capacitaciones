@@ -1,0 +1,15 @@
+%grid-carrossel {
+  display: grid;
+  grid-auto-flow: column;
+  gap: $spc-700;
+  overflow-x: scroll;
+  padding-right: $padding-carrossel;
+  max-width: 100%;
+
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: $spc-700;
+
+  & > * {
+    scroll-snap-align: start;
+  }
+}

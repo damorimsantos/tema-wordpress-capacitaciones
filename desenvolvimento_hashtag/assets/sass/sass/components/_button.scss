@@ -1,0 +1,92 @@
+.botao {
+  &:link,
+  &:visited,
+  &:hover,
+  &:active,
+  & {
+    @include flex($align: center, $justify: center, $gap: $spc-200);
+    cursor: pointer;
+    border-radius: 100vw;
+    border: none;
+    background-image: linear-gradient(
+      to right,
+      $clr-yellow-400,
+      $clr-orange-400
+    );
+    font-weight: 600;
+    line-height: 1;
+    color: $clr-black;
+    padding: $spc-400 $spc-700;
+    font-size: $fs-600;
+    text-decoration: none;
+    transition: $transition-function $transition-duration scale;
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+    word-break: keep-all;
+    // min-width: 13rem;
+
+    @include respond(s) {
+      font-size: $fs-500;
+      padding: $spc-300 $spc-600;
+    }
+
+    @include respond(ss) {
+      padding: $spc-200 $spc-500;
+    }
+  }
+
+  &:hover,
+  &:active {
+    transform: scale(1.05);
+  }
+
+  &.botao--sm {
+    padding: $spc-300 $spc-600;
+    font-size: $fs-500;
+
+    @include respond(m) {
+      padding: $spc-200 $spc-500;
+      font-size: $fs-400;
+    }
+
+    @include respond(s) {
+      padding: $spc-100 $spc-400;
+    }
+
+    @include respond(ss) {
+      padding: $spc-90 $spc-300;
+      font-size: $fs-300;
+    }
+  }
+
+  &.botao--wpp {
+    background-color: $clr-green-300;
+    background-image: none;
+  }
+
+  &--sem-fundo:link,
+  &--sem-fundo:visited,
+  &--sem-fundo:hover,
+  &--sem-fundo:active {
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid $clr-yellow-400;
+    color: inherit;
+  }
+}
+
+p.botao {
+  &:link,
+  &:visited,
+  &:hover,
+  &:active,
+  & {
+    cursor: auto;
+  }
+
+  &:hover,
+  &:active {
+    scale: none;
+  }
+}

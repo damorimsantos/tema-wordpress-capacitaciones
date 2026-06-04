@@ -1,0 +1,10 @@
+.git/
+.gitattributes
+.gitignore
+.deployignore
+deploy/
+node_modules/
+scripts/
+package.json
+package-lock.json
+*.map

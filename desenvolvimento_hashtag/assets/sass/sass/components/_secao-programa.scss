@@ -1,0 +1,117 @@
+.programa {
+    overflow-x: hidden;
+    position: relative;
+
+    & .container {
+        @include flex($gap: 4.5vw);
+        position: relative;
+        overflow-x: visible;
+
+        @include respond(g) {
+            flex-flow: column;
+            overflow-x: hidden;
+            gap: $spc-800;
+            max-width: 75rem;
+        }
+    }
+
+    &__coluna {
+        @include flex($flow: column, $gap: $spc-600);
+        max-width: 48.5rem;
+        flex: 1;
+
+        @include respond(g) {
+            max-width: 100% !important;
+            order: 1;
+        }
+
+        & h2 {
+            text-align: start;
+            margin-bottom: $spc-90;
+
+            @include respond(g) {
+                max-width: 55rem;
+            }
+
+            @include respond(m) {
+                margin-bottom: 0;
+                max-width: 35rem;
+            }
+        }
+
+        & p {
+            line-height: 1.6;
+        }
+    }
+
+    &__coluna-img {
+        position: relative;
+        flex: 1;
+        min-height: 40rem;
+        @include flex($align: center, $justify: start);
+
+        @include respond(g) {
+            min-height: 0;
+            order: 2;
+        }
+    }
+
+    // & .programa__coluna-img {
+    //     flex: 0;
+    //     height: max-content;
+    //     min-height: 0;
+    //     max-width: max-content;
+    // }
+
+    & .o-que__img {
+        border-radius: $border-radius-s;
+        border: solid 1px darken($color: $clr-white, $amount: 40);
+        // box-shadow: -12.37px -2.47px 28.45px 0px lighten($color: $clr-black, $amount:
+        //             10);
+        transform: translateX(8rem) scale(130%);
+
+        @include respond(g) {
+            // transform: scale(80%);
+            transform: none !important;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        @include respond(m) {
+            width: 100%;
+            transform: none !important;
+        }
+    }
+
+    &__img {
+        transform: translateX(-15rem) scale(130%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-60%, -50%) scale(120%);
+
+        @include respond(g) {
+            transform: scale(80) !important;
+            overflow: hidden;
+            position: static;
+            transform: none !important;
+            max-width: 65rem;
+            margin: 0 auto;
+        }
+
+        @include respond(m) {
+            width: 100%;
+            transform: none !important;
+        }
+    }
+
+    & .luz-o-que {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 90rem;
+        z-index: -1;
+        mix-blend-mode: soft-light;
+    }
+}

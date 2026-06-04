@@ -1,0 +1,23 @@
+.container-luz {
+    &--2 {
+        position: relative;
+        overflow: hidden;
+
+        & .luz {
+            position: absolute;
+            z-index: -1;
+
+            &-como-funciona {
+                right: 50%;
+                bottom: 50%;
+                transform: translate(80%, 70%);
+                min-width: 200rem;
+                max-width: 200rem;
+
+                // @include respond(g) {
+                //     transform: translate(80%, 100%);
+                // }
+            }
+        }
+    }
+}

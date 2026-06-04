@@ -1,0 +1,167 @@
+.diferenciais {
+    position: relative;
+    overflow: hidden;
+
+    & h2:first-child {
+        @include respond(gg) {
+            max-width: 73rem;
+        }
+
+        @include respond(m) {
+            max-width: 50rem;
+        }
+    }
+
+    & h2:nth-child(2) {
+        @include respond(m) {
+            // max-width: 58rem;
+        }
+    }
+
+    &__grid {
+        color: #060d21;
+        display: grid;
+        width: 89%;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: $spc-500;
+
+        @include respond(g) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        @include respond(m) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 1fr);
+        }
+
+        @include respond(xm) {
+            margin: $spc-0;
+            width: 100%;
+        }
+
+        &--2 {
+            grid-template-columns: repeat(2, 38rem);
+            grid-template-rows: 1fr;
+            width: max-content;
+
+            @include respond(mm) {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(2, auto);
+                width: 100%;
+                max-width: 50rem;
+            }
+
+            & .diferenciais {
+                &__item {
+                    border: solid 1px #6f8fe5;
+                    background-image: linear-gradient(
+                        165.59deg,
+                        #173074 10.22%,
+                        #2b5ada 96.4%
+                    );
+                    color: #fff;
+                }
+
+                &__titulo {
+                    font-weight: 500;
+                }
+
+                &__p {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    &__grid--5-itens {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "div1 div1 div2 div2 div3 div3" ". div4 div4 div5 div5 .";
+
+        @include respond(g) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "div1 div1 div2 div2"
+                "div3 div3  div4 div4" ". div5 div5 .";
+        }
+
+        @include respond(m) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-areas: "div1" "div2" "div3" "div4" "div5";
+        }
+
+        & .diferenciais__item {
+            &:first-child {
+                grid-area: div1;
+            }
+            &:nth-child(2) {
+                grid-area: div2;
+            }
+            &:nth-child(3) {
+                grid-area: div3;
+            }
+            &:nth-child(4) {
+                grid-area: div4;
+            }
+            &:nth-child(5) {
+                grid-area: div5;
+            }
+        }
+    }
+
+    &__item {
+        background-color: $clr-white;
+        color: $clr-black;
+        border-radius: $border-radius-s;
+        padding: $spc-800;
+        @include flex($flow: column, $gap: $spc-500);
+
+        @include respond(m) {
+            padding: $spc-700;
+        }
+    }
+
+    &__svg {
+        width: $spc-700;
+    }
+
+    &__icone {
+        min-width: $spc-700;
+        max-width: $spc-700;
+    }
+
+    &__titulo {
+        font-size: $fs-500;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+
+    &__p {
+        font-weight: 500;
+        line-height: 1.6;
+    }
+
+    & .luz-diferenciais {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 230rem;
+        max-width: 230rem;
+        width: 100%;
+        z-index: -1;
+
+        @include respond(g) {
+            // top: 20%;
+        }
+    }
+
+    & .botao-verde {
+        margin: 0 auto;
+    }
+}

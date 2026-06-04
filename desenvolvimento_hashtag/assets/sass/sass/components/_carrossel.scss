@@ -1,0 +1,84 @@
+@include property(
+    $variable: padding-mask,
+    $syntax: "<percentage>",
+    $inherits: false,
+    $initial-value: 0%
+);
+
+.carrossel {
+    &__track {
+        position: relative;
+        mask: linear-gradient(
+            to right,
+            transparent,
+            white var(--padding-mask),
+            white (100% - $padding-carrossel),
+            transparent
+        );
+        transition: --padding-mask $transition-duration-short
+            $transition-function;
+
+        &[scrolled],
+        &--mask-duplo {
+            --padding-mask: calc(#{$padding-carrossel} / 2);
+            // mask: linear-gradient(
+            //   to right,
+            //   transparent,
+            //   white 15%,
+            //   white 85%,
+            //   transparent
+            // );
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    // &::after {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   inset: 0;
+    //   z-index: 1;
+    // }
+
+    &__controles {
+        @include flex($align: center, $gap: $spc-200);
+
+        &--semscroll {
+            opacity: 0;
+        }
+    }
+
+    &__seta {
+        color: rgba($color: $clr-white, $alpha: 0.5);
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        border: solid 1px currentColor;
+        width: 4rem;
+        aspect-ratio: 1;
+        height: 4rem;
+        padding: $spc-200;
+        transition-property: scale, color;
+        transition-duration: $transition-duration;
+        transition-timing-function: $transition-function;
+
+        align-self: center;
+
+        &--habilitada {
+            color: rgba($color: $clr-white, $alpha: 1);
+            cursor: pointer;
+
+            &:hover {
+                scale: 1.05;
+            }
+        }
+
+        & svg {
+            width: 100%;
+            aspect-ratio: 1;
+        }
+    }
+}

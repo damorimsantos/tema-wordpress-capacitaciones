@@ -1,0 +1,38 @@
+:root {
+  --percentual-translate: -50%;
+}
+
+@include respond(up-xxg) {
+  :root {
+    --percentual-translate: -33.3333333%;
+  }
+}
+
+.infinite-scroller {
+  overflow: hidden;
+  width: 100%;
+  mask: linear-gradient(
+    to right,
+    transparent,
+    white 15%,
+    white 85%,
+    transparent
+  );
+
+  & > * {
+    animation: infinite-scroll $infinite-scroll-duration linear infinite;
+    width: max-content;
+
+    @include respond(up-g) {
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+@keyframes infinite-scroll {
+  to {
+    translate: calc(var(--percentual-translate) - $curso-gap / 2);
+  }
+}

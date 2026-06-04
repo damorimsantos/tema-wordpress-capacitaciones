@@ -1,0 +1,55 @@
+.perguntas-frequentes {
+    & hr {
+        max-width: 28rem;
+        margin: $spc-700 auto;
+        margin-bottom: $spc-800;
+        border-color: rgba(64, 64, 64, 0.7);
+    }
+
+    &__acordeao {
+        max-width: 83rem;
+        width: 100%;
+        @include flex($flow: column, $gap: $spc-500);
+        z-index: 3;
+    }
+
+    &__item {
+        width: 100%;
+        background-color: rgba($color: $clr-white, $alpha: 0.1);
+        border: 1px solid rgba($color: $clr-white, $alpha: 0.2);
+        border-radius: $border-radius-s;
+        cursor: pointer;
+        height: auto;
+    }
+
+    &__cabecalho {
+        @include flex($justify: space-between, $gap: $spc-500);
+        padding: $spc-400 $spc-700;
+    }
+
+    &__seta {
+        min-width: $spc-400;
+        &.invertida {
+            transform: rotate(180deg);
+            transition: transform $transition-duration-short
+                $transition-function;
+        }
+    }
+
+    &__corpo {
+        @include flex($flow: column, $gap: $spc-400);
+        overflow: hidden;
+        transition: max-height,
+            margin-bottom $transition-duration $transition-function;
+        max-height: 0;
+        color: rgba($color: $clr-white, $alpha: 0.6);
+
+        margin-left: $spc-800;
+        margin-right: $spc-800;
+        margin-top: $spc-0;
+        &.aberto {
+            max-height: 200rem;
+            margin-bottom: $spc-400;
+        }
+    }
+}

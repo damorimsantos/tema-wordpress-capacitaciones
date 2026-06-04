@@ -1,0 +1,236 @@
+.hero {
+    background-image: url(../../../imgs/Global/bg-hero.png);
+    // background-image: url(../../imgs/Global/bg-hero.png);
+    background-color: transparent;
+    position: relative;
+    padding-top: $spc-500; // diminuindo o padding pra caber mais do form na tela
+    overflow-x: hidden;
+
+    @include respond(g) {
+        padding-top: $spc-700;
+        position: static;
+    }
+
+    & .container {
+        @include flex($gap: $spc-500);
+        position: relative;
+
+        @include respond(g) {
+            flex-flow: column;
+            align-items: center;
+            gap: $spc-900;
+        }
+    }
+
+    &__coluna {
+        @include flex($flow: column, $gap: $spc-300);
+        max-width: 48rem;
+
+        @include respond(g) {
+            max-width: 55rem;
+        }
+
+        @include respond(xm) {
+            max-width: none;
+        }
+
+        @include respond(ss) {
+            gap: $spc-400;
+        }
+    }
+
+    & .logo-nome-curso {
+        font-size: 2rem;
+
+        &__svg {
+            @include respond(m) {
+                width: $spc-800;
+            }
+        }
+
+        & img {
+            @include respond(m) {
+                width: $spc-800;
+            }
+        }
+
+        &__nome {
+            @include respond(m) {
+                font-size: $fs-400;
+                gap: $spc-0;
+            }
+        }
+    }
+
+    &__h1--destaque-completo {
+        // @include flex($flow: column);
+        font-size: $fs-1100;
+        line-height: 1;
+        font-weight: 500;
+        // font-weight: 600;
+
+        @include respond(m) {
+            font-size: $fs-1000;
+        }
+
+        @include respond(s) {
+            font-size: $fs-900;
+        }
+
+        @include respond(ss) {
+            font-size: $fs-800;
+            max-width: 30rem;
+        }
+
+        & span {
+            text-transform: capitalize;
+            line-height: 1;
+            font-weight: 500;
+            // font-weight: 600;
+        }
+    }
+
+    &__h1--destaque-nome {
+        @include flex($flow: column, $gap: $spc-100);
+        font-size: $fs-700;
+        line-height: 1;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        @include respond(m) {
+            font-size: $fs-600;
+        }
+
+        & span {
+            font-size: $fs-1100;
+            text-transform: none;
+
+            @include respond(m) {
+                font-size: $fs-1000;
+            }
+        }
+    }
+
+    &__p {
+        font-size: $fs-500;
+        line-height: 1.4;
+
+        @include respond(ss) {
+            font-size: $fs-400;
+        }
+    }
+
+    & .form-inscricao {
+        @include flex($flow: column, $gap: $spc-100);
+
+        &__inputs {
+            @include flex($flow: column, $gap: $spc-100);
+        }
+
+        &__campo {
+            @include flex($flow: column);
+
+            & small {
+                display: none;
+                margin-top: 0.4rem;
+                margin-left: 2rem;
+                color: $clr-red;
+                font-weight: 600;
+                font-family: inherit;
+                max-width: 100%;
+            }
+
+            &.sucesso input {
+                border: solid 2px $clr-green-300;
+            }
+
+            &.erro input {
+                border: solid 2px $clr-red;
+            }
+
+            &.erro small {
+                display: inline-block;
+            }
+        }
+
+        &__input {
+            background-color: hsla(0, 0%, 13%, 30%);
+            border: solid 1px rgba(255, 255, 255, 0.45);
+            // padding: 1.6rem 1.02rem;
+            padding: $spc-300 $spc-200;
+            border-radius: $border-radius-s;
+            color: $clr-white;
+            font-weight: 400;
+            box-shadow: none;
+
+            &::placeholder {
+                color: $clr-white;
+                font-weight: 300;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        & .botao-verde {
+            min-width: 35rem;
+            width: 100%;
+            margin: 0;
+            background-image: linear-gradient(
+                90deg,
+                $clr-green-300,
+                $clr-green-350
+            );
+            font-size: $fs-400;
+
+            @include respond(m) {
+                min-width: 0;
+            }
+
+            @include respond(s) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__conjunto-imgs {
+        position: absolute;
+        left: 53rem;
+        top: 50%;
+        transform: translateY(-48%);
+        width: 65rem;
+        align-self: center;
+        justify-self: center;
+
+        @include respond(xg) {
+            width: 50vw !important;
+        }
+
+        @include respond(g) {
+            position: static;
+            transform: none !important;
+            width: 90% !important;
+        }
+
+        @include respond(m) {
+            width: 110% !important;
+        }
+    }
+
+    & .luz-hero {
+        mix-blend-mode: soft-light;
+        position: absolute;
+        z-index: -1;
+        top: -60%;
+        left: 50%;
+        transform: translateX(-20%);
+        max-width: 90rem;
+
+        @include respond(g) {
+            max-width: 100%;
+            transform: translateX(-50%);
+            top: 55rem;
+        }
+    }
+}

@@ -1,0 +1,3162 @@
+<!-- Modelo para a página Comunidade Impressionadora -->
+
+<!-- <?php
+/*
+Template name: Home
+*/
+?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <title><?php wp_title('|', true, 'right'); ?></title> -->
+    <title>Hashtag Treinamentos</title>
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/sass/css/style.css"
+    />
+
+    <!-- Scripts Auxiliares -->
+    <script src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/js/auxiliares.js"></script>
+
+    <!-- Scripts do Head configurados em 'Opções do Site'/https://www.hashtagtreinamentos.com/wp-admin/admin.php?page=opcoes-do-site  -->
+    <!-- <?php the_field('head', 'option'); ?> -->
+  </head>
+
+  <body class="">
+    <!-- <?php get_header('hashtag'); ?> -->
+    <header class="header grade-conteudo">
+      <div class="fuga">
+        <img
+          src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/logo-hashtag.webp"
+          alt="Logo Hashtag Treinamentos"
+        />
+
+        <nav class="header__nav">
+          <div class="header__menu">
+            <div class="header__menu-central"></div>
+          </div>
+
+          <ul>
+            <li class="header__item">
+              <a class="header__titulo">
+                Cursos
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="none"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M3.293 5.293a1 1 0 0 1 1.414 0L8 8.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+
+              <div class="header__lista grade-conteudo">
+                <ul class="fuga">
+                  <li>
+                    <a
+                      class="header__lista-item"
+                      href="https://dlp.hashtagtreinamentos.com/ingles/espera/inscricao?origemurl=hashtag_ig_org_biohashi"
+                    >
+                      <div class="header__lista-icone">
+                        <img
+                          class=""
+                          width="111"
+                          height="112"
+                          src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-ingles.png"
+                          alt="Ícone Inglês"
+                        />
+                      </div>
+                      <p>Curso de Inglês</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      class="header__lista-item"
+                      href="https://www.hashtagtreinamentos.com/curso-python"
+                    >
+                      <div class="header__lista-icone">
+                        <img
+                          class=""
+                          width="111"
+                          height="112"
+                          src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-python.svg"
+                          alt="Ícone Python"
+                        />
+                      </div>
+                      <p>Curso de Python</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.hashtagtreinamentos.com/curso-power-bi"
+                      class="header__lista-item"
+                    >
+                      <div class="header__lista-icone">
+                        <img
+                          class=""
+                          width="76"
+                          height="100"
+                          src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-pbi.png"
+                          alt="Ícone Power BI"
+                        />
+                      </div>
+                      <p>Curso de Power BI</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.hashtagtreinamentos.com/curso-de-excel-online"
+                      class="header__lista-item"
+                    >
+                      <div class="header__lista-icone">
+                        <img
+                          class=""
+                          width="25"
+                          height="23"
+                          src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-excel.svg"
+                          alt="Ícone Excel"
+                        />
+                      </div>
+                      <p>Curso de Excel</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.hashtagtreinamentos.com/curso-javascript"
+                      class="header__lista-item"
+                    >
+                      <div class="header__lista-icone">
+                        <img
+                          class=""
+                          width="25"
+                          height="23"
+                          src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-javascript.svg"
+                          alt="Ícone JavaScript"
+                        />
+                      </div>
+                      <p>Curso de JavaScript</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.hashtagtreinamentos.com/curso-html-css"
+                      class="header__lista-item"
+                    >
+                      <div class="header__lista-icone">
+                        <img
+                          class=""
+                          width="25"
+                          height="23"
+                          src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-htmlcss.png"
+                          alt="Ícone HTML e CSS"
+                        />
+                      </div>
+                      <p>Curso de HTML e CSS</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.hashtagtreinamentos.com/curso-ciencia-de-dados"
+                      class="header__lista-item"
+                    >
+                      <div class="header__lista-icone">
+                        <img
+                          class=""
+                          width="25"
+                          height="23"
+                          src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-cd.svg"
+                          alt="Ícone Ciência de Dados"
+                        />
+                      </div>
+                      <p>Curso de Ciência de Dados</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.hashtagtreinamentos.com/curso-sql"
+                      class="header__lista-item"
+                    >
+                      <div class="header__lista-icone">
+                        <img
+                          class=""
+                          width="25"
+                          height="23"
+                          src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-sql.svg"
+                          alt="Ícone SQL"
+                        />
+                      </div>
+                      <p>Curso de SQL</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://lp.hashtagtreinamentos.com/power-automate/pg-inscricao?fonte=lespera&src=lespa-site-header"
+                      class="header__lista-item"
+                    >
+                      <div class="header__lista-icone">
+                        <img
+                          class=""
+                          width="25"
+                          height="23"
+                          src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-powerautomate.webp"
+                          alt="Ícone Power Automate"
+                        />
+                      </div>
+                      <p>Curso de Power Automate</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.hashtagtreinamentos.com/curso-vba-excel"
+                      class="header__lista-item"
+                    >
+                      <div class="header__lista-icone">
+                        <img
+                          class=""
+                          width="25"
+                          height="23"
+                          src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-vba.png"
+                          alt="Ícone VBA"
+                        />
+                      </div>
+                      <p>Curso de VBA</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.hashtagtreinamentos.com/curso-de-power-apps"
+                      class="header__lista-item"
+                    >
+                      <div class="header__lista-icone">
+                        <img
+                          class=""
+                          width="25"
+                          height="23"
+                          src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-powerapps.svg"
+                          alt="Ícone Power Apps"
+                        />
+                      </div>
+                      <p>Curso de Power Apps</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.hashtagtreinamentos.com/curso-powerpoint"
+                      class="header__lista-item"
+                    >
+                      <div class="header__lista-icone">
+                        <img
+                          class=""
+                          width="25"
+                          height="23"
+                          src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-powerpoint.svg"
+                          alt="Ícone PowerPoint"
+                        />
+                      </div>
+                      <p>Curso de PowerPoint</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="header__item">
+              <a
+                href="https://www.hashtagtreinamentos.com/comunidade-impressionadora?fonte=lespera&src=lescom-home"
+                class="header__titulo"
+              >
+                Assinatura
+              </a>
+            </li>
+
+            <li class="header__item">
+              <a
+                href="https://www.hashtagtreinamentos.com/treinamentos-corporativos"
+                class="header__titulo"
+              >
+                Para Empresas
+              </a>
+            </li>
+
+            <li class="header__item">
+              <a
+                href="https://www.hashtagtreinamentos.com/blog"
+                class="header__titulo"
+              >
+                Blog
+              </a>
+            </li>
+
+            <li class="header__item">
+              <a
+                href="https://api.whatsapp.com/send?phone=5521996582442&text=Ol%C3%A1,%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20os%20Cursos%20da%20Hashtag!"
+                class="header__titulo"
+              >
+                Fale conosco
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__botoes">
+          <a
+            href="https://portalhashtag.com/login"
+            class="botao botao--sm botao--sem-fundo botao--login"
+            >Login</a
+          >
+          <a
+            href="https://www.hashtagtreinamentos.com/comunidade-impressionadora?fonte=lespera&src=lescom-home"
+            class="js-botaoOferta botao botao--sm"
+            >Matricule-se</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="grade-conteudo">
+      <section class="secao hero largura-total">
+        <div class="hero__titulos">
+          <h1>Comunidade Impressionadora</h1>
+          <h2 class="fuga">
+            <b>
+              <span class="realce-azul"
+                >Tudo o que você precisa saber para se destacar no Mercado de
+                Trabalho,</span
+              >
+            </b>
+            usando as ferramentas e linguagens de programação mais importantes,
+            do básico ao impressionador.
+          </h2>
+        </div>
+
+        <div
+          class="video"
+          width="755"
+          height="425"
+          style="aspect-ratio: 755/425; border: none"
+        >
+          <img
+            width="755"
+            height="425"
+            style="aspect-ratio: 755/425"
+            src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/thumb-comunidade.webp"
+            alt="Thumbnail Vídeo Comunidade Impressionadora"
+          />
+        </div>
+
+        <a href="#" class="js-botaoOferta botao"
+          ><span>Começar agora</span>
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+            >
+              <rect
+                width="20"
+                height="20"
+                transform="translate(0.5)"
+                fill="black"
+                fill-opacity="0.01"
+              ></rect>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.3632 4.19527C11.6236 3.93491 12.0457 3.93491 12.306 4.19527L17.6394 9.5286C17.8997 9.78895 17.8997 10.2111 17.6394 10.4714L12.306 15.8048C12.0457 16.0651 11.6236 16.0651 11.3632 15.8048C11.1029 15.5444 11.1029 15.1223 11.3632 14.8619L15.5585 10.6667H3.83464C3.46645 10.6667 3.16797 10.3682 3.16797 10C3.16797 9.63182 3.46645 9.33334 3.83464 9.33334H15.5585L11.3632 5.13807C11.1029 4.87772 11.1029 4.45562 11.3632 4.19527Z"
+                fill="black"
+              ></path></svg></span
+        ></a>
+
+        <div class="hero__alunos">
+          <div class="alunos">
+            <div class="alunos__item">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/alunos-1.webp"
+                alt="Aluno Hashtag"
+              />
+            </div>
+            <div class="alunos__item">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/alunos-2.webp"
+                alt="Aluno Hashtag"
+              />
+            </div>
+            <div class="alunos__item">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/alunos-3.webp"
+                alt="Aluno Hashtag"
+              />
+            </div>
+            <div class="alunos__item">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/alunos-4.webp"
+                alt="Aluno Hashtag"
+              />
+            </div>
+          </div>
+
+          <p><b>+110mil</b> Alunos</p>
+        </div>
+
+        <div class="hero__cursos infinite-scroller largura-total">
+          <div class="curso">
+            <div class="curso__item">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-sql.svg"
+                alt="Ícone SQL"
+              />
+              <p>SQL</p>
+            </div>
+
+            <div class="curso__item">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-vba.png"
+                alt="Ícone VBA"
+              />
+              <p>VBA</p>
+            </div>
+
+            <div class="curso__item">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-powerapps.svg"
+                alt="Ícone Power Apps"
+              />
+              <p>Power Apps</p>
+            </div>
+
+            <div class="curso__item">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-powerpoint.svg"
+                alt="Ícone PowerPoint"
+              />
+              <p>PowerPoint</p>
+            </div>
+
+            <div class="curso__item">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-excel.svg"
+                alt="Ícone Excel"
+              />
+              <p>Excel</p>
+            </div>
+
+            <div class="curso__item">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-pbi.png"
+                alt="Ícone Power BI"
+              />
+              <p>Power BI</p>
+            </div>
+
+            <div class="curso__item">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-python.svg"
+                alt="Ícone Python"
+              />
+              <p>Python</p>
+            </div>
+
+            <div class="curso__item">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-javascript.svg"
+                alt="Ícone JavaScript"
+              />
+              <p>JavaScript</p>
+            </div>
+
+            <div class="curso__item">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-html.svg"
+                alt="Ícone HTML"
+              />
+              <p>HTML & CSS</p>
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-css.svg"
+                alt="Ícone CSS"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__diferenciais ef-slide ef-slide--visivel">
+          <div class="diferencial">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="diferencial__icone"
+            >
+              <mask
+                id="mask0_1186_3445"
+                style="mask-type: luminance"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="30"
+                height="30"
+              >
+                <path
+                  d="M15.0964 27.433C16.8117 27.4352 18.5105 27.0984 20.0952 26.442C21.6799 25.7855 23.1193 24.8224 24.3306 23.6079C25.5451 22.3966 26.5082 20.9572 27.1646 19.3725C27.8211 17.7878 28.1578 16.089 28.1556 14.3737C28.1578 12.6584 27.821 10.9596 27.1646 9.37491C26.5081 7.7902 25.545 6.35083 24.3306 5.13952C23.1193 3.92503 21.6799 2.96189 20.0952 2.30546C18.5105 1.64902 16.8117 1.31224 15.0964 1.31446C13.3811 1.31228 11.6823 1.64908 10.0976 2.30551C8.51286 2.96194 7.07349 3.92505 5.86217 5.13952C4.64771 6.35083 3.68459 7.7902 3.02816 9.37491C2.37173 10.9596 2.03493 12.6584 2.03712 14.3737C2.0349 16.089 2.37168 17.7878 3.02811 19.3725C3.68454 20.9572 4.64768 22.3966 5.86217 23.6079C7.07349 24.8224 8.51286 25.7855 10.0976 26.4419C11.6823 27.0983 13.3811 27.4351 15.0964 27.433Z"
+                  fill="#555555"
+                  stroke="white"
+                  stroke-width="2.61185"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.87305 14.3738L13.7908 18.2916L21.6264 10.4561"
+                  stroke="white"
+                  stroke-width="2.61185"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </mask>
+              <g mask="url(#mask0_1186_3445)">
+                <path
+                  d="M-0.574219 -1.29883H30.768V30.0434H-0.574219V-1.29883Z"
+                  fill="#00FF89"
+                />
+              </g>
+            </svg>
+            <p>Mais de 20 cursos práticos sempre atualizados</p>
+          </div>
+
+          <div class="diferencial">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="diferencial__icone"
+            >
+              <mask
+                id="mask0_1186_3445"
+                style="mask-type: luminance"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="30"
+                height="30"
+              >
+                <path
+                  d="M15.0964 27.433C16.8117 27.4352 18.5105 27.0984 20.0952 26.442C21.6799 25.7855 23.1193 24.8224 24.3306 23.6079C25.5451 22.3966 26.5082 20.9572 27.1646 19.3725C27.8211 17.7878 28.1578 16.089 28.1556 14.3737C28.1578 12.6584 27.821 10.9596 27.1646 9.37491C26.5081 7.7902 25.545 6.35083 24.3306 5.13952C23.1193 3.92503 21.6799 2.96189 20.0952 2.30546C18.5105 1.64902 16.8117 1.31224 15.0964 1.31446C13.3811 1.31228 11.6823 1.64908 10.0976 2.30551C8.51286 2.96194 7.07349 3.92505 5.86217 5.13952C4.64771 6.35083 3.68459 7.7902 3.02816 9.37491C2.37173 10.9596 2.03493 12.6584 2.03712 14.3737C2.0349 16.089 2.37168 17.7878 3.02811 19.3725C3.68454 20.9572 4.64768 22.3966 5.86217 23.6079C7.07349 24.8224 8.51286 25.7855 10.0976 26.4419C11.6823 27.0983 13.3811 27.4351 15.0964 27.433Z"
+                  fill="#555555"
+                  stroke="white"
+                  stroke-width="2.61185"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.87305 14.3738L13.7908 18.2916L21.6264 10.4561"
+                  stroke="white"
+                  stroke-width="2.61185"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </mask>
+              <g mask="url(#mask0_1186_3445)">
+                <path
+                  d="M-0.574219 -1.29883H30.768V30.0434H-0.574219V-1.29883Z"
+                  fill="#00FF89"
+                />
+              </g>
+            </svg>
+            <p>Suporte a dúvidas diário</p>
+          </div>
+
+          <div class="diferencial">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="diferencial__icone"
+            >
+              <mask
+                id="mask0_1186_3445"
+                style="mask-type: luminance"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="30"
+                height="30"
+              >
+                <path
+                  d="M15.0964 27.433C16.8117 27.4352 18.5105 27.0984 20.0952 26.442C21.6799 25.7855 23.1193 24.8224 24.3306 23.6079C25.5451 22.3966 26.5082 20.9572 27.1646 19.3725C27.8211 17.7878 28.1578 16.089 28.1556 14.3737C28.1578 12.6584 27.821 10.9596 27.1646 9.37491C26.5081 7.7902 25.545 6.35083 24.3306 5.13952C23.1193 3.92503 21.6799 2.96189 20.0952 2.30546C18.5105 1.64902 16.8117 1.31224 15.0964 1.31446C13.3811 1.31228 11.6823 1.64908 10.0976 2.30551C8.51286 2.96194 7.07349 3.92505 5.86217 5.13952C4.64771 6.35083 3.68459 7.7902 3.02816 9.37491C2.37173 10.9596 2.03493 12.6584 2.03712 14.3737C2.0349 16.089 2.37168 17.7878 3.02811 19.3725C3.68454 20.9572 4.64768 22.3966 5.86217 23.6079C7.07349 24.8224 8.51286 25.7855 10.0976 26.4419C11.6823 27.0983 13.3811 27.4351 15.0964 27.433Z"
+                  fill="#555555"
+                  stroke="white"
+                  stroke-width="2.61185"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.87305 14.3738L13.7908 18.2916L21.6264 10.4561"
+                  stroke="white"
+                  stroke-width="2.61185"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </mask>
+              <g mask="url(#mask0_1186_3445)">
+                <path
+                  d="M-0.574219 -1.29883H30.768V30.0434H-0.574219V-1.29883Z"
+                  fill="#00FF89"
+                />
+              </g>
+            </svg>
+            <p>Mais de 50 projetos completos</p>
+          </div>
+
+          <div class="diferencial">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="diferencial__icone"
+            >
+              <mask
+                id="mask0_1186_3445"
+                style="mask-type: luminance"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="30"
+                height="30"
+              >
+                <path
+                  d="M15.0964 27.433C16.8117 27.4352 18.5105 27.0984 20.0952 26.442C21.6799 25.7855 23.1193 24.8224 24.3306 23.6079C25.5451 22.3966 26.5082 20.9572 27.1646 19.3725C27.8211 17.7878 28.1578 16.089 28.1556 14.3737C28.1578 12.6584 27.821 10.9596 27.1646 9.37491C26.5081 7.7902 25.545 6.35083 24.3306 5.13952C23.1193 3.92503 21.6799 2.96189 20.0952 2.30546C18.5105 1.64902 16.8117 1.31224 15.0964 1.31446C13.3811 1.31228 11.6823 1.64908 10.0976 2.30551C8.51286 2.96194 7.07349 3.92505 5.86217 5.13952C4.64771 6.35083 3.68459 7.7902 3.02816 9.37491C2.37173 10.9596 2.03493 12.6584 2.03712 14.3737C2.0349 16.089 2.37168 17.7878 3.02811 19.3725C3.68454 20.9572 4.64768 22.3966 5.86217 23.6079C7.07349 24.8224 8.51286 25.7855 10.0976 26.4419C11.6823 27.0983 13.3811 27.4351 15.0964 27.433Z"
+                  fill="#555555"
+                  stroke="white"
+                  stroke-width="2.61185"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.87305 14.3738L13.7908 18.2916L21.6264 10.4561"
+                  stroke="white"
+                  stroke-width="2.61185"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </mask>
+              <g mask="url(#mask0_1186_3445)">
+                <path
+                  d="M-0.574219 -1.29883H30.768V30.0434H-0.574219V-1.29883Z"
+                  fill="#00FF89"
+                />
+              </g>
+            </svg>
+            <p>Acesso imediato e por 12 meses</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="secao quem-nivel largura-total">
+        <h2>
+          Para quem é a
+          <b><span class="realce-azul">Comunidade Impressionadora</span></b>
+        </h2>
+
+        <div class="quem ef-slide ef-slide--visivel">
+          <div class="quem__item">
+            <div class="quem__cabecalho">
+              <div class="quem__img">
+                <img
+                  loading="lazy"
+                  width="260"
+                  height="146"
+                  style="aspect-ratio: 260/146"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/img-nivel (3).webp"
+                  alt="Pessoas em reunião de negócios"
+                />
+              </div>
+            </div>
+            <div class="quem__conteudo">
+              <p>Para quem quer se destacar na sua empresa</p>
+              <p class="botao" style="display: none">Destaque-se</p>
+            </div>
+          </div>
+
+          <div class="quem__item">
+            <div class="quem__cabecalho">
+              <div class="quem__img">
+                <img
+                  loading="lazy"
+                  width="260"
+                  height="173"
+                  style="aspect-ratio: 260/173"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/img-nivel (2).webp"
+                  alt="Pessoas em reunião de negócios"
+                />
+              </div>
+            </div>
+            <div class="quem__conteudo">
+              <p>Para quem quer conseguir uma vaga ou mudar de área</p>
+              <p class="botao" style="display: none">Mudança</p>
+            </div>
+          </div>
+
+          <div class="quem__item">
+            <div class="quem__cabecalho">
+              <div class="quem__img">
+                <img
+                  loading="lazy"
+                  width="260"
+                  height="178"
+                  style="aspect-ratio: 260/178"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/img-nivel (1).webp"
+                  alt="Pessoas em reunião de negócios"
+                />
+              </div>
+            </div>
+            <div class="quem__conteudo">
+              <p>Para quem quer vender seus próprios projetos</p>
+              <p class="botao" style="display: none">Negócios</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>
+          Independente do
+          <b><span class="realce-azul">seu nível atual</span></b>
+        </h2>
+
+        <div class="nivel ef-slide ef-slide--visivel">
+          <div class="nivel__item">
+            <div
+              class="barra-progresso barra-progresso--azul"
+              aria-valuenow="0"
+              style="--progresso: 0%"
+            >
+              <div class="barra-progresso__luz"></div>
+            </div>
+            <p>Iniciantes</p>
+          </div>
+
+          <div class="nivel__separador"></div>
+
+          <div class="nivel__item">
+            <div
+              class="barra-progresso barra-progresso--preenchida barra-progresso--amarela"
+              aria-valuenow="50"
+              style="--progresso: 50%"
+            >
+              <div class="barra-progresso__luz"></div>
+            </div>
+            <p>Intermediários</p>
+          </div>
+
+          <div class="nivel__separador"></div>
+
+          <div class="nivel__item">
+            <div
+              class="barra-progresso barra-progresso--verde"
+              aria-valuenow="100"
+              style="--progresso: 100%"
+            >
+              <div class="barra-progresso__luz"></div>
+            </div>
+            <p>Avançados</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="secao largura-total referencia">
+        <h2 class="text-balance">
+          Tudo o que você precisa para virar uma referência
+          <b><span class="realce-verde">em qualquer empresa</span></b>
+        </h2>
+
+        <hr />
+
+        <div class="cursos-carrossel conteudo-direita carrossel">
+          <div class="cursos-carrossel__titulo">
+            <h3 class="text-balance">
+              Cursos de Ferramentas de <span class="realce-azul">Negócios</span>
+            </h3>
+
+            <!-- carrossel__controles--semscroll -->
+            <div class="carrossel__controles cursos-carrossel__controles">
+              <div class="carrossel__seta">
+                <svg
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.8282 6.28275H3.62507L8.31164 1.59618L7.12113 0.414062L0.414062 7.12113L7.12113 13.8282L8.30325 12.6461L3.62507 7.95952H13.8282V6.28275Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+
+              <!-- carrossel__seta--habilitada -->
+              <div class="carrossel__seta">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                >
+                  <path
+                    d="M6.87895 0.414062L5.69682 1.59618L10.375 6.28275H0.171875V7.95952H10.375L5.69682 12.6461L6.87895 13.8282L13.586 7.12113L6.87895 0.414062Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="cursos-carrossel__cards carrossel__track">
+            <div class="card card--excel">
+              <svg
+                width="236"
+                height="173"
+                viewBox="0 0 236 173"
+                class="card__curso"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_1277_732)">
+                  <path
+                    d="M154.071 52.4199L57.063 35.3008V161.794C57.063 167.571 61.746 172.254 67.5227 172.254H234.913C240.69 172.254 245.373 167.571 245.373 161.794V115.19L154.071 52.4199Z"
+                    fill="#185C37"
+                  />
+                  <path
+                    d="M154.071 -56H67.5227C61.746 -56 57.063 -51.317 57.063 -45.5403V1.06366L154.071 58.1273L205.428 75.2464L245.373 58.1273V1.06366L154.071 -56Z"
+                    fill="#21A366"
+                  />
+                  <path
+                    d="M57.063 1.06348H154.071V58.1272H57.063V1.06348Z"
+                    fill="#107C41"
+                  />
+                  <path
+                    opacity="0.1"
+                    d="M126.492 -10.3491H57.063V132.31H126.492C132.261 132.291 136.933 127.619 136.952 121.85V0.110621C136.933 -5.65833 132.261 -10.3304 126.492 -10.3491Z"
+                    fill="black"
+                  />
+                  <path
+                    opacity="0.2"
+                    d="M120.786 -4.6416H57.063V138.018H120.786C126.555 137.999 131.227 133.327 131.246 127.558V5.81814C131.227 0.049192 126.555 -4.62285 120.786 -4.6416Z"
+                    fill="black"
+                  />
+                  <path
+                    opacity="0.2"
+                    d="M120.786 -4.6416H57.063V126.605H120.786C126.555 126.586 131.227 121.914 131.246 116.145V5.81814C131.227 0.049192 126.555 -4.62285 120.786 -4.6416Z"
+                    fill="black"
+                  />
+                  <path
+                    opacity="0.2"
+                    d="M115.08 -4.6416H57.063V126.605H115.08C120.849 126.586 125.521 121.914 125.539 116.145V5.81814C125.521 0.049192 120.849 -4.62285 115.08 -4.6416Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M10.4588 -4.6416H115.079C120.856 -4.6416 125.539 0.041369 125.539 5.81814V110.439C125.539 116.215 120.856 120.898 115.079 120.898H10.4588C4.68199 120.898 -0.000976562 116.215 -0.000976562 110.439V5.81814C-0.000976562 0.041369 4.68199 -4.6416 10.4588 -4.6416Z"
+                    fill="url(#paint0_linear_1277_732)"
+                  />
+                  <path
+                    d="M32.3936 92.1254L54.3973 58.0298L34.2367 24.1226H50.4542L61.4561 45.8068C62.4718 47.8667 63.168 49.396 63.5446 50.406H63.6873C64.4101 48.7626 65.1709 47.1667 65.9698 45.6184L77.7306 24.134H92.6185L71.9443 57.8416L93.1436 92.1253H77.3027L64.5946 68.3241C63.996 67.3114 63.4881 66.2478 63.0768 65.1457H62.8885C62.5162 66.2254 62.0223 67.2592 61.4162 68.2272L48.3315 92.1254H32.3936Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M234.913 -56H154.071V1.06367H245.373V-45.5403C245.373 -51.317 240.69 -56 234.913 -56Z"
+                    fill="#33C481"
+                  />
+                  <path
+                    d="M154.071 58.127H245.373V115.191H154.071V58.127Z"
+                    fill="#107C41"
+                  />
+                </g>
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_1277_732"
+                    x1="21.8079"
+                    y1="-12.8147"
+                    x2="103.73"
+                    y2="129.072"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#18884F" />
+                    <stop offset="0.5" stop-color="#117E43" />
+                    <stop offset="1" stop-color="#0B6631" />
+                  </linearGradient>
+                  <clipPath id="clip0_1277_732">
+                    <rect
+                      width="245.374"
+                      height="228.255"
+                      fill="white"
+                      transform="translate(0 -56)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-fred-excel.webp"
+                  alt="Fred da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-excel.svg"
+                  alt="Ícone Excel"
+                />
+
+                <div>
+                  <p><b>Excel</b></p>
+                  <p>Impressionador</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--pbi">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-pbi.png"
+                alt="Card Power Bi"
+                class="card__curso"
+              />
+
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-alon-pbi.png"
+                  alt="Alon da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-pbi.png"
+                  alt="Ícone PBI"
+                />
+
+                <div>
+                  <p><b>Power BI</b></p>
+                  <p>Impressionador</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--ia">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-ia.webp"
+                alt="Card Inteligência Artificial"
+                class="card__curso"
+              />
+
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-fred-ia.webp"
+                  alt="Fred da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-ia.webp"
+                  alt="Ícone Excel"
+                />
+
+                <div>
+                  <p class="card__texto--menor">
+                    <b>Inteligência Artificial</b>
+                  </p>
+                  <p>Impressionador</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--powerapps">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-powerapps.png"
+                alt="Card Power Apps"
+                class="card__curso"
+              />
+
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-fred-powerapps.png"
+                  alt="Fred da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-powerapps.svg"
+                  alt="Ícone Power Apps"
+                />
+
+                <div>
+                  <p class="">
+                    <b>Power Apps</b>
+                  </p>
+                  <p>Impressionador</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--powerautomate">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-powerautomate.webp"
+                alt="Card Power Automate"
+                class="card__curso"
+              />
+
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-raphael-powerautomate.webp"
+                  alt="Raphael da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-powerautomate.webp"
+                  alt="Ícone Power Automate"
+                />
+
+                <div>
+                  <p class="">
+                    <b>Power Automate</b>
+                  </p>
+                  <p>Impressionador</p>
+                </div>
+              </div>
+
+              <div class="card__fundo-escuro card__fundo-escuro--visivel"></div>
+            </div>
+
+            <div class="card card--ppt">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-ppt.webp"
+                alt="Card PowerPoint"
+                class="card__curso"
+              />
+
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-camila-ppt.png"
+                  alt="Camila da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-powerpoint.svg"
+                  alt="Ícone Power Automate"
+                />
+
+                <div>
+                  <p class="">
+                    <b>PowerPoint</b>
+                  </p>
+                  <p>Impressionador</p>
+                </div>
+              </div>
+
+              <div class="card__fundo-escuro card__fundo-escuro--visivel"></div>
+            </div>
+
+            <div class="card card--word">
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-especialista-word.webp"
+                  alt="Andrew da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-word.webp"
+                  alt="Ícone Word"
+                />
+
+                <div>
+                  <p class="">
+                    <b>Word</b>
+                  </p>
+                  <p class="card__texto--menor">Aplicações Práticas</p>
+                </div>
+              </div>
+
+              <div class="card__fundo-escuro card__fundo-escuro--visivel"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cursos-carrossel conteudo-direita carrossel">
+          <div class="cursos-carrossel__titulo">
+            <h3 class="text-balance">
+              Cursos de Programação e
+              <span class="realce-azul">Desenvolvimento</span>
+            </h3>
+
+            <!-- carrossel__controles--semscroll -->
+            <div class="carrossel__controles cursos-carrossel__controles">
+              <div class="carrossel__seta">
+                <svg
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.8282 6.28275H3.62507L8.31164 1.59618L7.12113 0.414062L0.414062 7.12113L7.12113 13.8282L8.30325 12.6461L3.62507 7.95952H13.8282V6.28275Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+
+              <!-- carrossel__seta--habilitada -->
+              <div class="carrossel__seta">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                >
+                  <path
+                    d="M6.87895 0.414062L5.69682 1.59618L10.375 6.28275H0.171875V7.95952H10.375L5.69682 12.6461L6.87895 13.8282L13.586 7.12113L6.87895 0.414062Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="cursos-carrossel__cards carrossel__track">
+            <div class="card card--python">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-python.webp"
+                alt="Card Python"
+                class="card__curso"
+              />
+
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-lira-python.webp"
+                  alt="Lira da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-python.svg"
+                  alt="Ícone Python"
+                />
+
+                <div>
+                  <p><b>Python</b></p>
+                  <p>Impressionador</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--javascript">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-javascript.webp"
+                alt="Card JavaScript"
+                class="card__curso"
+              />
+
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-daniel-javascript.webp"
+                  alt="Daniel da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-javascript.svg"
+                  alt="Ícone JavaScript"
+                />
+
+                <div>
+                  <p><b>JavaScript</b></p>
+                  <p>Impressionador</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--sql">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-sql.webp"
+                alt="Card SQL"
+                class="card__curso"
+              />
+
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-marcus-sql.webp"
+                  alt="Marcus da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-sql.svg"
+                  alt="Ícone SQL"
+                />
+
+                <div>
+                  <p><b>SQL</b></p>
+                  <p>Impressionador</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--htmlcss">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-htmlcss.webp"
+                alt="Card HTML & CSS"
+                class="card__curso"
+              />
+
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-diego-htmlcss.webp"
+                  alt="Diego da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-htmlcss.png"
+                  alt="Ícone HTML & CSS"
+                />
+
+                <div>
+                  <p class="">
+                    <b>HTML & CSS</b>
+                  </p>
+                  <p>Impressionador</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--vba">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-vba.webp"
+                alt="Card VBA"
+                class="card__curso"
+              />
+
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-diego-vba.webp"
+                  alt="Diego da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-vba.png"
+                  alt="Ícone VBA"
+                />
+
+                <div>
+                  <p class="">
+                    <b>VBA</b>
+                  </p>
+                  <p>Impressionador</p>
+                </div>
+              </div>
+
+              <div class="card__fundo-escuro card__fundo-escuro--visivel"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cursos-carrossel conteudo-direita carrossel">
+          <div class="cursos-carrossel__titulo">
+            <h3 class="text-balance">
+              Cursos de <span class="realce-azul">SoftSkills</span>
+            </h3>
+
+            <!-- carrossel__controles--semscroll -->
+            <div class="carrossel__controles cursos-carrossel__controles">
+              <div class="carrossel__seta">
+                <svg
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.8282 6.28275H3.62507L8.31164 1.59618L7.12113 0.414062L0.414062 7.12113L7.12113 13.8282L8.30325 12.6461L3.62507 7.95952H13.8282V6.28275Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+
+              <!-- carrossel__seta--habilitada -->
+              <div class="carrossel__seta">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                >
+                  <path
+                    d="M6.87895 0.414062L5.69682 1.59618L10.375 6.28275H0.171875V7.95952H10.375L5.69682 12.6461L6.87895 13.8282L13.586 7.12113L6.87895 0.414062Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="cursos-carrossel__cards carrossel__track">
+            <div class="card card--perfis">
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-especialista-perfis-comportamentais.webp"
+                  alt="Ana Mcauchar"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-perfis-comportamentais.webp"
+                  alt="Ícone Perfis Comportamentais"
+                />
+
+                <div>
+                  <p>
+                    <b>Perfis</b>
+                  </p>
+                  <p>Comportamentais</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--processoseletivo">
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-marcio-processoseletivo.webp"
+                  alt="Márcio"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-processo.svg"
+                  alt="Ícone Processos Seletivos"
+                />
+
+                <div>
+                  <p><b>Processos</b></p>
+                  <p>Seletivos</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--comunicacao">
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-ana-comunicaco.webp"
+                  alt="Ana Mcauchar"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-comunicacao.svg"
+                  alt="Ícone Comunicação Eficaz"
+                />
+
+                <div>
+                  <p><b>Comunicação</b></p>
+                  <p>Eficaz</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--gestaotempo">
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-michel-gestao.webp"
+                  alt="Michel Helal"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-gestaotempo.svg"
+                  alt="Ícone Gestão de Tempo"
+                />
+
+                <div>
+                  <p class="">
+                    <b>Gestão</b>
+                  </p>
+                  <p>de Tempo</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--feedback">
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-especialista-feedback.webp"
+                  alt="Ana Mcauchar"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-feedback.webp"
+                  alt="Ícone Perfis Comportamentais"
+                />
+
+                <div class="card__texto--centralizado">
+                  <p>
+                    <b>Feedback</b>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--lideranca">
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-especialista-lideranca.webp"
+                  alt="Ana Mcauchar"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-lideranca.webp"
+                  alt="Ícone Perfis Comportamentais"
+                />
+
+                <div class="card__texto--centralizado">
+                  <p>
+                    <b>Liderança</b>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--produtividade">
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-cajadorenan-produtividade.webp"
+                  alt="Gabriel e Renan da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-produtividade.svg"
+                  alt="Ícone Produtividade e Aprendizagem"
+                />
+
+                <div>
+                  <p class="">
+                    <b>Produtividade</b>
+                  </p>
+                  <p>e Aprendizagem</p>
+                </div>
+              </div>
+
+              <div class="card__fundo-escuro card__fundo-escuro--visivel"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cursos-carrossel conteudo-direita carrossel">
+          <div class="cursos-carrossel__titulo">
+            <h3 class="text-balance">
+              Ferramentas <span class="realce-azul">Auxiliares</span>
+            </h3>
+
+            <!-- carrossel__controles--semscroll -->
+            <div class="carrossel__controles cursos-carrossel__controles">
+              <div class="carrossel__seta">
+                <svg
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.8282 6.28275H3.62507L8.31164 1.59618L7.12113 0.414062L0.414062 7.12113L7.12113 13.8282L8.30325 12.6461L3.62507 7.95952H13.8282V6.28275Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+
+              <!-- carrossel__seta--habilitada -->
+              <div class="carrossel__seta">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                >
+                  <path
+                    d="M6.87895 0.414062L5.69682 1.59618L10.375 6.28275H0.171875V7.95952H10.375L5.69682 12.6461L6.87895 13.8282L13.586 7.12113L6.87895 0.414062Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="cursos-carrossel__cards carrossel__track">
+            <div class="card card--linkedin">
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-especialista-linkedin.webp"
+                  alt="Especialista de Linkedin"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-linkedin.svg"
+                  alt="Ícone Linkedin"
+                />
+
+                <div>
+                  <p><b>Sedredos</b></p>
+                  <p>do LinkedIn</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--algoritmos">
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-lira-algoritmo.webp"
+                  alt="Lira da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-algoritmos.svg"
+                  alt="Ícone Algoritmos"
+                />
+
+                <div>
+                  <p class="card__texto--menor">
+                    <b>Lógica Programação</b>
+                  </p>
+                  <p>e Algoritmos</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--entrevistas">
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-joao-entrevistas.webp"
+                  alt="João da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-entrevistas.svg"
+                  alt="Ícone Entrevistas"
+                />
+
+                <div>
+                  <p class="">
+                    <b>Entrevistas</b>
+                  </p>
+                  <p>com Gestores</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--segredos">
+              <div class="card__img">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-especialista-segredos.webp"
+                  alt="Pedro da Hashtag"
+                />
+              </div>
+
+              <div class="card__nome-curso">
+                <img
+                  loading="lazy"
+                  src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-segredos.webp"
+                  alt="Ícone Segredos do PC"
+                />
+
+                <div>
+                  <p><b>Segredos</b></p>
+                  <p>do PC</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="card card--aws">
+            <div class="card__img">
+              <img loading="lazy" src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Card/card-especialista-aws.webp" alt="Especialista de AWS" />
+            </div>
+
+            <div class="card__nome-curso">
+              <img loading="lazy" src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-aws.svg" alt="Ícone AWS" />
+
+              <div>
+                <p><b>AWS</b></p>
+                <p>e Cloud</p>
+              </div>
+            </div>
+          </div> -->
+          </div>
+        </div>
+
+        <a href="#" class="js-botaoOferta botao"
+          ><span>Acesse agora mesmo</span>
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+            >
+              <rect
+                width="20"
+                height="20"
+                transform="translate(0.5)"
+                fill="black"
+                fill-opacity="0.01"
+              ></rect>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.3632 4.19527C11.6236 3.93491 12.0457 3.93491 12.306 4.19527L17.6394 9.5286C17.8997 9.78895 17.8997 10.2111 17.6394 10.4714L12.306 15.8048C12.0457 16.0651 11.6236 16.0651 11.3632 15.8048C11.1029 15.5444 11.1029 15.1223 11.3632 14.8619L15.5585 10.6667H3.83464C3.46645 10.6667 3.16797 10.3682 3.16797 10C3.16797 9.63182 3.46645 9.33334 3.83464 9.33334H15.5585L11.3632 5.13807C11.1029 4.87772 11.1029 4.45562 11.3632 4.19527Z"
+                fill="black"
+              ></path></svg></span
+        ></a>
+      </section>
+
+      <section class="secao largura-total destacar">
+        <h2 class="text-balance">
+          Eles conseguiram se
+          <b><span class="realce-azul">destacar no Mercado</span></b>
+        </h2>
+
+        <div
+          class="carrossel carrossel--automatico largura-total ef-slide ef-slide--visivel"
+        >
+          <div class="carrossel__controles cursos-carrossel__controles">
+            <div class="carrossel__seta">
+              <svg
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.8282 6.28275H3.62507L8.31164 1.59618L7.12113 0.414062L0.414062 7.12113L7.12113 13.8282L8.30325 12.6461L3.62507 7.95952H13.8282V6.28275Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+
+            <!-- carrossel__seta--habilitada -->
+            <div class="carrossel__seta">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  d="M6.87895 0.414062L5.69682 1.59618L10.375 6.28275H0.171875V7.95952H10.375L5.69682 12.6461L6.87895 13.8282L13.586 7.12113L6.87895 0.414062Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div
+            class="carrossel__track carrossel__track--mask-duplo destacar__carrossel"
+          >
+            <div class="destacar__item">
+              <div class="destacar__video">
+                <img
+                  loading="lazy"
+                  src=""
+                  fakeSRC="pUtl38fKdg0"
+                  alt="Thumbnail do Vídeo"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="e-font-icon-svg e-eicon-play"
+                  viewBox="0 0 1000 1000"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M838 162C746 71 633 25 500 25 371 25 258 71 163 162 71 254 25 367 25 500 25 633 71 746 163 837 254 929 367 979 500 979 633 979 746 933 838 837 929 746 975 633 975 500 975 367 929 254 838 162M808 192C892 279 933 379 933 500 933 621 892 725 808 808 725 892 621 938 500 938 379 938 279 896 196 808 113 725 67 621 67 500 67 379 108 279 196 192 279 108 383 62 500 62 621 62 721 108 808 192M438 392V642L642 517 438 392Z"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="destacar__texto">
+                Em poucos meses conseguiu ser promovido e migrar para a área de
+                tecnologia que queria
+
+                <span class="destacar__nome"> Wilson Fortino </span>
+              </div>
+            </div>
+
+            <div class="destacar__item">
+              <div class="destacar__video">
+                <img
+                  loading="lazy"
+                  src=""
+                  fakeSRC="SpyX8I2R_3I"
+                  alt="Thumbnail do Vídeo"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="e-font-icon-svg e-eicon-play"
+                  viewBox="0 0 1000 1000"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M838 162C746 71 633 25 500 25 371 25 258 71 163 162 71 254 25 367 25 500 25 633 71 746 163 837 254 929 367 979 500 979 633 979 746 933 838 837 929 746 975 633 975 500 975 367 929 254 838 162M808 192C892 279 933 379 933 500 933 621 892 725 808 808 725 892 621 938 500 938 379 938 279 896 196 808 113 725 67 621 67 500 67 379 108 279 196 192 279 108 383 62 500 62 621 62 721 108 808 192M438 392V642L642 517 438 392Z"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="destacar__texto">
+                "Não tinha grana, resolvi parcelar o curso. 6 meses depois eu
+                dobrei meu salário"
+
+                <span class="destacar__nome"> Leonardo Moura </span>
+              </div>
+            </div>
+
+            <div class="destacar__item">
+              <div class="destacar__video">
+                <img
+                  loading="lazy"
+                  src=""
+                  fakeSRC="CfIa9Qd0H2Q"
+                  alt="Thumbnail do Vídeo"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="e-font-icon-svg e-eicon-play"
+                  viewBox="0 0 1000 1000"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M838 162C746 71 633 25 500 25 371 25 258 71 163 162 71 254 25 367 25 500 25 633 71 746 163 837 254 929 367 979 500 979 633 979 746 933 838 837 929 746 975 633 975 500 975 367 929 254 838 162M808 192C892 279 933 379 933 500 933 621 892 725 808 808 725 892 621 938 500 938 379 938 279 896 196 808 113 725 67 621 67 500 67 379 108 279 196 192 279 108 383 62 500 62 621 62 721 108 808 192M438 392V642L642 517 438 392Z"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="destacar__texto">
+                "Eu perdia muitas oportunidades por falta de conhecimento, mas
+                depois do curso consegui ser promovida em menos de 1 ano"
+
+                <span class="destacar__nome"> Livia Freitas </span>
+              </div>
+            </div>
+
+            <div class="destacar__item">
+              <div class="destacar__video">
+                <img
+                  loading="lazy"
+                  src=""
+                  fakeSRC="XSojshm5iC0"
+                  alt="Thumbnail do Vídeo"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="e-font-icon-svg e-eicon-play"
+                  viewBox="0 0 1000 1000"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M838 162C746 71 633 25 500 25 371 25 258 71 163 162 71 254 25 367 25 500 25 633 71 746 163 837 254 929 367 979 500 979 633 979 746 933 838 837 929 746 975 633 975 500 975 367 929 254 838 162M808 192C892 279 933 379 933 500 933 621 892 725 808 808 725 892 621 938 500 938 379 938 279 896 196 808 113 725 67 621 67 500 67 379 108 279 196 192 279 108 383 62 500 62 621 62 721 108 808 192M438 392V642L642 517 438 392Z"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="destacar__texto">
+                "Pra você ter noção, meu salário hoje por mês é 6x o valor que
+                investi no curso"
+
+                <span class="destacar__nome"> Julius Otto </span>
+              </div>
+            </div>
+
+            <div class="destacar__item">
+              <div class="destacar__video">
+                <img
+                  loading="lazy"
+                  src=""
+                  fakeSRC="78uCEz0ZWnA"
+                  alt="Thumbnail do Vídeo"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="e-font-icon-svg e-eicon-play"
+                  viewBox="0 0 1000 1000"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M838 162C746 71 633 25 500 25 371 25 258 71 163 162 71 254 25 367 25 500 25 633 71 746 163 837 254 929 367 979 500 979 633 979 746 933 838 837 929 746 975 633 975 500 975 367 929 254 838 162M808 192C892 279 933 379 933 500 933 621 892 725 808 808 725 892 621 938 500 938 379 938 279 896 196 808 113 725 67 621 67 500 67 379 108 279 196 192 279 108 383 62 500 62 621 62 721 108 808 192M438 392V642L642 517 438 392Z"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="destacar__texto">
+                "Estava procurando meu primeiro emprego, mas pediam sempre
+                experiência. Fiz o curso e fui chamadas por 2 multinacionais"
+
+                <span class="destacar__nome"> Laryssa Marques </span>
+              </div>
+            </div>
+
+            <div class="destacar__item">
+              <div class="destacar__video">
+                <img
+                  loading="lazy"
+                  src=""
+                  fakeSRC="j9CyCjOTRzA"
+                  alt="Thumbnail do Vídeo"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="e-font-icon-svg e-eicon-play"
+                  viewBox="0 0 1000 1000"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M838 162C746 71 633 25 500 25 371 25 258 71 163 162 71 254 25 367 25 500 25 633 71 746 163 837 254 929 367 979 500 979 633 979 746 933 838 837 929 746 975 633 975 500 975 367 929 254 838 162M808 192C892 279 933 379 933 500 933 621 892 725 808 808 725 892 621 938 500 938 379 938 279 896 196 808 113 725 67 621 67 500 67 379 108 279 196 192 279 108 383 62 500 62 621 62 721 108 808 192M438 392V642L642 517 438 392Z"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="destacar__texto">
+                "Depois do curso, implementei o método impressionador, virei uma
+                referência na minha empresa e fui promovido muito rápido"
+
+                <span class="destacar__nome"> Heitor Portela </span>
+              </div>
+            </div>
+
+            <div class="destacar__item">
+              <div class="destacar__video">
+                <img
+                  loading="lazy"
+                  src=""
+                  fakeSRC="5vCRH7kI2mA"
+                  alt="Thumbnail do Vídeo"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="e-font-icon-svg e-eicon-play"
+                  viewBox="0 0 1000 1000"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M838 162C746 71 633 25 500 25 371 25 258 71 163 162 71 254 25 367 25 500 25 633 71 746 163 837 254 929 367 979 500 979 633 979 746 933 838 837 929 746 975 633 975 500 975 367 929 254 838 162M808 192C892 279 933 379 933 500 933 621 892 725 808 808 725 892 621 938 500 938 379 938 279 896 196 808 113 725 67 621 67 500 67 379 108 279 196 192 279 108 383 62 500 62 621 62 721 108 808 192M438 392V642L642 517 438 392Z"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="destacar__texto">
+                "Fiquei desempregado com 46 anos, mas depois que fiz o curso
+                consegui chamar atenção pro meu currículo e fui contratado"
+
+                <span class="destacar__nome"> Reinaldo Neves </span>
+              </div>
+            </div>
+
+            <div class="destacar__item">
+              <div class="destacar__video">
+                <img
+                  loading="lazy"
+                  src=""
+                  fakeSRC="ThcNKtQzvAk"
+                  alt="Thumbnail do Vídeo"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="e-font-icon-svg e-eicon-play"
+                  viewBox="0 0 1000 1000"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M838 162C746 71 633 25 500 25 371 25 258 71 163 162 71 254 25 367 25 500 25 633 71 746 163 837 254 929 367 979 500 979 633 979 746 933 838 837 929 746 975 633 975 500 975 367 929 254 838 162M808 192C892 279 933 379 933 500 933 621 892 725 808 808 725 892 621 938 500 938 379 938 279 896 196 808 113 725 67 621 67 500 67 379 108 279 196 192 279 108 383 62 500 62 621 62 721 108 808 192M438 392V642L642 517 438 392Z"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="destacar__texto">
+                "Tinha tentado outros cursos e nada funcionava. Entrei no
+                impressionador e hoje estou assumindo a gerência na empresa"
+
+                <span class="destacar__nome"> João Victor </span>
+              </div>
+            </div>
+
+            <div class="destacar__item">
+              <div class="destacar__video">
+                <img
+                  loading="lazy"
+                  src=""
+                  fakeSRC="ZxTAxOrfLPg"
+                  alt="Thumbnail do Vídeo"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="e-font-icon-svg e-eicon-play"
+                  viewBox="0 0 1000 1000"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M838 162C746 71 633 25 500 25 371 25 258 71 163 162 71 254 25 367 25 500 25 633 71 746 163 837 254 929 367 979 500 979 633 979 746 933 838 837 929 746 975 633 975 500 975 367 929 254 838 162M808 192C892 279 933 379 933 500 933 621 892 725 808 808 725 892 621 938 500 938 379 938 279 896 196 808 113 725 67 621 67 500 67 379 108 279 196 192 279 108 383 62 500 62 621 62 721 108 808 192M438 392V642L642 517 438 392Z"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="destacar__texto">
+                "Em uma semana eu recebi 7 propostas de emprego, aceitei uma
+                delas e hoje ganho 100% a mais do que ganhava"
+
+                <span class="destacar__nome"> Felipe de Goes </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div
+          class="destacar__diferencial ef-slide destacar__diferencial--light"
+        >
+          <div class="destacar__textos">
+            <h2>
+              O que é a
+              <span class="realce-azul--escuro"
+                ><b>Comunidade Impressionadora</b></span
+              >
+            </h2>
+
+            <p>
+              Entenda como funciona a assinatura da Hashtag e matricule-se para
+              se destacar em qualquer empresa
+            </p>
+
+            <div class="hero__alunos">
+              <div class="alunos">
+                <div class="alunos__item">
+                  <img
+                    loading="lazy"
+                    src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/alunos-1.webp"
+                    alt="Aluno Hashtag"
+                  />
+                </div>
+                <div class="alunos__item">
+                  <img
+                    loading="lazy"
+                    src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/alunos-2.webp"
+                    alt="Aluno Hashtag"
+                  />
+                </div>
+                <div class="alunos__item">
+                  <img
+                    loading="lazy"
+                    src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/alunos-3.webp"
+                    alt="Aluno Hashtag"
+                  />
+                </div>
+                <div class="alunos__item">
+                  <img
+                    loading="lazy"
+                    src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/alunos-4.webp"
+                    alt="Aluno Hashtag"
+                  />
+                </div>
+              </div>
+
+              <p class="nowrap"><b>+110mil</b> Alunos</p>
+            </div>
+          </div>
+
+          <div class="destacar__imagem destacar__imagem--margin">
+            <img
+              loading="lazy"
+              width="488"
+              height="341"
+              style="aspect-ratio: 488/341"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/diferencial-1.webp"
+              alt="Dashboard de Power BI"
+            />
+          </div>
+        </div>
+
+        <div class="destacar__diferencial ef-slide">
+          <div class="destacar__textos">
+            <h2>
+              Portal de
+              <span class="realce-azul">Cursos</span>
+            </h2>
+
+            <p>
+              Aulas gravadas e atualizadas todo mês para você poder assistir no
+              seu ritmo, quando quiser e quantas vezes quiser. Com apostilas e
+              materiais extras e disponível para assistir pelo computador,
+              celular, tablet ou qualquer plataforma.
+            </p>
+          </div>
+
+          <div class="destacar__imagem destacar__imagem--margin">
+            <img
+              loading="lazy"
+              width="573"
+              height="369"
+              style="aspect-ratio: 573/369"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/diferencial-2.webp"
+              alt="Notebook com o Portal Hashtag"
+            />
+          </div>
+
+          <img
+            loading="lazy"
+            width="772"
+            height="346"
+            style="aspect-ratio: 772/346"
+            src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/fundo-diferencial-1.webp"
+            alt="Cursos da Comunidade"
+            class="destacar__fundo"
+          />
+        </div>
+
+        <div class="destacar__diferencial ef-slide">
+          <div class="destacar__textos">
+            <h2 class="fuga">
+              Realidade do Mercado de Trabalho -
+              <span class="realce-azul">Projetos e Exercícios</span>
+            </h2>
+
+            <p>
+              Exercícios e mais de 50 Projetos Práticos em todo o conteúdo para
+              você poder ter um currículo diferenciado mesmo enquanto aprende.
+              Aprenda sempre com o que realmente é usado nas empresas.
+            </p>
+          </div>
+
+          <div class="destacar__imagem">
+            <img
+              loading="lazy"
+              width="601"
+              height="279"
+              style="aspect-ratio: 601/279"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/diferencial-3.webp"
+              alt="Códigos em Python"
+            />
+          </div>
+        </div>
+
+        <div class="destacar__diferencial ef-slide">
+          <div class="destacar__textos">
+            <h2>Banco de <span class="realce-azul">Vagas</span></h2>
+
+            <p>
+              Tenha acesso a vagas exclusivas disponibilizadas por empresas
+              parceiras diretamente aos alunos da Hashtag
+            </p>
+          </div>
+
+          <div class="destacar__imagem destacar__imagem--margin">
+            <img
+              loading="lazy"
+              width="601"
+              height="307"
+              style="aspect-ratio: 601/307"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/diferencial-4.webp"
+              alt="Banco de Vagas da Hashtag"
+            />
+          </div>
+        </div>
+
+        <div class="destacar__diferencial ef-slide">
+          <div class="destacar__textos">
+            <h2>
+              Didática do <span class="realce-azul">Básico ao Avançado</span>
+            </h2>
+
+            <p>
+              Uma dos principais pilares de todo professor da Hashtag é ter uma
+              didática realmente diferenciada. Todos os cursos são construídos
+              de forma completa, para te ensinar tudo o que você precisa do
+              básico ao avançado, com uma didática passo a passo que garante que
+              independente do seu nível atual ou da sua área você vai conseguir
+              aprender
+            </p>
+          </div>
+
+          <div class="destacar__imagem destacar__imagem--margin-s">
+            <img
+              loading="lazy"
+              width="474"
+              height="334"
+              style="aspect-ratio: 474/334"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/diferencial-5.webp"
+              alt="Portal Hashtag"
+            />
+          </div>
+        </div>
+
+        <a href="#secao-oferta" class="botao"
+          ><span>Garanta sua vaga</span>
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+            >
+              <rect
+                width="20"
+                height="20"
+                transform="translate(0.5)"
+                fill="black"
+                fill-opacity="0.01"
+              ></rect>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.3632 4.19527C11.6236 3.93491 12.0457 3.93491 12.306 4.19527L17.6394 9.5286C17.8997 9.78895 17.8997 10.2111 17.6394 10.4714L12.306 15.8048C12.0457 16.0651 11.6236 16.0651 11.3632 15.8048C11.1029 15.5444 11.1029 15.1223 11.3632 14.8619L15.5585 10.6667H3.83464C3.46645 10.6667 3.16797 10.3682 3.16797 10C3.16797 9.63182 3.46645 9.33334 3.83464 9.33334H15.5585L11.3632 5.13807C11.1029 4.87772 11.1029 4.45562 11.3632 4.19527Z"
+                fill="black"
+              ></path></svg></span
+        ></a>
+      </section>
+
+      <section class="secao largura-total diferenciais">
+        <div class="comparacao">
+          <div
+            class="comparacao__item comparacao__item--titulo comparacao__item--tradicional comparacao__item--hidem"
+          >
+            <h3>Ensino Tradicional</h3>
+          </div>
+
+          <div
+            class="comparacao__item comparacao__item--titulo comparacao__item--hidem"
+          >
+            <img
+              loading="lazy"
+              width="27"
+              height="38"
+              style="aspect-ratio: 27/38"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/logo-h.webp"
+              alt="Logo Hashtag"
+            />
+            <h3>Hashtag Treinamentos</h3>
+          </div>
+
+          <div
+            class="comparacao__item comparacao__item--titulo comparacao__item--tradicional ef-slide-100"
+            aria-hidden="true"
+          >
+            <h3>Ensino Tradicional</h3>
+          </div>
+
+          <div class="comparacao__item ef-slide-100">
+            <img
+              loading="lazy"
+              width="21"
+              height="21"
+              style="aspect-ratio: 21/21"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/x.webp"
+              alt="Check"
+            />
+            <p>Engessado, desatualizado e sem aplicações reais</p>
+          </div>
+
+          <div
+            class="comparacao__item comparacao__item--titulo ef-slide-100"
+            aria-hidden="true"
+          >
+            <img
+              loading="lazy"
+              width="27"
+              height="38"
+              style="aspect-ratio: 27/38"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/logo-h.webp"
+              alt="Logo Hashtag"
+            />
+            <h3>Hashtag Treinamentos</h3>
+          </div>
+
+          <div class="comparacao__item ef-slide-100">
+            <img
+              loading="lazy"
+              width="21"
+              height="21"
+              style="aspect-ratio: 21/21"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/check-quadrado.webp"
+              alt="Check"
+            />
+            <p>
+              Atualizado, dinâmico e que te prepara pra realidade do mercado
+            </p>
+          </div>
+
+          <hr aria-hidden="true" class="ef-slide-100" />
+
+          <div
+            class="comparacao__item comparacao__item--titulo comparacao__item--tradicional ef-slide-100"
+            aria-hidden="true"
+          >
+            <h3>Ensino Tradicional</h3>
+          </div>
+
+          <div class="comparacao__item ef-slide-100">
+            <img
+              loading="lazy"
+              width="21"
+              height="21"
+              style="aspect-ratio: 21/21"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/x.webp"
+              alt="Check"
+            />
+            <p>Sem didática, linguagem muito técnica e difícil de acompanhar</p>
+          </div>
+
+          <div
+            class="comparacao__item comparacao__item--titulo ef-slide-100"
+            aria-hidden="true"
+          >
+            <img
+              loading="lazy"
+              width="27"
+              height="38"
+              style="aspect-ratio: 27/38"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/logo-h.webp"
+              alt="Logo Hashtag"
+            />
+            <h3>Hashtag Treinamentos</h3>
+          </div>
+
+          <div class="comparacao__item ef-slide-100">
+            <img
+              loading="lazy"
+              width="21"
+              height="21"
+              style="aspect-ratio: 21/21"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/check-quadrado.webp"
+              alt="Check"
+            />
+            <p>
+              Didática e linguagem simples, passo a passo do zero, te pegando
+              pela mão em cada desafio pra você entender tudo, independente do
+              seu nível
+            </p>
+          </div>
+
+          <hr aria-hidden="true" class="ef-slide-100" />
+
+          <div
+            class="comparacao__item comparacao__item--titulo comparacao__item--tradicional ef-slide-100"
+            aria-hidden="true"
+          >
+            <h3>Ensino Tradicional</h3>
+          </div>
+
+          <div class="comparacao__item ef-slide-100">
+            <img
+              loading="lazy"
+              width="21"
+              height="21"
+              style="aspect-ratio: 21/21"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/x.webp"
+              alt="Check"
+            />
+            <p>Sem suporte a dúvidas</p>
+          </div>
+
+          <div
+            class="comparacao__item comparacao__item--titulo ef-slide-100"
+            aria-hidden="true"
+          >
+            <img
+              loading="lazy"
+              width="27"
+              height="38"
+              style="aspect-ratio: 27/38"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/logo-h.webp"
+              alt="Logo Hashtag"
+            />
+            <h3>Hashtag Treinamentos</h3>
+          </div>
+
+          <div class="comparacao__item ef-slide-100">
+            <img
+              loading="lazy"
+              width="21"
+              height="21"
+              style="aspect-ratio: 21/21"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/check-quadrado.webp"
+              alt="Check"
+            />
+            <p>
+              Acompanhamento completo pra qualquer dúvida do curso e do seu
+              trabalho com especialistas
+            </p>
+          </div>
+
+          <hr aria-hidden="true" class="ef-slide-100" />
+
+          <div
+            class="comparacao__item comparacao__item--titulo comparacao__item--tradicional ef-slide-100"
+            aria-hidden="true"
+          >
+            <h3>Ensino Tradicional</h3>
+          </div>
+
+          <div class="comparacao__item ef-slide-100">
+            <img
+              loading="lazy"
+              width="21"
+              height="21"
+              style="aspect-ratio: 21/21"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/x.webp"
+              alt="Check"
+            />
+            <p>Sem contato com outros alunos</p>
+          </div>
+
+          <div
+            class="comparacao__item comparacao__item--titulo ef-slide-100"
+            aria-hidden="true"
+          >
+            <img
+              loading="lazy"
+              width="27"
+              height="38"
+              style="aspect-ratio: 27/38"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/logo-h.webp"
+              alt="Logo Hashtag"
+            />
+            <h3>Hashtag Treinamentos</h3>
+          </div>
+
+          <div class="comparacao__item ef-slide-100">
+            <img
+              loading="lazy"
+              width="21"
+              height="21"
+              style="aspect-ratio: 21/21"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/check-quadrado.webp"
+              alt="Check"
+            />
+            <p>
+              Uma verdadeira comunidade de alunos pra troca de conhecimento e
+              experiência
+            </p>
+          </div>
+
+          <hr aria-hidden="true" class="ef-slide-100" />
+
+          <div
+            class="comparacao__item comparacao__item--titulo comparacao__item--tradicional ef-slide-100"
+            aria-hidden="true"
+          >
+            <h3>Ensino Tradicional</h3>
+          </div>
+
+          <div class="comparacao__item ef-slide-100">
+            <img
+              loading="lazy"
+              width="21"
+              height="21"
+              style="aspect-ratio: 21/21"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/x.webp"
+              alt="Check"
+            />
+            <p>Sem exercícios pra praticar</p>
+          </div>
+
+          <div
+            class="comparacao__item comparacao__item--titulo ef-slide-100"
+            aria-hidden="true"
+          >
+            <img
+              loading="lazy"
+              width="27"
+              height="38"
+              style="aspect-ratio: 27/38"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/logo-h.webp"
+              alt="Logo Hashtag"
+            />
+            <h3>Hashtag Treinamentos</h3>
+          </div>
+
+          <div class="comparacao__item ef-slide-100">
+            <img
+              loading="lazy"
+              width="21"
+              height="21"
+              style="aspect-ratio: 21/21"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/check-quadrado.webp"
+              alt="Check"
+            />
+            <p>
+              Exercícios, desafios e projetos reais ao longo de todo o Programa
+              pra você dominar todo o conteúdo
+            </p>
+          </div>
+        </div>
+
+        <a href="#secao-oferta" class="botao"
+          ><span>Seja aluno</span>
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+            >
+              <rect
+                width="20"
+                height="20"
+                transform="translate(0.5)"
+                fill="black"
+                fill-opacity="0.01"
+              ></rect>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.3632 4.19527C11.6236 3.93491 12.0457 3.93491 12.306 4.19527L17.6394 9.5286C17.8997 9.78895 17.8997 10.2111 17.6394 10.4714L12.306 15.8048C12.0457 16.0651 11.6236 16.0651 11.3632 15.8048C11.1029 15.5444 11.1029 15.1223 11.3632 14.8619L15.5585 10.6667H3.83464C3.46645 10.6667 3.16797 10.3682 3.16797 10C3.16797 9.63182 3.46645 9.33334 3.83464 9.33334H15.5585L11.3632 5.13807C11.1029 4.87772 11.1029 4.45562 11.3632 4.19527Z"
+                fill="black"
+              ></path></svg></span
+        ></a>
+
+        <h2 class="text-balance">
+          Tudo isso com
+          <b
+            ><span class="realce-azul">Trilhas Personalizadas</span> para o seu
+            objetivo</b
+          >
+        </h2>
+
+        <div class="trilhas">
+          <div class="trilhas__item ef-slide">
+            <img
+              loading="lazy"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/tres-pontos.webp"
+              alt="Três pontos"
+              class="trilhas__trespontos"
+            />
+
+            <img
+              loading="lazy"
+              width="274"
+              height="238"
+              style="aspect-ratio: 274/238"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/trilha-1.webp"
+              alt="Trilha Personalizada"
+              class="trilhas__fundo"
+            />
+
+            <div>
+              <p class="trilhas__texto">
+                Trilha Desenvolvedor
+                <span class="realce-azul">Web/Full Stack</span>
+              </p>
+
+              <a
+                href="javascript:void(0)"
+                class="trilhas__botao botao js-botaoPopupTrilha"
+                textotrilha="Aprenda tudo o que você precisa de programação e desenvolvimento para se tornar um Desenvolvedor Full Stack de referência. Javascript, React, Node, React Native, Banco de Dados, Git e GitHub, Express.JS, HTML/CSS, Tailwind e muito mais. Ao entrar na comunidade você vai poder ter acesso a essa trilha sem nenhum custo adicional se desejar se tornar um desenvolvedor completo."
+                >Saber mais</a
+              >
+            </div>
+          </div>
+
+          <div class="trilhas__item ef-slide">
+            <img
+              loading="lazy"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/tres-pontos.webp"
+              alt="Três pontos"
+              class="trilhas__trespontos"
+            />
+
+            <img
+              loading="lazy"
+              width="274"
+              height="238"
+              style="aspect-ratio: 274/238"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/trilha-2.webp"
+              alt="Trilha Personalizada"
+              class="trilhas__fundo"
+            />
+
+            <div>
+              <p class="trilhas__texto">
+                Trilha Analista de
+                <span class="realce-azul">Dados</span>
+              </p>
+
+              <a
+                href="javascript:void(0)"
+                class="trilhas__botao botao js-botaoPopupTrilha"
+                textotrilha="Torne-se um Analista de Dados de referência, aprendendo tudo o que você precisa de Excel, Power BI, SQL, Python e Inteligência Artificial para se destacar em qualquer empresa. Construa projetos práticos em cada ferramenta e tenha um caminho de estudos otimizado e personalizado para a área de dados. Ao entrar na comunidade você vai poder ter acesso a essa trilha sem nenhum custo adicional se desejar se tornar um analista de dados completo."
+                >Saber mais</a
+              >
+            </div>
+          </div>
+
+          <div class="trilhas__item ef-slide">
+            <img
+              loading="lazy"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/tres-pontos.webp"
+              alt="Três pontos"
+              class="trilhas__trespontos"
+            />
+
+            <img
+              loading="lazy"
+              width="274"
+              height="238"
+              style="aspect-ratio: 274/238"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/trilha-3.webp"
+              alt="Trilha Personalizada"
+              class="trilhas__fundo"
+            />
+
+            <div>
+              <p class="trilhas__texto">
+                Trilha Desenvolvedor
+                <span class="realce-azul">Front-End</span>
+              </p>
+
+              <a
+                href="javascript:void(0)"
+                class="trilhas__botao botao js-botaoPopupTrilha"
+                textotrilha="Aprenda tudo o que você precisa de programação e desenvolvimento para se tornar um Desenvolvedor Front End de referência. HTML/CSS, Javascript, React, React Native, Git e GitHub, Tailwind, Bootstrap, SASS e muito mais. Ao entrar na comunidade você vai poder ter acesso a essa trilha sem nenhum custo adicional se desejar se tornar um desenvolvedor front end completo."
+                >Saber mais</a
+              >
+            </div>
+          </div>
+
+          <div class="trilhas__item ef-slide">
+            <img
+              loading="lazy"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/tres-pontos.webp"
+              alt="Três pontos"
+              class="trilhas__trespontos"
+            />
+
+            <img
+              loading="lazy"
+              width="274"
+              height="238"
+              style="aspect-ratio: 274/238"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/trilha-4.webp"
+              alt="Trilha Personalizada"
+              class="trilhas__fundo"
+            />
+
+            <div>
+              <p class="trilhas__texto">
+                Trilha Desenvolvedor
+                <span class="realce-azul">Back-End</span>
+              </p>
+
+              <a
+                href="javascript:void(0)"
+                class="trilhas__botao botao js-botaoPopupTrilha"
+                textotrilha="Aprenda tudo o que você precisa de programação e desenvolvimento para se tornar um Desenvolvedor Backend de referência. Javascript, Node.Js, SQL, Banco de Dados, Express.JS, Git e GitHub, Python e muito mais. Ao entrar na comunidade você vai poder ter acesso a essa trilha sem nenhum custo adicional se desejar se tornar um desenvolvedor backend completo."
+                >Saber mais</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="muito-mais">
+          <p class="h3">e muito mais...</p>
+          <p>
+            <b>Não sabe qual trilha seguir ou por onde começar?</b> Nosso time
+            te ajuda a escolher uma trilha personalizada para. o seu objetivo
+          </p>
+        </div>
+
+        <div class="suporte ef-fade">
+          <div class="suporte__bloco">
+            <h3>
+              E ainda com <span class="realce-azul">O MELHOR</span> suporte aos
+              alunos da internet
+            </h3>
+
+            <p>
+              Equipe de especialistas reais, tirando todas as suas dúvidas +
+              Hashbot, a inteligência artificial de dúvidas instantâneas.
+            </p>
+
+            <a href="#secao-oferta" class="botao botao--sm"
+              ><span>Escolha seu formato preferido</span>
+              <span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="20"
+                  viewBox="0 0 21 20"
+                  fill="none"
+                >
+                  <rect
+                    width="20"
+                    height="20"
+                    transform="translate(0.5)"
+                    fill="black"
+                    fill-opacity="0.01"
+                  ></rect>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.3632 4.19527C11.6236 3.93491 12.0457 3.93491 12.306 4.19527L17.6394 9.5286C17.8997 9.78895 17.8997 10.2111 17.6394 10.4714L12.306 15.8048C12.0457 16.0651 11.6236 16.0651 11.3632 15.8048C11.1029 15.5444 11.1029 15.1223 11.3632 14.8619L15.5585 10.6667H3.83464C3.46645 10.6667 3.16797 10.3682 3.16797 10C3.16797 9.63182 3.46645 9.33334 3.83464 9.33334H15.5585L11.3632 5.13807C11.1029 4.87772 11.1029 4.45562 11.3632 4.19527Z"
+                    fill="black"
+                  ></path></svg></span
+            ></a>
+          </div>
+
+          <div class="suporte__imagem">
+            <img
+              loading="lazy"
+              width="580"
+              height="389"
+              style="aspect-ratio: 580/389"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/time-comunidade.webp"
+              alt="Professores da Comunidade Impressionadora"
+              class="suporte__comunidade"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="secao-oferta" class="secao oferta largura-total">
+        <div class="oferta__caixa ef-fade">
+          <div class="oferta__container">
+            <div class="oferta__titulo">
+              <img
+                loading="lazy"
+                width="51"
+                height="71"
+                style="aspect-ratio: 51/71"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/logo-h-51.webp"
+                alt="Logo Hashtag Treinamentos"
+              />
+              <img
+                loading="lazy"
+                width="144"
+                height="40"
+                style="aspect-ratio: 144/40"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/hashtag-treinamentos.svg"
+                alt="Hashtag Treinamentos"
+              />
+            </div>
+            <h2>Comunidade<br />Impressionadora</h2>
+            <hr />
+            <p>
+              Preço individual de todos os cursos:
+              <span class="oferta__riscado">R$ 12.000</span>
+            </p>
+            <p>
+              <span class="oferta__preco js-preco-parcelado">R$ 124,75</span
+              >/mês
+            </p>
+            <a href="#" class="js-botaoPadrao botao"
+              ><span>Fazer minha inscrição</span>
+              <span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="20"
+                  viewBox="0 0 21 20"
+                  fill="none"
+                >
+                  <rect
+                    width="20"
+                    height="20"
+                    transform="translate(0.5)"
+                    fill="black"
+                    fill-opacity="0.01"
+                  ></rect>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.3632 4.19527C11.6236 3.93491 12.0457 3.93491 12.306 4.19527L17.6394 9.5286C17.8997 9.78895 17.8997 10.2111 17.6394 10.4714L12.306 15.8048C12.0457 16.0651 11.6236 16.0651 11.3632 15.8048C11.1029 15.5444 11.1029 15.1223 11.3632 14.8619L15.5585 10.6667H3.83464C3.46645 10.6667 3.16797 10.3682 3.16797 10C3.16797 9.63182 3.46645 9.33334 3.83464 9.33334H15.5585L11.3632 5.13807C11.1029 4.87772 11.1029 4.45562 11.3632 4.19527Z"
+                    fill="black"
+                  ></path></svg></span
+            ></a>
+            <img
+              loading="lazy"
+              width="290"
+              height="47"
+              style="aspect-ratio: 290/47"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/formas-pagamento.svg"
+              alt="Formas de Pagamento"
+            />
+          </div>
+
+          <img
+            loading="lazy"
+            width="478"
+            height="59"
+            style="aspect-ratio: 478/59"
+            src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/complemento-oferta.webp"
+            alt="Fundo da Oferta"
+            class="oferta__fundo"
+          />
+        </div>
+      </section>
+
+      <section class="secao garantia">
+        <div class="garantia__30dias">
+          <div class="garantia__30">30</div>
+
+          <div class="garantia__textos-garantia">
+            <p class="garantia__texto-garantia">garantia</p>
+            <p class="garantia__dias-garantia">
+              dias de<br />
+              garantia
+            </p>
+            <img
+              loading="lazy"
+              width="166"
+              height="30"
+              style="aspect-ratio: 166/30"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/5-estrelas.webp"
+              alt="5 estrelas"
+            />
+          </div>
+        </div>
+
+        <div class="garantia__textos">
+          <h2>
+            Garantia incondicional de <span class="realce-azul">30 dias</span>
+          </h2>
+
+          <p>
+            Se por qualquer motivo você não se identificar com o curso ou se
+            arrepender, você pode acionar a
+            <b> garantia incondicional de 30 dias. </b><br /><br />
+            Ou seja, você pode assistir ao curso inteiro, se não gostar,
+            <b>
+              é só pedir o seu dinheiro de volta dentro dos primeiros 30 dias.
+            </b>
+          </p>
+        </div>
+      </section>
+
+      <section class="secao certificado largura-total">
+        <div class="certificado__caixa ef-slide">
+          <div class="certificado__bloco">
+            <h3>
+              Certificado em todos os
+              <span class="realce-azul">cursos e trilhas</span>
+            </h3>
+
+            <p>
+              Aceito e reconhecido em todo o Brasil, por empresas e instituições
+              de ensino.
+            </p>
+
+            <a href="#secao-oferta" class="botao botao--sm"
+              ><span>Faça sua matrícula</span>
+              <span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="20"
+                  viewBox="0 0 21 20"
+                  fill="none"
+                >
+                  <rect
+                    width="20"
+                    height="20"
+                    transform="translate(0.5)"
+                    fill="black"
+                    fill-opacity="0.01"
+                  ></rect>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.3632 4.19527C11.6236 3.93491 12.0457 3.93491 12.306 4.19527L17.6394 9.5286C17.8997 9.78895 17.8997 10.2111 17.6394 10.4714L12.306 15.8048C12.0457 16.0651 11.6236 16.0651 11.3632 15.8048C11.1029 15.5444 11.1029 15.1223 11.3632 14.8619L15.5585 10.6667H3.83464C3.46645 10.6667 3.16797 10.3682 3.16797 10C3.16797 9.63182 3.46645 9.33334 3.83464 9.33334H15.5585L11.3632 5.13807C11.1029 4.87772 11.1029 4.45562 11.3632 4.19527Z"
+                    fill="black"
+                  ></path></svg></span
+            ></a>
+          </div>
+
+          <img
+            loading="lazy"
+            width="841"
+            height="591"
+            style="aspect-ratio: 841/591"
+            src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/certificado.webp"
+            alt="Certificado da Hashtag"
+            class="certificado__img"
+          />
+
+          <img
+            loading="lazy"
+            src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/luz-certificado.webp"
+            alt=""
+            class="certificado__luz"
+          />
+        </div>
+      </section>
+
+      <section class="secao duvidas">
+        <h3>
+          <span class="realce-azul">Ainda tem dúvidas?</span>
+          Ainda tem dúvidas? Fale com um dos nossos consultores
+        </h3>
+
+        <a
+          target="_blank"
+          href="https://api.whatsapp.com/send?phone=5521996582442&text=Ol%C3%A1%2C+gostaria+de+tirar+uma+d%C3%BAvida++sobre+a+Comunidade+Impressionadora"
+          class="botao botao--wpp"
+          ><span>Falar no WhatsApp</span>
+          <span>
+            <img
+              loading="lazy"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/Ícone/icone-whatsapp.svg"
+              alt="Ícone Whatsapp" /></span
+        ></a>
+      </section>
+
+      <section class="secao oque">
+        <div class="oque__titulo">
+          <img
+            loading="lazy"
+            width="51"
+            height="71"
+            style="aspect-ratio: 51/71"
+            src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/logo-h-51.webp"
+            alt="Logo Hashtag Treinamentos"
+          />
+          <img
+            loading="lazy"
+            width="251"
+            height="22"
+            style="aspect-ratio: 251/22"
+            src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/hashtag-treinamentos-h.svg"
+            alt="Hashtag Treinamentos"
+          />
+        </div>
+
+        <h3>
+          O que é a Hashtag Treinamentos e a
+          <span class="realce-azul">Comunidade Impressionadora?</span>
+        </h3>
+
+        <div class="oque__blocos">
+          <div class="oque__bloco ef-slide">
+            <div class="oque__icone">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/oque-1.svg"
+                alt="Ícone sobre a Hashtag"
+              />
+            </div>
+            <p>
+              A Hashtag Treinamentos é uma das
+              <b>maiores escola da América Latina</b>
+              em treinamentos nas
+              <b>principais ferramentas do mercado de trabalho.</b> <br /><br />
+              Seja em ferramentas de Negócios e Análise de Dados ou em
+              Linguagens de Programação, nossos cursos já ajudaram mais de
+              <b>100.000 alunos em todo o Brasil e até fora do Brasil.</b>
+            </p>
+          </div>
+
+          <div class="oque__bloco ef-slide">
+            <div class="oque__icone">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/oque-2.svg"
+                alt="Ícone sobre a Hashtag"
+              />
+            </div>
+            <p>
+              Com mais de
+              <b>
+                1.5 milhões de inscritos no Youtube e mais de 750 mil seguidores
+                no Instagram</b
+              >, se você quer se destacar no Mercado de Trabalho, aqui na
+              Hashtag Treinamentos você vai ter tudo o que precisa, do básico ao
+              avançado.
+            </p>
+          </div>
+
+          <div class="oque__bloco ef-slide">
+            <div class="oque__icone">
+              <img
+                loading="lazy"
+                src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Comunidade Impressionadora/oque-3.svg"
+                alt="Ícone sobre a Hashtag"
+              />
+            </div>
+            <p>
+              A Comunidade Impressionadora é a assinatura oficial da Hashtag
+              Treinamentos. <br /><br />
+              Com apenas 1 único valor você tem acesso
+              <b>
+                aos melhores treinamentos do Mercado para se tornar uma
+                referência em qualquer empresa.
+              </b>
+            </p>
+          </div>
+        </div>
+
+        <a href="#secao-oferta" class="botao"
+          ><span>Começar agora</span>
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+            >
+              <rect
+                width="20"
+                height="20"
+                transform="translate(0.5)"
+                fill="black"
+                fill-opacity="0.01"
+              ></rect>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.3632 4.19527C11.6236 3.93491 12.0457 3.93491 12.306 4.19527L17.6394 9.5286C17.8997 9.78895 17.8997 10.2111 17.6394 10.4714L12.306 15.8048C12.0457 16.0651 11.6236 16.0651 11.3632 15.8048C11.1029 15.5444 11.1029 15.1223 11.3632 14.8619L15.5585 10.6667H3.83464C3.46645 10.6667 3.16797 10.3682 3.16797 10C3.16797 9.63182 3.46645 9.33334 3.83464 9.33334H15.5585L11.3632 5.13807C11.1029 4.87772 11.1029 4.45562 11.3632 4.19527Z"
+                fill="black"
+              ></path></svg></span
+        ></a>
+      </section>
+    </main>
+
+    <!-- <?php get_footer('hashtag'); ?> -->
+
+    <div class="popup">
+      <div class="popup-container">
+        <div class="popup-spinner">
+          <img
+            loading="lazy"
+            src="https://daks2k3a4ib2z.cloudfront.net/61b9e0dd381626819c8d4f83/6331d9916652e734346e35db_9.gif"
+            alt=""
+          />
+        </div>
+
+        <button
+          type="button"
+          class="btn btn--fechar btn--popup"
+          id="botaoPopupFechar"
+        >
+          X
+        </button>
+
+        <form
+          method="POST"
+          action="https://hashtagtreinamentos.activehosted.com/proc.php"
+          id="_form_7807_"
+          class="form"
+          novalidate
+        >
+          <!-- Inputs obrigatórios dos formulários do activecampaign -->
+          <input type="hidden" name="u" value="7807" />
+          <input type="hidden" name="f" value="7807" />
+          <input type="hidden" name="act" value="sub" />
+
+          <div class="form-inputs">
+            <div class="form-campo">
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="*Seu nome e sobrenome"
+                required
+              />
+              <small></small>
+            </div>
+
+            <div class="form-campo">
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="*Seu melhor e-mail"
+                required
+              />
+              <small></small>
+            </div>
+
+            <div class="form-campo form-campo--duplo">
+              <input
+                type="text"
+                id="field[59]"
+                name="field[59]"
+                value=""
+                placeholder="DDD"
+              />
+              <input
+                type="text"
+                id="field[60]"
+                name="field[60]"
+                placeholder="Seu celular"
+              />
+            </div>
+
+            <input type="hidden" name="field[6]" value="" />
+
+            <!-- linkTemp -->
+            <!-- <input type="hidden" name="field[58]" value="" /> -->
+
+            <!-- linkTempIDProduto -->
+            <input type="hidden" name="field[112]" value="" />
+
+            <!-- linkTempIDOferta -->
+            <input type="hidden" name="field[113]" value="" />
+
+            <!-- linkTempSRC -->
+            <input type="hidden" name="field[114]" value="" />
+
+            <!-- linkTempPixBillet -->
+            <input type="hidden" name="field[115]" value="" />
+          </div>
+
+          <button class="btn btn--hero" id="_form_7807_submit" type="submit">
+            Garantir minha vaga
+          </button>
+        </form>
+
+        <div class="popup__conteudo" style="display: none"></div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <script src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/js/header.js"></script>
+
+    <!-- Infinite Scroller -->
+    <script src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/js/infinite-scroller.js"></script>
+
+    <!-- Barra de Progresso -->
+    <script src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/js/barra-progresso.js"></script>
+
+    <!-- Carrossel -->
+    <script src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/js/carrossel.js"></script>
+
+    <!-- Scroll On View -->
+    <script src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/js/scroll-on-view.js"></script>
+
+    <!-- Ajuste de ano -->
+    <script src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/js/ajuste-ano.js"></script>
+
+    <!-- Precheckout -->
+    <script src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/js/precheckout.js"></script>
+
+    <!-- Trocar Imagens por Vídeo -->
+    <script src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/js/trocar-imagem-video.js"></script>
+
+    <!-- <?php the_field('footer', 'option'); ?> -->
+    <!-- Pega o campo 'footer' da página 'Opções do Site'/https://www.hashtagtreinamentos.com/wp-admin/admin.php?page=opcoes-do-site -->
+  </body>
+</html>

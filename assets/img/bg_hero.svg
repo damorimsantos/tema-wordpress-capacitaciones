@@ -1,0 +1,27 @@
+<svg id="Agrupar_31" data-name="Agrupar 31" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="882.324" viewBox="0 0 1920 882.324">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.075" x2="-0.042" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff8fa"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1.075" x2="-0.042" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f60"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Mask" width="1920" height="882.324" fill="url(#linear-gradient)"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Clip_2" data-name="Clip 2" d="M0,0H1462V1437.65H0Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <rect id="Mask-2" data-name="Mask" width="1920" height="882.324" opacity="0.1" fill="url(#linear-gradient-2)"/>
+  <g id="bg" clip-path="url(#clip-path)">
+    <g id="Oranic_shape" transform="translate(463 -255.238)">
+      <path id="Clip_2-2" data-name="Clip 2" d="M0,0H1462V1437.65H0Z" fill="none"/>
+      <g id="Oranic_shape-2" data-name="Oranic_shape" clip-path="url(#clip-path-2)">
+        <path id="Fill_1" data-name="Fill 1" d="M0,1437.65s76.626-324.976,384.426-434.792c233.515-83.313,336.639,31.7,464.682-41.372,123.634-70.554,73.062-178.761,169.673-304.652C1101.3,549.312,1125.1,568.29,1123.557,474.415c-2.325-141.565-365.575-75.467-562.523-197.667C341.056,140.258,286.188,0,286.188,0H1462V1437.65Z" fill="#f60" opacity="0.2"/>
+      </g>
+    </g>
+  </g>
+</svg>

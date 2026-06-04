@@ -1,0 +1,49 @@
+.semana-consumidor {
+    padding-block: 2.5rem;
+    background-image: linear-gradient(
+        to right,
+        hsl(56, 85%, 55%),
+        hsl(25, 100%, 58%)
+    );
+    color: black;
+    font-weight: 400;
+
+    & .container {
+        flex-flow: row !important;
+        gap: 3.7rem !important;
+        justify-content: center !important;
+
+        @include respond(g) {
+            flex-flow: column !important;
+            align-items: center !important;
+            text-align: center !important;
+            gap: 2rem !important;
+        }
+
+        & div {
+            @include flex($flow: column, $gap: 1.02rem, $align: start);
+
+            @include respond(g) {
+                align-items: center !important;
+                text-align: center !important;
+            }
+        }
+
+        & h2 {
+            font-weight: 600;
+            font-size: 2.8rem;
+
+            @include respond(g) {
+                font-size: 2.4rem;
+            }
+        }
+
+        & p {
+            text-wrap: balance;
+        }
+
+        & a {
+            font-weight: 500;
+        }
+    }
+}

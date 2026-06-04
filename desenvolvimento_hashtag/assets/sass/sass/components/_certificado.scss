@@ -1,0 +1,121 @@
+.certificado {
+    & .container {
+        background-color: $clr-bg-450;
+        flex-flow: row;
+        align-items: normal;
+        border-radius: $border-radius-s;
+        padding: $spc-1100 $spc-1000;
+        position: relative;
+        gap: $spc-500;
+
+        @include respond(g) {
+            flex-flow: column;
+            max-width: 70rem;
+            margin-bottom: 18vw;
+        }
+
+        @include respond(m) {
+            padding: $spc-900 $spc-800;
+        }
+    }
+
+    & h2 {
+        text-align: start;
+        max-width: 58rem;
+
+        @include respond(g) {
+            max-width: none;
+        }
+
+        @include respond(m) {
+            max-width: 40rem;
+        }
+    }
+
+    &__textos {
+        @include flex($flow: column, $gap: $spc-700);
+    }
+
+    &__paragrafos {
+        @include flex($flow: column, $gap: $spc-500);
+        max-width: 45rem;
+        line-height: 1.6;
+
+        @include respond(g) {
+            max-width: none;
+        }
+    }
+
+    &__container-img {
+        @include respond(g) {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3/2;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-10rem) scale(0.9);
+
+        // 1089px
+        @media (max-width: 68.0625em) {
+            transform: translateX(-10rem) scale(0.8);
+            top: 0;
+        }
+
+        @include respond(g) {
+            right: none !important;
+            left: 50% !important;
+            top: 60% !important;
+            transform: translateX(-45%) scale(170%) !important;
+        }
+    }
+
+    &__luz {
+        position: absolute;
+        mix-blend-mode: overlay;
+        z-index: 0;
+        border-radius: $border-radius-s;
+
+        &--desktop {
+            top: 0;
+            right: 0;
+
+            @include respond(g) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            display: none;
+
+            @include respond(g) {
+                display: inline-block;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+
+    & .botao-verde {
+        margin-top: $spc-1300;
+        max-width: 45rem;
+        position: relative;
+        z-index: 999;
+
+        @include respond(m) {
+            margin-top: $spc-1400;
+        }
+
+        @include respond(xm) {
+            margin-top: $spc-1000;
+        }
+
+        @include respond(s) {
+            margin-top: $spc-1000;
+        }
+    }
+}

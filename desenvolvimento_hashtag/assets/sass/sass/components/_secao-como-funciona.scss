@@ -1,0 +1,145 @@
+.como-funciona {
+    & h2:first-child {
+        margin-bottom: $spc-500;
+
+        @include respond(m) {
+            margin: 0;
+            align-self: start;
+            @include flex($flow: column, $align: start);
+            text-align: start;
+        }
+
+        @include respond(xm) {
+            // text-align: left;
+            // align-self: start;
+            // @include flex($flow: column);
+        }
+    }
+
+    &__textos-imgs {
+        @include flex($gap: $spc-1000);
+
+        @include respond(g) {
+            flex-flow: column;
+        }
+    }
+
+    &__textos {
+        @include flex($flow: column, $gap: $spc-500);
+        line-height: 1.6;
+        flex: 1.2;
+
+        @include respond(g) {
+            max-width: 75rem;
+        }
+    }
+
+    &__paragrafos {
+        max-width: 35rem;
+    }
+
+    &__imgs {
+        flex: 1;
+        @include flex(
+            $flow: column,
+            $align: center,
+            $justify: center,
+            $gap: $spc-500
+        );
+        transform: translateY(-3.5rem);
+        width: 100%;
+
+        @include respond(xg) {
+            justify-content: center;
+            transform: translateY(-2rem);
+        }
+
+        @include respond(g) {
+            flex-flow: row;
+            align-items: end;
+            gap: $spc-500;
+        }
+
+        @include respond(xm) {
+            flex-flow: column;
+        }
+    }
+
+    &__img {
+        justify-self: center;
+        display: inline;
+        width: 100%;
+        height: auto;
+
+        @include respond(g) {
+            flex: 1;
+        }
+    }
+
+    &__retangulo-fundo {
+        position: relative;
+        background-image: linear-gradient(200deg, #8b00ff, #060b4a 79%);
+        border-radius: $border-radius-s;
+        width: 100%;
+        aspect-ratio: 5.35/2;
+
+        @include respond(g) {
+            flex: 1;
+        }
+    }
+
+    & .logo-nome-curso--como-funciona {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: $fs-600;
+        width: max-content;
+
+        @include respond(m) {
+            font-size: $fs-500;
+        }
+
+        @include respond(xm) {
+            font-size: $fs-600;
+        }
+
+        @include respond(ss) {
+            font-size: $fs-500;
+        }
+    }
+
+    & .check-list {
+        color: rgba($clr-white, 0.85);
+
+        @include respond(mm) {
+            padding-top: $spc-500;
+            padding-bottom: $spc-500;
+        }
+
+        &__caixa {
+            max-width: 95rem;
+            margin: 0 auto;
+            @include flex($justify: center, $gap: $spc-400);
+            flex-wrap: wrap;
+
+            @include respond(mm) {
+                flex-flow: column;
+                justify-content: start;
+            }
+        }
+
+        &__item {
+            font-weight: 500;
+            line-height: 1.6;
+        }
+    }
+
+    &__h2--baixo {
+        max-width: 100rem;
+    }
+
+    & .botao-verde {
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,21 @@
+# Dependências
+node_modules/
+
+# Configuração local de deploy (contém host/usuário/path — NÃO versionar)
+deploy/deploy.config.json
+
+# Chaves locais de deploy
+deploy/*.ssh
+deploy/*.pem
+deploy/id_*
+
+# Arquivos de sistema
+*.ini
+.DS_Store
+
+# Source maps de build
+*.map
+
+# Python bytecode (scripts/ helpers)
+__pycache__/
+*.pyc

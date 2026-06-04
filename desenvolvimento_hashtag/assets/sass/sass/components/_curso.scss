@@ -1,0 +1,32 @@
+$curso-gap: $spc-200;
+
+.curso {
+  @include flex($align: center, $gap: $curso-gap);
+
+  &--cta {
+    & .curso__item {
+      &:hover,
+      &:active {
+        scale: 1.1;
+        background-color: $clr-bg-600;
+      }
+    }
+  }
+
+  &__item {
+    @include flex($align: center, $gap: $spc-100);
+    border-radius: 100vh;
+    background-color: $clr-bg-700;
+    padding: $spc-300 $spc-600;
+    white-space: nowrap;
+    min-width: max-content;
+    text-decoration: none;
+
+    transition: $transition-function $transition-duration scale,
+      $transition-function $transition-duration background-color;
+  }
+
+  & img {
+    height: 2.5rem;
+  }
+}

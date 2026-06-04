@@ -1,0 +1,379 @@
+:root {
+    --clr-img-before: #{$clr-bg-600};
+    --card-clr-bg: #{$clr-bg-700};
+}
+
+$card-backdrop-filter: 5px;
+$card-border-radius: 7px;
+
+.card {
+    @include flex($flow: column, $gap: $spc-400, $justify: end, $align: center);
+    width: 23.6rem;
+    min-width: 23.6rem;
+    aspect-ratio: 236/299;
+    border-radius: $card-border-radius;
+    position: relative;
+    padding: $spc-500;
+    overflow: hidden;
+    background-color: var(--card-clr-bg);
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(45deg, transparent, $clr-white);
+        mix-blend-mode: soft-light;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        opacity: 100%;
+    }
+
+    &__curso {
+        position: absolute;
+        inset: 0;
+    }
+
+    &__img {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+
+        &::after,
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: soft-light;
+            opacity: 50%;
+            position: absolute;
+            z-index: 0;
+            bottom: 0;
+        }
+
+        &::after {
+            background-image: linear-gradient(to top, black, transparent);
+        }
+
+        &:not(.sem-sombra) {
+            &::before {
+                background-image: linear-gradient(
+                    to top,
+                    var(--clr-img-before),
+                    transparent
+                );
+                mix-blend-mode: normal;
+                height: 50%;
+                opacity: 100%;
+            }
+        }
+    }
+
+    &__nome-curso {
+        @include flex($gap: $spc-100, $justify: end, $align: center);
+        position: relative;
+        z-index: 2;
+        backdrop-filter: blur($card-backdrop-filter);
+        border-radius: $card-border-radius;
+
+        & img {
+            width: 4rem;
+        }
+    }
+
+    &__texto {
+        &--menor {
+            font-size: $fs-300;
+        }
+
+        &--centralizado {
+            align-self: center;
+        }
+    }
+
+    &__fundo-escuro {
+        display: none;
+
+        &--visivel {
+            display: block;
+            content: "";
+            width: 125%;
+            height: 40%;
+            filter: blur(10px);
+            position: absolute;
+            z-index: 0;
+            background-color: $clr-black;
+            bottom: 0;
+        }
+    }
+
+    // Cores
+    &--excel {
+        --clr-img-before: #{$clr-green-600};
+        --card-clr-bg: #{$clr-green-500};
+    }
+
+    &--pbi {
+        --clr-img-before: #{$clr-yellow-600};
+        --card-clr-bg: #{$clr-yellow-450};
+    }
+
+    &--ia {
+        --clr-img-before: #{$clr-blue-550};
+        --card-clr-bg: #{$clr-blue-500};
+    }
+
+    &--powerapps {
+        --clr-img-before: #{$clr-pink-500};
+        --card-clr-bg: #{$clr-pink-400};
+    }
+
+    &--powerautomate {
+        --clr-img-before: #{$clr-blue-250};
+        --card-clr-bg: #{$clr-white};
+
+        // & .card__img {
+        //     &::before {
+        //         background-image: linear-gradient(to top, #193343, transparent);
+        //     }
+        // }
+    }
+
+    &--ppt {
+        --clr-img-before: #{$clr-orange-600};
+        --card-clr-bg: #{$clr-orange-500};
+    }
+
+    &--python {
+        --clr-img-before: #{$clr-blue-600};
+        --card-clr-bg: #{$clr-blue-275};
+    }
+
+    &--javascript {
+        --clr-img-before: #{$clr-black};
+        --card-clr-bg: #{$clr-yellow-450};
+    }
+
+    &--sql {
+        --clr-img-before: #{$clr-blue-450};
+        --card-clr-bg: #{$clr-blue-275};
+    }
+
+    &--htmlcss {
+        --clr-img-before: #{$clr-orange-450};
+        --card-clr-bg: #{$clr-blue-285};
+    }
+
+    &--vba {
+        --clr-img-before: #{$clr-blue-475};
+        --card-clr-bg: #{$clr-blue-265};
+    }
+
+    &--processoseletivo {
+        --clr-img-before: #{$clr-blue-550};
+        --card-clr-bg: #{$clr-blue-275};
+    }
+
+    &--comunicacao {
+        --clr-img-before: #{$clr-purple-600};
+        --card-clr-bg: #{$clr-purple-400};
+    }
+
+    &--perfis {
+        --clr-img-before: #{$clr-blue-600};
+    }
+
+    &--gestaotempo {
+        --clr-img-before: #{$clr-blue-550};
+        --card-clr-bg: #{$clr-blue-550};
+    }
+
+    &--produtividade {
+        --clr-img-before: #{$clr-black};
+        --card-clr-bg: #{$clr-white};
+    }
+
+    &--linkedin {
+        --clr-img-before: #{$clr-blue-450};
+    }
+
+    &--aws {
+        --clr-img-before: #{$clr-black};
+    }
+
+    &--algoritmos {
+        --clr-img-before: #{$clr-purple-350};
+    }
+
+    &--entrevistas {
+        --clr-img-before: #{$clr-black};
+    }
+
+    &--lideranca {
+        --clr-img-before: #{$clr-blue-500};
+    }
+
+    &--feedback {
+        --clr-img-before: #{$clr-purple-350};
+    }
+
+    &--segredos {
+        --clr-img-before: #{$clr-blue-550};
+    }
+
+    &--word {
+        --clr-img-before: #{$clr-blue-500};
+    }
+
+    &--ciencia-dados {
+        &::after {
+            background-image: none;
+        }
+
+        & .card__curso {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &--ingles {
+        & .card {
+            background-color: #0e0d0c;
+
+            &__img {
+                height: 100%;
+                & img {
+                    position: absolute;
+                    z-index: -1;
+                    height: 105%;
+                    bottom: 0;
+                    max-width: none;
+                    transform: translateX(-12%);
+                }
+            }
+        }
+    }
+
+    &--analise-dados {
+        background-color: #f6f4f4 !important;
+
+        & .card__img {
+            // position: absolute;
+            // z-index: 0;
+            // bottom: 0;
+            // z-index: 1;
+            // width: 100%;
+
+            & img {
+                // position: absolute;
+                // bottom: -2rem;
+                // left: 0;
+                // z-index: -1;
+                margin-top: 2rem;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &__botoes {
+        z-index: 99;
+        @include flex($flow: column, $gap: $spc-100);
+    }
+
+    // Cores dos botões
+    &__saber-mais {
+        &--excel {
+            background-color: #168349;
+            border-color: #33c481;
+        }
+
+        &--pbi {
+            background-color: #b67f00;
+            border-color: #f7dc66 !important;
+        }
+
+        &--python {
+            background-color: #008cb4;
+            border-color: #ffe264 !important;
+        }
+
+        &--ia {
+            background-color: #147ecf;
+            border-color: #8cc8f5 !important;
+        }
+
+        &--ingles {
+            background-color: #824278;
+            border-color: #be95be !important;
+        }
+
+        &--ciencia-dados {
+            background-color: #3f70bc;
+            border-color: #00d1ff !important;
+        }
+
+        &--javascript {
+            background-color: #f7df1e;
+            border-color: #ffe264 !important;
+            color: black !important;
+            font-weight: 400;
+        }
+
+        &--vba {
+            background-color: #27488b;
+            border-color: #8c8c8c !important;
+        }
+
+        &--sql {
+            background-color: #006bc0;
+        }
+
+        &--htmlcss {
+            background-color: #e34f26;
+            border-color: #2965f1 !important;
+        }
+
+        &--powerapps {
+            background-color: #eab3d3;
+            border-color: #782a66 !important;
+            color: black !important;
+            font-weight: 400;
+        }
+
+        &--ppt {
+            background-color: #d35230;
+            border-color: #ff8f6b !important;
+        }
+
+        &--powerautomate {
+            // background-color: #00a9e9;
+            background-color: #0070dc;
+        }
+
+        &--analise-dados {
+            background-color: #041071;
+        }
+
+        &--full-stack {
+            border-color: #d6c300 !important;
+            background-color: #8041b8;
+        }
+    }
+
+    &__nome-professor,
+    &__saber-mais {
+        border: solid 1px $clr-white;
+        padding: $spc-100 $spc-300;
+        min-width: 20rem;
+        border-radius: 100vh;
+        text-align: center;
+        font-size: $fs-300 !important;
+    }
+
+    &__saber-mais {
+        font-weight: 500 !important;
+        text-decoration: none;
+    }
+}

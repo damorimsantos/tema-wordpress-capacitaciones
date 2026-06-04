@@ -1,0 +1,1054 @@
+<style>
+  :root {
+    --branco: #fff;
+
+    --cor-botao: #ff9926;
+    --borda-botao: #1a4d3b;
+
+    --fundo-container: #121212;
+    --borda-container: var(--borda-botao);
+
+    --fundo-popup: rgba(0, 0, 0, 0.8);
+
+    --cor-fonte: #121417;
+    --cor-fonte-placeholder: #121417bb;
+    --cor-fonte-botao: black;
+
+    --borda-input: var(--borda-botao);
+    --sombra-input: #359d7844;
+
+    --cor-spinner: #fcfefc;
+  }
+
+  /* Ajustes Elementor */
+
+  .elementor-popup-modal {
+    display: flex;
+  }
+
+  .elementor-popup-modal .dialog-close-button {
+    z-index: 1;
+  }
+
+  .elementor-popup-modal .dialog-close-button svg {
+    height: 1em;
+    width: 1em;
+  }
+
+  /* Popup */
+
+  .popup-form--spinner {
+    & .container-spinner {
+      display: block;
+    }
+
+    & .container-form {
+      display: none;
+    }
+
+    & a {
+      display: none !important;
+    }
+  }
+
+  .container-spinner {
+    display: none;
+  }
+
+  .popup-aberto {
+    overflow-y: hidden;
+  }
+
+  .popup-aberto .popup {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translatex(0);
+  }
+
+  .popup-aberto--spinner .form {
+    display: none;
+  }
+
+  .popup-aberto--spinner .popup-container {
+    border: none;
+    width: auto;
+    background-color: var(--cor-spinner);
+  }
+
+  .popup-aberto--spinner .popup-spinner {
+    display: block;
+  }
+
+  .popup-container {
+    position: relative;
+    width: 100%;
+    max-width: 50rem;
+    box-shadow: 0 0 0.8rem -0.2rem var(--sombra-input);
+    background-color: var(--fundo-container);
+    padding: 2.4rem;
+    border-radius: 30px;
+    color: var(--cor-fonte);
+    border: solid 2px var(--borda-container);
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-campo--duplo {
+    display: flex;
+    gap: 8px;
+
+    & input:first-child {
+      max-width: 90px;
+    }
+  }
+
+  .form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form input {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.8rem 1.6rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--branco);
+    width: 100%;
+    color: inherit;
+  }
+
+  .form input::placeholder {
+    color: var(--cor-fonte-placeholder);
+  }
+
+  .form input:focus {
+    outline: none;
+    box-shadow: 0 0 1.2rem 0.6rem var(--sombra-input);
+  }
+
+  .form small {
+    display: none;
+    margin-top: 0.4rem;
+    margin-left: 2rem;
+    color: var(--branco);
+    font-family: inherit;
+    max-width: 100%;
+  }
+
+  .btn--hero {
+    border-radius: 10px;
+    font-family: inherit;
+    cursor: pointer;
+    background-color: var(--cor-botao);
+    color: var(--cor-fonte-botao);
+    text-transform: uppercase;
+    padding: 16px 16px;
+    border: none;
+
+    align-self: center;
+    transition: all 0.3s;
+    animation: luzes 1.5s linear infinite;
+    width: 100%;
+    font-size: 18px;
+    font-family: TacticSansBld;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .btn--hero:hover {
+    color: var(--branco);
+  }
+
+  .btn--fechar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    border-radius: 50%;
+    width: 4.4rem;
+    height: 4.4rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    transform: translate(45%, -45%);
+    border: solid 3px var(--borda-botao);
+    background-color: var(--cor-botao);
+    color: var(--cor-fonte-botao);
+    box-shadow: 0 0 0.4rem 0.2rem var(--sombra-input);
+  }
+
+  .btn--fechar:hover {
+    border-width: 2px;
+  }
+
+  .popup-spinner {
+    display: none;
+    width: 4rem;
+    margin: auto;
+    aspect-ratio: 1/1;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  .sucesso input {
+    border: solid 3px #00e900;
+  }
+
+  .erro input {
+    border: solid 3px red;
+  }
+
+  .erro small {
+    display: inline-block;
+  }
+</style>
+
+<form
+  method="POST"
+  action="https://hashtagtreinamentos.activehosted.com/proc.php"
+  id="_form_5346_"
+  class="form"
+  novalidate
+>
+  <!-- Inputs obrigatórios dos formulários do activecampaign -->
+  <input type="hidden" name="u" value="5346" />
+  <input type="hidden" name="f" value="5346" />
+  <input type="hidden" name="act" value="sub" />
+
+  <div class="form-inputs">
+    <div class="form-campo">
+      <input
+        type="text"
+        id="fullname"
+        name="fullname"
+        placeholder="*Seu nome e sobrenome"
+        required
+      />
+      <small></small>
+    </div>
+
+    <div class="form-campo">
+      <input
+        type="text"
+        id="email"
+        name="email"
+        placeholder="*Seu melhor e-mail"
+        required
+      />
+      <small></small>
+    </div>
+
+    <div class="form-campo form-campo--duplo">
+      <input
+        type="text"
+        id="field[59]"
+        name="field[59]"
+        value=""
+        placeholder="DDD"
+      />
+      <input
+        type="text"
+        id="field[60]"
+        name="field[60]"
+        placeholder="Seu celular"
+      />
+    </div>
+
+    <!-- OrigemURL -->
+    <input type="hidden" name="field[6]" value="" />
+
+    <!-- OrigemRef -->
+    <input type="hidden" name="field[10]" value="" />
+
+    <!-- linkTemp -->
+    <input type="hidden" name="field[58]" value="" />
+
+    <!-- FonteTemp -->
+    <input type="hidden" name="field[62]" value="" />
+
+    <!-- linkTempIDProduto -->
+    <input type="hidden" name="field[112]" value="" />
+
+    <!-- linkTempIDOferta -->
+    <input type="hidden" name="field[113]" value="" />
+
+    <!-- linkTempSRC -->
+    <input type="hidden" name="field[114]" value="" />
+
+    <!-- linkTempPixBillet -->
+    <input type="hidden" name="field[115]" value="" />
+
+    <!-- sck -->
+    <input type="hidden" name="field[158]" value="" />
+  </div>
+
+  <button class="btn--hero" id="_form_5346_submit" type="submit">
+    Quero garantir uma vaga
+  </button>
+</form>
+
+<script>
+  // Validação do formulário
+
+  function togglePopupAberto(spinner) {
+    bodyEl.classList.toggle("popup-aberto");
+
+    if (spinner) {
+      togglePopupSpinner();
+    }
+  }
+
+  function togglePopupSpinner() {
+    popupForm.classList.add("popup-form--spinner");
+  }
+
+  function checarEnvioFormulario() {
+    let isfullnameValid = checkfullname(),
+      isEmailValid = checkEmail();
+
+    let isFormValid = isfullnameValid && isEmailValid;
+
+    if (isFormValid) {
+      enviarFormulario();
+    }
+  }
+
+  function enviarFormulario() {
+    togglePopupSpinner();
+    formActive.submit();
+  }
+
+  function definirLinkCheckout() {
+    let linkTempIDProdutoForm = document.querySelector("[name='field[112]']");
+    let linkTempIDOfertaForm = document.querySelector("[name='field[113]']");
+    let linkTempSRCForm = document.querySelector("[name='field[114]']");
+    let linkTempSCKForm = document.querySelector("[name='field[158]']");
+    let linkTempPixBilletForm = document.querySelector("[name='field[115]']");
+
+    var parametroLink = new URLSearchParams(window.location.search).get("link");
+    let variavelLinkTempForm = ["", "", ""];
+
+    variavelLinkTempForm[1] = srcPadrao;
+    variavelLinkTempForm[2] = 1;
+
+    if (parametroLink == "ab" || parametroLink == "cb") {
+      parametroLink = parametroLink.substring(0, 1) + "p";
+      variavelLinkTempForm[2] = 0;
+    }
+
+    if (parametroLink && linksCheckout[fontePagina][parametroLink][nomeCurso]) {
+      variavelLinkTempForm[0] =
+        linksCheckout[fontePagina][parametroLink][nomeCurso];
+    } else if (linksCheckout[fontePagina]["cp"][nomeCurso]) {
+      variavelLinkTempForm[0] = linksCheckout[fontePagina]["cp"][nomeCurso];
+    } else if (linksCheckout[fontePagina]["ap"][nomeCurso]) {
+      variavelLinkTempForm[0] = linksCheckout[fontePagina]["ap"][nomeCurso];
+    } else if (linksCheckout["lespera"]["cp"][nomeCurso]) {
+      variavelLinkTempForm[0] = linksCheckout["lespera"]["cp"][nomeCurso];
+    } else {
+      variavelLinkTempForm[0] = linksCheckout["lespera"]["ap"][nomeCurso];
+    }
+
+    if (
+      linkTempIDProdutoForm &&
+      linkTempIDOfertaForm &&
+      linkTempSRCForm &&
+      linkTempPixBilletForm
+    ) {
+      linkTempIDProdutoForm.value = variavelLinkTempForm[0][0];
+      linkTempIDOfertaForm.value = variavelLinkTempForm[0][1];
+      linkTempSRCForm.value = variavelLinkTempForm[1];
+      linkTempPixBilletForm.value = variavelLinkTempForm[2];
+    }
+
+    if (linkTempSCKForm && sckPadrao) {
+      linkTempSCKForm.value = sckPadrao;
+    }
+
+    var formCompleto = true;
+
+    inputsForm.forEach(function (elInput) {
+      if (elInput.value == "" && elInput.getAttribute("name") != "field[6]") {
+        formCompleto = false;
+      }
+    });
+
+    if (formCompleto) {
+      checarEnvioFormulario();
+    }
+  }
+
+  function waitForElm(selector) {
+    return new Promise((resolve) => {
+      if (document.querySelector(selector)) {
+        return resolve(document.querySelector(selector));
+      }
+
+      const observer = new MutationObserver((mutations) => {
+        if (document.querySelector(selector)) {
+          observer.disconnect();
+          resolve(document.querySelector(selector));
+        }
+      });
+
+      // If you get "parameter 1 is not of type 'Node'" error, see https://stackoverflow.com/a/77855838/492336
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+      });
+    });
+  }
+
+  function dataLayerPushTagManager(evento) {
+    dataLayer.push({ event: evento });
+  }
+
+  const gerarMesAno = (data) =>
+    data.toLocaleString("default", { month: "short" }).substring(0, 3) +
+    data.getFullYear().toString().substr(-2);
+
+  var formActive = document.querySelector(".form");
+  var inputsForm = document.querySelectorAll(".form input");
+  var popupForm = document.querySelector(".popup-form");
+
+  var parametrosURL = new URLSearchParams(window.location.search);
+  var parametroSRC = parametrosURL.get("src");
+  var parametroSCK = parametrosURL.get("sck");
+  var parametroUTMSource = parametrosURL.get("utm_source");
+  var parametroUTMMedium = parametrosURL.get("utm_medium");
+  var parametroUTMContent = parametrosURL.get("utm_content");
+  var parametroUTMCampaign = parametrosURL.get("utm_campaign");
+  var parametroUTMTerm = parametrosURL.get("utm_term");
+  var parametroConversion = parametrosURL.get("conversion");
+
+  var fullnameForm = document.querySelector("#fullname");
+  var emailForm = document.querySelector("#email");
+  var linkTempForm = document.querySelector(".form [name='field[58]']");
+
+  var nomeCurso = parametrosURL.get("curso");
+  var tipoPagina = parametrosURL.get("tipopg");
+  var fontePagina = parametrosURL.get("fonte");
+
+  var elemsVideoVendas = document.querySelectorAll("[id*=video-]");
+  var elemCupomDesconto = document.querySelector("#cupom-desconto");
+  var elemBoxOfertaAvulso = document.querySelector("#box-oferta-avulso");
+  var elemAbasFormaPgto = document.querySelector(
+    "#elemento-abas .e-n-tabs-heading"
+  );
+
+  var elemsPrecoParcelado = document.querySelectorAll(".js-preco-parcelado");
+  var elemsPrecoAvista = document.querySelectorAll(".js-preco-avista");
+
+  var tipoPreco = "padrao";
+  var fonteReferencia;
+
+  if (!nomeCurso) {
+    nomeCurso = "python";
+  }
+
+  if (!fontePagina) {
+    if (nomeCurso == "vit") {
+      fontePagina = "intensivao";
+    } else {
+      fontePagina = "lespera";
+    }
+  } else if (nomeCurso == "cd") {
+    if (fontePagina == "up") {
+      tipoPreco = "cd-up";
+    } else {
+      tipoPreco = "cd";
+    }
+
+    switch (fontePagina) {
+      case "yt":
+        fontePagina = "lespera";
+        fonteReferencia = "yt";
+        break;
+      case "ytb":
+        fontePagina = "lespera";
+        fonteReferencia = "ytb";
+        break;
+      case "aula-f":
+        fontePagina = "aula";
+        fonteReferencia = "aula-f";
+        break;
+      case "afiliado":
+        fontePagina = "aula";
+        fonteReferencia = "afiliado";
+        break;
+    }
+  }
+
+  var listaCodigos = {
+    python: "py",
+    excel: "ex",
+    pbi: "pbi",
+    ad: "ad",
+    cd: "cd",
+    ia: "ia",
+    vit: "vit",
+  };
+
+  var listaSrc = {
+    lespera: "les",
+    perpetuo: "vtsd_",
+    intensivao: "l",
+    aula: "w",
+    up: "up_",
+    patrocinio: "vpi_",
+    afiliado: "af_",
+  };
+
+  listaSrc["jornada"] = listaSrc["intensivao"];
+
+  var listaForm = {
+    python: {
+      lespera: "5346",
+      perpetuo: "5102",
+      intensivao: "6100",
+      up: "6102",
+    },
+
+    excel: {
+      lespera: "5344",
+      perpetuo: "5056",
+      intensivao: "5976",
+      up: "5978",
+      aula: "8693",
+    },
+
+    pbi: {
+      lespera: "5150",
+      perpetuo: "5104",
+      intensivao: "6104",
+      up: "6106",
+    },
+
+    ad: {
+      perpetuo: "6854",
+      aula: "6206",
+      intensivao: "9340",
+    },
+
+    cd: {
+      lespera: "5378",
+      perpetuo: "5856",
+      intensivao: "5990",
+      up: "5988",
+      afiliado: "9800",
+    },
+
+    ia: {
+      lespera: "7430",
+      jornada: "7354",
+      up: "8205",
+    },
+
+    vit: {
+      intensivao: "6532",
+    },
+  };
+
+  listaForm["python"]["patrocinio"] = listaForm["python"]["perpetuo"];
+  listaForm["cd"]["aula"] = listaForm["cd"]["intensivao"];
+
+  var tabelaPrecos = {
+    padrao: {
+      lespera: { parcelado: "124,75", avista: "1.497" },
+      intensivao: { parcelado: "97,14", avista: "997" },
+    },
+    cd: {
+      lespera: { parcelado: "194,56", avista: "1.997" },
+      intensivao: { parcelado: "145,85", avista: "1.497" },
+    },
+    "cd-up": {
+      up: { parcelado: "155,59", avista: "1.597" },
+    },
+  };
+
+  tabelaPrecos["padrao"]["perpetuo"] = tabelaPrecos["padrao"]["lespera"];
+  tabelaPrecos["padrao"]["patrocinio"] = tabelaPrecos["padrao"]["lespera"];
+  tabelaPrecos["padrao"]["up"] = tabelaPrecos["padrao"]["intensivao"];
+  tabelaPrecos["padrao"]["aula"] = tabelaPrecos["padrao"]["intensivao"];
+  tabelaPrecos["padrao"]["jornada"] = tabelaPrecos["padrao"]["intensivao"];
+
+  tabelaPrecos["cd"]["perpetuo"] = tabelaPrecos["cd"]["lespera"];
+  tabelaPrecos["cd"]["patrocinio"] = tabelaPrecos["cd"]["lespera"];
+  tabelaPrecos["cd"]["up"] = tabelaPrecos["cd"]["intensivao"];
+  tabelaPrecos["cd"]["aula"] = tabelaPrecos["cd"]["intensivao"];
+  tabelaPrecos["cd"]["afiliado"] = tabelaPrecos["cd"]["intensivao"];
+
+  // Mudar vídeo de vendas
+  if (
+    nomeCurso != "python" ||
+    fontePagina != "lespera" ||
+    fonteReferencia == "yt" ||
+    fonteReferencia == "ytb"
+  ) {
+    var fontePaginaAjust = fontePagina;
+
+    if (
+      fonteReferencia == "yt" ||
+      fonteReferencia == "ytb" ||
+      fonteReferencia == "aula-f"
+    )
+      fontePaginaAjust = fonteReferencia;
+
+    if (fontePaginaAjust == "up" || fontePaginaAjust == "perpetuo") {
+      fontePaginaAjust = "lespera";
+    }
+
+    // Percorre todos os vídeos da página e deixa oculto aqueles que não tiverem a fonte certa
+    elemsVideoVendas.forEach((elem) => {
+      if (elem.id == "video-" + fontePaginaAjust) {
+        elem.style.display = "block";
+      } else {
+        elem.style.display = "none";
+      }
+    });
+  }
+
+  // Mudar preço da página
+  if (fontePagina != "lespera" || tipoPreco == "cd") {
+    elemsPrecoParcelado.forEach((elem) => {
+      try {
+        elem.innerText = tabelaPrecos[tipoPreco][fontePagina]["parcelado"];
+      } catch (error) {
+        elem.innerText = tabelaPrecos[tipoPreco]["lespera"]["parcelado"];
+        console.log("Erro na hora de acertar o preço parcelado", error);
+      }
+    });
+
+    elemsPrecoAvista.forEach((elem) => {
+      try {
+        elem.innerText = tabelaPrecos[tipoPreco][fontePagina]["avista"];
+      } catch (error) {
+        elem.innerText = tabelaPrecos[tipoPreco]["lespera"]["avista"];
+        console.log("Erro na hora de acertar o preço à vista", error);
+      }
+    });
+  }
+
+  // Deixar visível o banner de Cupom aplicado no Patrocínio
+  if (fontePagina == "patrocinio" && elemCupomDesconto) {
+    elemCupomDesconto.classList.remove("oculto");
+  }
+
+  // Deixar oculto o box de oferta avulso se for Intensivão
+  if (
+    (nomeCurso == "python" || nomeCurso == "pbi") &&
+    fontePagina == "intensivao" &&
+    elemBoxOfertaAvulso
+  ) {
+    elemBoxOfertaAvulso.classList.add("oculto");
+    elemAbasFormaPgto.classList.add("oculto");
+  }
+
+  // Acertar ID dos elementos do formulário
+  var numFormActive = listaForm[nomeCurso][fontePagina];
+
+  if (!numFormActive) {
+    var numFormActive = listaForm[nomeCurso]["lespera"];
+  }
+
+  if (listaForm[nomeCurso][fontePagina]) {
+    if (numFormActive != formActive.id.replace("_form_", "").replace("_", "")) {
+      document.querySelector("#" + formActive.id + "submit").id =
+        "_form_" + numFormActive + "_submit";
+      formActive.id = "_form_" + numFormActive + "_";
+      formActive.querySelectorAll("[type=hidden]")[0].value = numFormActive;
+      formActive.querySelectorAll("[type=hidden]")[1].value = numFormActive;
+    }
+  }
+
+  var linksCheckout = {
+    lespera: {
+      cp: {
+        python: ["L16941472G", "jkqgab2o"],
+        pbi: ["L16941472G", "zdbqq3em"],
+        ad: ["L16941472G", "wl4l6c7z"],
+        ia: ["L16941472G", "e4h1jty2"],
+        excel: ["L16941472G", "evy4c5jw"],
+      },
+      cl: {
+        python: ["L16941472G", "b15liira"],
+        pbi: ["L16941472G", "tp4xuqai"],
+        ad: ["L16941472G", "b5tj6qka"],
+        ia: ["L16941472G", "68alu19c"],
+        excel: ["L16941472G", "8l5juetb"],
+      },
+      ap: {
+        python: ["F42471520G", "b647jpf1"],
+        pbi: ["W13967687P", "ipj3r8ns"],
+        cd: ["T71657435R", "nyvbjtmv"],
+        excel: ["V6008994R", "siu1b7e5"],
+      },
+      al: {
+        python: ["C42475707T", "vsv595yl"],
+        pbi: ["V39165195N", "x088fh7q"],
+        cd: ["N71657803T", "ctfjn8wj"],
+        excel: ["V39120067A", "3gmjcbsi"],
+      },
+    },
+
+    intensivao: {
+      cp: {
+        python: ["L16941472G", "merp7bu8"],
+        pbi: ["L16941472G", "7nw425lq"],
+        ia: ["L16941472G", "a4ac49ac"],
+        excel: ["L16941472G", "iqf27ssx"],
+        ad: ["L16941472G", "rvehnvco"],
+      },
+      cl: {
+        python: ["L16941472G", "8hb00r1d"],
+        pbi: ["L16941472G", "2j2sc7sn"],
+        ia: ["L16941472G", "4hzj11qz"],
+        excel: ["L16941472G", "dmf4vn6q"],
+        ad: ["L16941472G", "mbrn4u7c"],
+      },
+      ap: {
+        cd: ["T71657435R", "1beg8orb"],
+      },
+      al: {
+        cd: ["N71657803T", "tzea9a49"],
+      },
+    },
+
+    aula: {
+      cp: {
+        ad: ["A91410311H", "ijaw9oa9"],
+        ia: ["A91410311H", "q13f9yk8"],
+        excel: ["A91410311H", "tkxfqta3"],
+      },
+      cl: {
+        ad: ["A91410311H", "hyz4d0ip"],
+        ia: ["A91410311H", "06jf4i6u"],
+        excel: ["A91410311H", "t5ln9yw5"],
+      },
+      ap: {
+        cd: ["T71657435R", "1beg8orb"],
+      },
+      al: {
+        cd: ["N71657803T", "tzea9a49"],
+      },
+    },
+
+    up: {
+      cp: {
+        python: ["L16941472G", "tj4obdf4"],
+        pbi: ["L16941472G", "o6hvu6pe"],
+        ia: ["A91410311H", "q13f9yk8"],
+        excel: ["L16941472G", "fu9uivcl"],
+      },
+      cl: {
+        python: ["L16941472G", "ti8d3qzu"],
+        pbi: ["L16941472G", "hqigadvh"],
+        ia: ["A91410311H", "06jf4i6u"],
+        excel: ["L16941472G", "auytd52f"],
+      },
+      ap: {
+        python: ["F42471520G", "gpqsgzb8"],
+        pbi: ["W13967687P", "s4lx15ic"],
+        cd: ["T71657435R", "f930r12b"],
+        excel: ["V6008994R", "h57kjitn"],
+      },
+      al: {
+        python: ["C42475707T", "bz0dayvx"],
+        pbi: ["V39165195N", "cqac6kl1"],
+        cd: ["N71657803T", "e21ua86r"],
+        excel: ["V39120067A", "2izh008r"],
+      },
+    },
+  };
+
+  // Links do Perpétuo iguais aos links da Lista de Espera e Webinário igual ao Intensivão
+  linksCheckout["perpetuo"] = linksCheckout["lespera"];
+  linksCheckout["jornada"] = linksCheckout["intensivao"];
+
+  linksCheckout["lespera"]["al"]["ia"] = linksCheckout["lespera"]["cl"]["ia"];
+  linksCheckout["lespera"]["ap"]["ia"] = linksCheckout["lespera"]["cp"]["ia"];
+
+  var dictTabelaLancamentos = {
+    ia: [
+      ["04", new Date("April 7 2025 GMT-0300")],
+      ["05", new Date("June 9 2025 GMT-0300")],
+      ["06", new Date("October 13 2025 GMT-0300")],
+    ],
+    ing: [
+      ["03", new Date("March 31 2025 GMT-0300")],
+      ["04", new Date("May 19 2025 GMT-0300")],
+      ["05", new Date("July 14 2025 GMT-0300")],
+      ["06", new Date("October 6 2025 GMT-0300")],
+    ],
+    python: [
+      ["22", new Date("April 7 2025 GMT-0300")],
+      ["23", new Date("June 2 2025 GMT-0300")],
+      ["24", new Date("September 8 2025 GMT-0300")],
+      ["25", new Date("October 13 2025 GMT-0300")],
+    ],
+    pbi: [
+      ["23", new Date("February 17 2025 GMT-0300")],
+      ["24", new Date("July 14 2025 GMT-0300")],
+      ["25", new Date("September 15 2025 GMT-0300")],
+      ["26", new Date("December 15 2025 GMT-0300")],
+    ],
+    excel: [
+      ["38", new Date("February 3 2025 GMT-0300")],
+      ["39", new Date("February 3 2026 GMT-0300")],
+    ],
+  };
+
+  dictUTMCampaign = {
+    python: "programacao",
+    excel: "treinamento",
+    pbi: "treinamento",
+    ad: "treinamento",
+    cd: "programacao",
+    ia: "treinamento",
+    vit: "vitalicio",
+    ing: "idioma",
+  };
+
+  // Atualizar SCK se tiver algum parâmetro na URL
+  if (parametroSCK) {
+    sckPadrao = parametroSCK;
+
+    console.log(`Tem SCK na URL, sck=${sckPadrao}`);
+  } else {
+    var dataHoje = new Date();
+
+    if (parametroUTMContent) {
+      sckPadrao = "utm_content=" + parametroUTMContent;
+    } else {
+      sckPadrao = "utm_content=pg-vendas";
+    }
+
+    if (parametroConversion) {
+      sckPadrao += "&conversion=" + parametroConversion;
+    } else if (["intensivao", "jornada"].includes(fontePagina)) {
+      if (dictTabelaLancamentos[nomeCurso]) {
+        var tabelaLancamentoCurso = dictTabelaLancamentos[nomeCurso];
+        var mesAnoConversion = gerarMesAno(tabelaLancamentoCurso[0][1]);
+
+        tabelaLancamentoCurso.forEach((listaCurso) => {
+          var data = listaCurso[1];
+          var lancamento = listaCurso[0];
+
+          // console.log(data);
+
+          if (dataHoje.getTime() > data.getTime() + 1000 * 60 * 60 * 24 * 8) {
+            mesAnoConversion = gerarMesAno(data);
+            // console.log(mesAnoConversion);
+
+            nLancamento = lancamento;
+          }
+        });
+
+        sckPadrao += `&conversion=lcto-${
+          listaSrc[fontePagina] +
+          listaCodigos[nomeCurso] +
+          nLancamento +
+          "-" +
+          mesAnoConversion
+        }`;
+
+        console.log(`Conversion de fonte Intensivão ou Jornada`);
+      }
+    } else if (fontePagina === "aula") {
+      sckPadrao += `&conversion=perpetuo-${
+        listaSrc[fontePagina] + listaCodigos[nomeCurso]
+      }`;
+
+      console.log(`Conversion de fonte=aula`);
+    } else {
+      var mesAnoConversion = gerarMesAno(dataHoje);
+
+      sckPadrao += `&conversion=perpetuo-${
+        listaSrc[fontePagina] + listaCodigos[nomeCurso]
+      }-${mesAnoConversion}`;
+      console.log(`Conversion de fonte diferente de Intensivão e Jornada`);
+    }
+
+    if (parametroUTMCampaign) {
+      sckPadrao += "&utm_campaign=" + parametroUTMCampaign;
+    } else if (dictUTMCampaign[nomeCurso]) {
+      sckPadrao += `&utm_campaign=${dictUTMCampaign[nomeCurso]}`;
+    }
+
+    console.log(
+      `Não tem UTM Content e Conversion, nem SCK na URL, sck=${sckPadrao}`
+    );
+  }
+
+  if (parametroUTMSource) {
+    sckPadrao += "&utm_source=" + parametroUTMSource;
+  }
+
+  if (parametroUTMMedium) {
+    sckPadrao += "&utm_medium=" + parametroUTMMedium;
+  }
+
+  if (parametroUTMTerm) {
+    sckPadrao += "&utm_term=" + parametroUTMTerm;
+  }
+
+  var srcPadrao = listaSrc[fontePagina] + listaCodigos[nomeCurso];
+
+  // Atualizar SRC se tiver algum parâmetro na URL
+  if (parametroSRC) {
+    srcPadrao = parametroSRC;
+  }
+
+  if (tipoPagina) {
+    srcPadrao += "_" + tipoPagina;
+  }
+
+  waitForElm(".form").then((elm) => {
+    console.log("Formulário apareceu");
+
+    if (typeof atualizarOrigens === "function") {
+      atualizarOrigens();
+    }
+
+    definirLinkCheckout();
+    dataLayerPushTagManager("AbriuForm");
+  });
+
+  // Funções para validar o formulário
+  var isRequired = (value) => (value === "" ? false : true);
+
+  var isEmailValid = (email) => {
+    var re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  };
+
+  var showError = (input, message) => {
+    var formField = input.parentElement;
+
+    formField.classList.remove("sucesso");
+    formField.classList.add("erro");
+
+    var erro = formField.querySelector("small");
+    erro.textContent = message;
+  };
+
+  var showSuccess = (input) => {
+    var formField = input.parentElement;
+
+    formField.classList.remove("erro");
+    formField.classList.add("sucesso");
+
+    var error = formField.querySelector("small");
+    error.textContent = "";
+  };
+
+  var checkfullname = () => {
+    let valid = false;
+    var fullname = fullnameForm.value.trim();
+
+    if (!isRequired(fullname)) {
+      showError(fullnameForm, "Seu nome não pode ser vazio.");
+    } else {
+      showSuccess(fullnameForm);
+      valid = true;
+    }
+    return valid;
+  };
+
+  var checkEmail = () => {
+    let valid = false;
+    var email = emailForm.value.trim();
+
+    if (!isRequired(email)) {
+      showError(emailForm, "Seu e-mail não pode ser vazio.");
+    } else if (!isEmailValid(email)) {
+      showError(emailForm, "O e-mail digitado não é válido.");
+    } else {
+      showSuccess(emailForm);
+      valid = true;
+    }
+    return valid;
+  };
+
+  var debounce = (fn, delay = 500) => {
+    let timeoutId;
+    return (...args) => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      timeoutId = setTimeout(() => {
+        fn.apply(null, args);
+      }, delay);
+    };
+  };
+
+  formActive.addEventListener(
+    "input",
+    debounce(function (e) {
+      switch (e.target.id) {
+        case "fullname":
+          checkfullname();
+          break;
+        case "email":
+          checkEmail();
+          break;
+      }
+    })
+  );
+
+  formActive.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    checarEnvioFormulario();
+  });
+</script>
+
+<script>
+  // Script para preencher o formulário de pre-checkout com os parâmetros da URL
+  function editarValorCampoForm(elemsForm, valorForm) {
+    elemsForm.forEach(function (element) {
+      element.value = valorForm;
+    });
+  }
+
+  var elemsFormFullname = document.querySelectorAll("#fullname");
+  var elemsFormEmail = document.querySelectorAll("#email");
+  var elemsFormDDD = document.querySelectorAll("[id='field[59]']");
+  var elemsFormCelular = document.querySelectorAll("[id='field[60]']");
+
+  var parametrosURLCheckout = new URLSearchParams(window.location.search);
+
+  var valorFirstname = parametrosURLCheckout.get("firstname");
+  var valorFullname = parametrosURLCheckout.get("fullname");
+  var valorEmail = parametrosURLCheckout.get("email");
+  var valorDDD = parametrosURLCheckout.get("ddd");
+  var valorCelular = parametrosURLCheckout.get("celular");
+  var valorPhone = parametrosURLCheckout.get("phone");
+
+  if (valorFullname) {
+    editarValorCampoForm(elemsFormFullname, valorFullname);
+  } else if (valorFirstname) {
+    editarValorCampoForm(elemsFormFullname, valorFirstname);
+  }
+
+  if (valorEmail) {
+    editarValorCampoForm(elemsFormEmail, valorEmail);
+  }
+
+  if (valorDDD && valorCelular) {
+    editarValorCampoForm(elemsFormDDD, valorDDD);
+    editarValorCampoForm(elemsFormCelular, valorCelular);
+  } else if (valorPhone) {
+    editarValorCampoForm(elemsFormDDD, valorPhone.substring(0, 2));
+    editarValorCampoForm(elemsFormCelular, valorPhone.substring(2));
+  }
+</script>

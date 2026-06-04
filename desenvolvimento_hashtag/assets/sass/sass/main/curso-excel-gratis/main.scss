@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import "abstracts/variables", "abstracts/mixins", "abstracts/extends"; // , "abstracts/functions"";
+
+// 2. Vendors
+@import "vendors/normalize";
+
+// 3. Base stuff
+@import "base/base", "base/helpers", "base/typography"; // , "base/fonts", ;
+
+// 4. Layout-related sections
+@import "layout/header-capacitaciones", "layout/footer";
+
+// 5. Components
+@import "components/secao-hero", "components/button", "components/botao-verde", "components/alunos",
+    "components/curso", "components/barra-progresso", "components/carrossel",
+    "components/card", "components/popup", "components/infinite-scroller";
+
+// 6. Page-specific styles
+@import "pages/curso-excel-gratis";
+
+// 7. Themes
+// @import "themes/default";

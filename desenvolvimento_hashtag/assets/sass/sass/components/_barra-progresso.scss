@@ -1,0 +1,114 @@
+@include property(
+  $variable: perc-progr-azul,
+  $syntax: "<percentage>",
+  $inherits: false,
+  $initial-value: 0%
+);
+
+@include property(
+  $variable: perc-progr-amarelo,
+  $syntax: "<percentage>",
+  $inherits: false,
+  $initial-value: 0%
+);
+
+@include property(
+  $variable: perc-progr-verde,
+  $syntax: "<percentage>",
+  $inherits: false,
+  $initial-value: 0%
+);
+
+$largura-barra: 2.5rem;
+$largura-total: 18.5rem;
+$tempo-transicao: 2s;
+
+.barra-progresso {
+  width: $largura-total;
+  aspect-ratio: 1;
+  border: solid 1px rgba($color: $clr-white, $alpha: 0.3);
+  background-color: transparent;
+  border-radius: 50%;
+  position: relative;
+  --clr-realces: #{$clr-blue-250};
+
+  &--amarela {
+    --clr-realces: #{$clr-yellow-500};
+  }
+
+  &--verde {
+    --clr-realces: #{$clr-green-400};
+  }
+
+  &::after {
+    color: var(--clr-realces);
+    content: attr(aria-valuenow) "%";
+    background-color: $clr-bg-900;
+    border-radius: inherit;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - $largura-barra);
+    aspect-ratio: 1;
+
+    display: grid;
+    place-items: center;
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: transparent;
+
+    transition: --perc-progr-azul $tempo-transicao $transition-function,
+      --perc-progr-amarelo $tempo-transicao $transition-function,
+      --perc-progr-verde $tempo-transicao $transition-function;
+
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: inherit;
+    z-index: 0;
+  }
+
+  &--azul {
+    &::before {
+      background-image: conic-gradient(
+        var(--clr-realces) var(--perc-progr-azul),
+        transparent 0%
+      );
+    }
+  }
+
+  &--amarela {
+    &::before {
+      background-image: conic-gradient(
+        var(--clr-realces) var(--perc-progr-amarelo),
+        transparent 0%
+      );
+    }
+  }
+
+  &--verde {
+    &::before {
+      background-image: conic-gradient(
+        var(--clr-realces) var(--perc-progr-verde),
+        transparent 0%
+      );
+    }
+  }
+
+  &__luz {
+    position: absolute;
+    aspect-ratio: 1;
+    border-radius: inherit;
+    width: 100%;
+    background-color: $clr-white;
+    opacity: 10%;
+    mix-blend-mode: soft-light;
+    filter: blur(20px);
+    z-index: 2;
+  }
+}

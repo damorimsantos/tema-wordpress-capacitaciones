@@ -1,0 +1,119 @@
+.grade-conteudo,
+.largura-total {
+  display: grid;
+  grid-template-columns:
+    [largura-total-start] minmax($container-padding, 1fr)
+    [fuga-start fuga-direita-start] minmax(0, $fuga-w)
+    [conteudo-start conteudo-direita-start] min(
+      100% - $container-padding * 2,
+      $container-max-w
+    )
+    [conteudo-end] minmax(0, $fuga-w) [fuga-end] minmax($container-padding, 1fr)
+    [largura-total-end fuga-direita-end conteudo-direita-end];
+
+  & > :not(.fuga, .largura-total, .fuga-direita, .conteudo-direita),
+  .largura-total
+    > :not(.fuga, .largura-total, .fuga-direita, .conteudo-direita) {
+    grid-column: conteudo;
+  }
+
+  & > .fuga {
+    grid-column: fuga;
+  }
+
+  & > .largura-total {
+    grid-column: largura-total;
+
+    display: grid;
+    grid-template-columns: inherit;
+  }
+
+  & > .fuga-direita {
+    grid-column: fuga-direita;
+  }
+
+  & > .conteudo-direita {
+    grid-column: conteudo-direita;
+  }
+}
+
+.secao {
+  overflow: hidden;
+  padding-block: $spc-1100;
+
+  @include respond(m) {
+    padding-block: $spc-800;
+  }
+}
+
+[class*="ef-slide"],
+[class*="ef-fade"] {
+  transition: all $transition-duration-long $transition-function;
+  opacity: 0;
+}
+
+[class*="ef-slide"] {
+  transform: translateY(8rem);
+}
+
+.ef-slide--visivel,
+.ef-fade--visivel {
+  opacity: 1;
+}
+
+.ef-slide--visivel {
+  transform: translateY(0);
+}
+
+// Criando as funções margin e padding
+// $listVariable: $spc-0 $spc-50 $spc-60 $spc-70 $spc-80 $spc-90 $spc-100 $spc-200
+//   $spc-300 $spc-400 $spc-500 $spc-600 $spc-700 $spc-800 $spc-900 $spc-1000
+//   $spc-1100 $spc-1200;
+// $listName: 0 50 60 70 80 90 100 200 300 400 500 600 700 800 900 1000 1100 1200;
+// $listProperty: m p;
+
+// @each $property in $listProperty {
+//   $nameProperty: margin;
+
+//   @if $property == p {
+//     $nameProperty: padding;
+//   }
+
+//   @each $nameItem in $listName {
+//     $nameItemIndex: index($listName, $nameItem);
+//     $variableItem: nth($listVariable, $nameItemIndex);
+
+//     .#{$property}t- {
+//       &#{$nameItem} {
+//         #{$nameProperty}-top: $variableItem;
+//       }
+//     }
+//     .#{$property}b- {
+//       &#{$nameItem} {
+//         #{$nameProperty}-bottom: $variableItem;
+//       }
+//     }
+//     .#{$property}l- {
+//       &#{$nameItem} {
+//         #{$nameProperty}-left: $variableItem;
+//       }
+//     }
+//     .#{$property}r- {
+//       &#{$nameItem} {
+//         #{$nameProperty}-right: $variableItem;
+//       }
+//     }
+//     .#{$property}x- {
+//       &#{$nameItem} {
+//         #{$nameProperty}-right: $variableItem;
+//         #{$nameProperty}-left: $variableItem;
+//       }
+//     }
+//     .#{$property}y- {
+//       &#{$nameItem} {
+//         #{$nameProperty}-top: $variableItem;
+//         #{$nameProperty}-bottom: $variableItem;
+//       }
+//     }
+//   }
+// }

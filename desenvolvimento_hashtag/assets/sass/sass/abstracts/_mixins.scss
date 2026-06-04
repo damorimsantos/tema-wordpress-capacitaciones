@@ -1,0 +1,89 @@
+@mixin flex($flow: row, $align: stretch, $justify: start, $gap: 0) {
+    display: flex;
+    flex-flow: $flow;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+@mixin property(
+    $variable: variable,
+    $syntax: "<number>",
+    $inherits: true,
+    $initial-value: 0
+) {
+    @property --#{$variable} {
+        syntax: $syntax;
+        inherits: $inherits;
+        initial-value: $initial-value;
+    }
+}
+
+@mixin respond($tamanho) {
+    @if $tamanho == xs {
+        // 360 para baixo
+        @media (max-width: 22.5em) {
+            @content;
+        }
+    } @else if $tamanho == ss {
+        // 419 para baixo
+        @media (max-width: 26.1875em) {
+            @content;
+        }
+    } @else if $tamanho == s {
+        // 479 para baixo
+        @media (max-width: 29.9375em) {
+            @content;
+        }
+    } @else if $tamanho == xxm {
+        // 565 para baixo
+        @media (max-width: 35.3125em) {
+            @content;
+        }
+    } @else if $tamanho == xm {
+        // 623 para baixo
+        @media (max-width: 38.9375em) {
+            @content;
+        }
+    } @else if $tamanho == m {
+        // 767 para baixo
+        @media (max-width: 47.9375em) {
+            @content;
+        }
+    } @else if $tamanho == mm {
+        // 856 para baixo
+        @media (max-width: 53.5em) {
+            @content;
+        }
+    } @else if $tamanho == g {
+        // 991px para baixo
+        @media (max-width: 61.9375em) {
+            @content;
+        }
+    } @else if $tamanho == up-g {
+        // 992px para cima
+        @media (min-width: 62em) {
+            @content;
+        }
+    } @else if $tamanho == gg {
+        // 1179px para baixo
+        @media (max-width: 73.6875em) {
+            @content;
+        }
+    } @else if $tamanho == xg {
+        // 1281px para baixo
+        @media (max-width: 80em) {
+            @content;
+        }
+    } @else if $tamanho == xxg {
+        // 1920px para baixo
+        @media (max-width: 120em) {
+            @content;
+        }
+    } @else if $tamanho == up-xxg {
+        // 1921px para cima
+        @media (min-width: 120.0625em) {
+            @content;
+        }
+    }
+}

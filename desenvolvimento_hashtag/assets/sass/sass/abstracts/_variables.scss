@@ -1,0 +1,144 @@
+// Font
+$text-font-stack: "Montserrat", system-ui, sans-serif !default;
+
+$fs-90: 0.77rem;
+$fs-100: 0.92rem;
+$fs-200: 1.11rem;
+$fs-300: 1.33rem;
+$fs-400: 1.6rem;
+$fs-500: 1.92rem;
+$fs-600: 2.3rem;
+$fs-700: 2.76rem;
+$fs-800: 3.32rem;
+$fs-900: 3.98rem;
+$fs-1000: 4.78rem;
+$fs-1100: 5.73rem;
+$fs-1200: 6.88rem;
+$fs-1300: 8.26rem;
+$fs-1400: 9.91rem;
+$fs-1500: 11.89rem;
+$fs-2000: 29.59rem;
+$fs-2100: 35.51rem;
+
+// Sizes
+$spc-0: 0rem;
+$spc-50: 0.27rem;
+$spc-60: 0.33rem;
+$spc-70: 0.42rem;
+$spc-80: 0.52rem;
+$spc-90: 0.65rem;
+$spc-100: 0.82rem;
+$spc-200: 1.02rem;
+$spc-300: 1.28rem;
+$spc-400: 1.6rem;
+$spc-500: 2rem;
+$spc-600: 2.5rem;
+$spc-700: 3.12rem;
+$spc-800: 3.9rem;
+$spc-900: 4.88rem;
+$spc-1000: 6.1rem;
+$spc-1100: 7.63rem;
+$spc-1200: 9.54rem;
+$spc-1300: 11.92rem;
+$spc-1400: 14.9rem;
+
+$border-radius-xs: 0.5rem;
+$border-radius-s: 0.9rem;
+$border-radius-m: 1.3rem;
+$border-radius-g: 1.8rem;
+
+$container-padding: $spc-500;
+$container-max-w: 100rem;
+$container-max-w-g: 110rem;
+$fuga-w: 7rem;
+
+$padding-carrossel: 15%;
+
+// Colors
+$clr-bg-400: hsl(210, 92%, 42%);
+$clr-bg-450: hsl(214, 94%, 31%);
+$clr-bg-500: hsl(211, 85%, 31%);
+$clr-bg-550: hsl(214, 88%, 19%);
+$clr-bg-600: hsl(224, 60%, 19%);
+$clr-bg-700: hsl(225, 61%, 14%); /*0e193a*/
+$clr-bg-800: hsl(223, 67%, 7%); /*060d1e*/
+$clr-bg-900: hsl(223, 70%, 8%); /*060e22*/
+
+$clr-green-300: hsl(152, 100%, 50%); /* #00FF89 */
+$clr-green-350: hsl(162, 100%, 50%); /* #00ffb3 */
+$clr-green-400: hsl(108, 73%, 50%); /* #47dd22 */
+$clr-green-450: hsl(153, 69%, 42%); /* #21B572 */
+$clr-green-500: hsl(115, 35%, 56%); /* #70B769 */
+$clr-green-600: hsl(115, 27%, 25%); /* #32522f */
+
+$clr-yellow-400: hsl(56, 85%, 55%); /* #eee22c */
+$clr-yellow-450: hsl(49, 90%, 68%); /* #F7DC66 */
+$clr-yellow-500: hsl(49, 100%, 67%); /* #ffe156 */
+$clr-yellow-550: hsl(41, 100%, 62%); /* #FFC03D */
+
+$clr-yellow-600: hsl(42, 74%, 24%); /* #6A4F10 */
+
+$clr-orange-400: hsl(25, 100%, 58%); /* #ff8128 */
+$clr-orange-450: hsl(13, 77%, 52%); /* #E34F26 */
+$clr-orange-500: hsl(22, 79%, 50%); /* #E3651B */
+$clr-orange-600: hsl(12, 75%, 43%); /* #C03B1B */
+
+$clr-red: hsl(0, 100%, 50%); /* #ff0000 */
+
+$clr-blue-200: hsl(224, 100%, 95%); /* #e5ecff */
+$clr-blue-225: hsl(224, 82%, 72%); /* #7D9DF2 */
+$clr-blue-250: hsl(199, 100%, 60%); /* #33beff */
+$clr-blue-265: hsl(220, 42%, 57%); /* #6483C0 */
+$clr-blue-275: hsl(204, 57%, 55%); /* #4A99CD */
+$clr-blue-285: hsl(228, 78%, 52%); /* #264DE4 */
+$clr-blue-295: hsl(224, 59%, 53%); /* #4267CE */
+$clr-blue-300: hsl(183, 97%, 50%);
+$clr-blue-350: hsl(225, 39%, 36%);
+$clr-blue-400: hsl(225, 54%, 45%); /* #3554af */
+$clr-blue-450: hsl(207, 50%, 41%); /* #346E9E */
+$clr-blue-455: hsl(211, 92%, 45%); /* #264DE4 */
+$clr-blue-475: hsl(220, 58%, 35%); /* #25488D */
+$clr-blue-500: hsl(212, 100%, 31%); /* #004a9f */
+$clr-blue-550: hsl(208, 94%, 27%); /* #044985 */
+$clr-blue-600: hsl(207, 55%, 22%); /* #193B57 */
+
+$clr-pink-400: hsl(315, 47%, 41%); /* #9B3882 */
+$clr-pink-500: hsl(315, 57%, 19%); /* #4C153E */
+
+$clr-purple-350: hsl(253, 60%, 46%); /* #4f2fbe */
+$clr-purple-400: hsl(271, 67%, 41%); /* #6C23B0 */
+$clr-purple-600: hsl(271, 66%, 25%); /* #41166A */
+
+$clr-black: #000;
+$clr-white: #fff;
+$clr-white-100: #f0f4ff;
+
+$clr-gray-100: hsl(220, 33%, 97%);
+$clr-gray-300: hsl(0, 0%, 83%); /* #D3D3D3 */
+$clr-gray: hsl(0, 0%, 67%); /* #ababab */
+
+$clr-yellow-100: hsl(40, 71%, 95%);
+$clr-purple-300: hsl(271, 67%, 41%);
+
+// Semantic theme/support tokens
+$clr-theme-blog-500: hsl(224, 60%, 12%);
+$clr-theme-panel-blue-500: hsl(223, 57%, 27%);
+$clr-theme-panel-blue-600: hsl(211, 88%, 19%);
+$clr-theme-sql-600: hsl(180, 100%, 3%);
+$clr-theme-ia-600: hsl(272, 100%, 6%);
+$clr-theme-n8n-600: hsl(0, 0%, 5%);
+$clr-theme-vba-600: hsl(191, 86%, 5%);
+$clr-theme-ad-600: hsl(221, 88%, 5%);
+$clr-theme-fullstack-600: hsl(280, 100%, 3%);
+$clr-accent-warm-100: hsl(34, 100%, 73%);
+$clr-accent-muted-400: hsl(225, 13%, 52%);
+$clr-social-purple-300: hsl(294, 57%, 46%);
+
+// Transition
+$transition-function: ease;
+$transition-duration-short: 150ms;
+$transition-duration: 300ms;
+$transition-duration-long: 800ms;
+
+// Components
+$infinite-scroll-duration: 30s;

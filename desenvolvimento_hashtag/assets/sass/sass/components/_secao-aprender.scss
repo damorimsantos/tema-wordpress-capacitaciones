@@ -1,0 +1,117 @@
+.aprender {
+    position: relative;
+    overflow: hidden;
+
+    & .container {
+        gap: $spc-900;
+    }
+
+    & h2 {
+        // margin-bottom: $spc-600;
+
+        // @include respond(g) {
+        //     margin-bottom: 0;
+        // }
+
+        @include respond(xm) {
+            // text-align: left;
+            // align-self: start;
+            @include flex($flow: row wrap, $align: center, $justify: center);
+            column-gap: $spc-80;
+            text-align: center;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: $spc-1100;
+        row-gap: $spc-1000;
+
+        @include respond(g) {
+            @include flex($flow: column, $gap: $spc-800);
+            align-items: center;
+            max-width: 60rem;
+            width: 100%;
+        }
+    }
+
+    &__paragrafos {
+        @include flex($flow: column, $justify: center, $gap: $spc-400);
+        line-height: 1.6;
+
+        @include respond(g) {
+            margin: 0;
+            // max-width: 60rem;
+        }
+
+        &--baixo {
+            @include respond(g) {
+                order: 4;
+            }
+        }
+    }
+
+    &__img {
+        max-width: 50rem;
+        width: 100%;
+        // border-radius: $border-radius-s;
+        // border: solid 1px darken($  color: $clr-white, $amount: 40);
+
+        @include respond(g) {
+            max-width: 60rem;
+            width: 100%;
+
+            // max-width: 60rem;
+        }
+
+        &-noticia {
+            @include respond(g) {
+                max-width: 60rem;
+                width: 100%;
+            }
+        }
+    }
+
+    & .botao-verde {
+        align-self: center;
+    }
+
+    // & .luz-aprender {
+    //     position: absolute;
+    //     left: 50%;
+    //     top: 50%;
+    //     transform: translate(-80%, -150%);
+    //     z-index: -1;
+
+    //     @include respond(g) {
+    //         // min-width: 300rem;
+    //         // transform: translate(-80%, -70%);
+    //         left: 0;
+    //         // transform: translateX(-80%) scale(300%);
+    //         width: 100%;
+    //         min-width: 100%;
+    //         transform: translateY(-150%);
+    //     }
+    // }
+
+    & .luz-aprender {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-80%, -50%);
+        // top: 0;
+        // left: 0;
+        z-index: -1;
+        max-width: 230rem;
+        min-width: 230rem;
+
+        @include respond(g) {
+            // left: 0;
+            // width: 100%;
+            // min-width: 100%;
+            // transform: translateY(-150%);
+        }
+    }
+}

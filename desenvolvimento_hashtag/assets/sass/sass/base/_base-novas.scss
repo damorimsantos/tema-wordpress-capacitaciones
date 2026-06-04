@@ -1,0 +1,52 @@
+body {
+    font-weight: 300;
+    position: relative;
+}
+
+h2 {
+    font-weight: 300;
+
+    @include respond(g) {
+        margin-bottom: 0 !important;
+    }
+}
+
+.secao {
+    overflow-x: hidden;
+    // padding-left: $spc-800;
+    // padding-right: $spc-800;
+    padding-left: $spc-700;
+    padding-right: $spc-700;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: $container-max-w-g;
+    @include flex($flow: column, $align: center, $gap: $spc-1100);
+
+    @include respond(m) {
+        gap: $spc-800;
+    }
+}
+
+hr {
+    width: $container-max-w-g;
+    max-width: 80%;
+    margin: 4rem auto;
+    margin-top: 1rem;
+    border: 0;
+    border: solid 1px $clr-blue-350;
+}
+
+.realce {
+    font-weight: 500;
+}
+
+.logo-nome-curso {
+    @include flex($gap: 1rem);
+    font-size: 2rem;
+
+    &__nome {
+        @include flex($flow: column, $gap: 0.3rem);
+    }
+}

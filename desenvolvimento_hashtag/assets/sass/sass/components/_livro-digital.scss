@@ -1,0 +1,54 @@
+.livro-digital {
+    & .container {
+        flex-flow: row;
+        gap: $spc-1100;
+
+        @include respond(g) {
+            flex-flow: column;
+            max-width: 70rem;
+            gap: $spc-800;
+        }
+    }
+
+    & h2 {
+        text-align: start;
+        max-width: 45rem;
+
+        @include respond(m) {
+            max-width: 35rem;
+        }
+    }
+
+    &__textos {
+        @include flex($flow: column, $gap: $spc-700);
+    }
+
+    &__paragrafos {
+        @include flex($flow: column, $gap: $spc-500);
+        max-width: 54rem;
+        line-height: 1.6;
+
+        @include respond(g) {
+            max-width: 100%;
+        }
+    }
+
+    &__container-img {
+        width: 50%;
+        @include flex($justify: end);
+
+        @include respond(g) {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__img {
+        transform: scale(95%);
+
+        @include respond(g) {
+            max-width: 40rem;
+            justify-content: center;
+        }
+    }
+}

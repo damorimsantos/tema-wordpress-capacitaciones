@@ -1,0 +1,3138 @@
+/*
+Theme Name: Hashtag
+Text Domain: hashtag
+Version: 1.0.0
+*/
+
+:root {
+  --branco: #fff;
+  --branco-translucido: rgba(255, 255, 255, 0.97);
+  --cinza1: #ececec;
+  --sombra1: rgba(0, 0, 0, 0.1);
+  --sombra2: rgba(0, 0, 0, 0.05);
+  --azul1: #112e61;
+  --amarelo0: #ffdf87;
+  --amarelo1: #ffc62c;
+  --amarelo2: #a07b16;
+  --laranja2: #ff6510;
+  --laranja3: #fe4e11;
+  --roxo1: #8047a6;
+  --roxo2: #2b015a;
+  --azul2: #0e5fc2;
+  --laranja1: #f60;
+  --laranja-foco: rgba(230, 125, 34, 0.5);
+  --tempo-transicao: 200ms;
+  --tipo-transicao: ease-in;
+}
+
+/* Geral */
+
+.oculto {
+  display: none !important;
+}
+
+/*! https://css.github.io/csso/csso.html para limpar o CSS */
+/*! footer-novo.php */
+.footer-padding-0 {
+  padding: 0;
+}
+/*! nova-home.php - Apenas CSS usado no Webflow - Código 'Ler Txt Classes Webflow' + Ajustes Manuais*/
+a.botao-cursos-home {
+  appearance: button;
+}
+
+.div-depoimentos-excel .mini_video,
+.div-depoimentos-home .mini_video,
+.div-depoimentos-powerBi .mini_video,
+.div-depoimentos-python .mini_video {
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  background-blend-mode: multiply;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.div-depoimentos-home .mini_video {
+  background-color: #7489af;
+}
+
+.div-depoimentos-home--javascript .mini_video {
+  background-color: var(--amarelo0);
+}
+
+.div-depoimentos-python .mini_video {
+  background-color: #aa956d;
+}
+
+.div-depoimentos-excel .mini_video {
+  background-color: #74b3a4;
+}
+
+.div-depoimentos-powerBi .mini_video {
+  background-color: #ffc03d;
+}
+
+.div-depoimentos-excel .slick-prev,
+.div-depoimentos-excel .slick-prev:focus,
+.div-depoimentos-excel .slick-prev:hover,
+.div-depoimentos-home .slick-prev,
+.div-depoimentos-home .slick-prev:focus,
+.div-depoimentos-home .slick-prev:hover,
+.div-depoimentos-powerBi .slick-prev,
+.div-depoimentos-powerBi .slick-prev:focus,
+.div-depoimentos-powerBi .slick-prev:hover,
+.div-depoimentos-python .slick-prev,
+.div-depoimentos-python .slick-prev:focus,
+.div-depoimentos-python .slick-prev:hover {
+  left: -35px;
+  background-size: cover;
+  height: 43px;
+  width: 43px;
+}
+
+.div-depoimentos-home .slick-prev,
+.div-depoimentos-home .slick-prev:focus,
+.div-depoimentos-home .slick-prev:hover {
+  background: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/ELEMENTO-seta-esquerda.png);
+}
+
+.div-depoimentos-excel .slick-prev,
+.div-depoimentos-excel .slick-prev:focus,
+.div-depoimentos-excel .slick-prev:hover {
+  background: url(https://www.hashtagtreinamentos.com/ELEMENTO-seta-esquerda-verde);
+}
+
+.div-depoimentos-python .slick-prev,
+.div-depoimentos-python .slick-prev:focus,
+.div-depoimentos-python .slick-prev:hover {
+  background: url(https://www.hashtagtreinamentos.com/elemento-seta-esquerda-3);
+}
+
+.div-depoimentos-powerBi .slick-prev,
+.div-depoimentos-powerBi .slick-prev:focus,
+.div-depoimentos-powerBi .slick-prev:hover {
+  background: url(https://www.hashtagtreinamentos.com/ELEMENTO-seta-esquerda-laranja);
+}
+
+.div-depoimentos-excel .slick-next:before,
+.div-depoimentos-excel .slick-prev:before,
+.div-depoimentos-home .slick-next:before,
+.div-depoimentos-home .slick-prev:before,
+.div-depoimentos-powerBi .slick-next:before,
+.div-depoimentos-powerBi .slick-prev:before,
+.div-depoimentos-python .slick-next:before,
+.div-depoimentos-python .slick-prev:before {
+  color: transparent;
+}
+
+.div-depoimentos-excel .slick-next,
+.div-depoimentos-excel .slick-next:focus,
+.div-depoimentos-excel .slick-next:hover,
+.div-depoimentos-home .slick-next,
+.div-depoimentos-home .slick-next:focus,
+.div-depoimentos-home .slick-next:hover,
+.div-depoimentos-powerBi .slick-next,
+.div-depoimentos-powerBi .slick-next:focus,
+.div-depoimentos-powerBi .slick-next:hover,
+.div-depoimentos-python .slick-next,
+.div-depoimentos-python .slick-next:focus,
+.div-depoimentos-python .slick-next:hover {
+  right: -35px;
+  background-size: cover;
+  height: 43px;
+  width: 43px;
+}
+
+.div-depoimentos-home .slick-next,
+.div-depoimentos-home .slick-next:focus,
+.div-depoimentos-home .slick-next:hover {
+  background: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/ELEMENTO-seta-direita.png);
+}
+
+.div-depoimentos-excel .slick-next,
+.div-depoimentos-excel .slick-next:focus,
+.div-depoimentos-excel .slick-next:hover {
+  background: url(https://www.hashtagtreinamentos.com/ELEMENTO-seta-direita-verde);
+}
+
+.div-depoimentos-python .slick-next,
+.div-depoimentos-python .slick-next:focus,
+.div-depoimentos-python .slick-next:hover {
+  background: url(https://www.hashtagtreinamentos.com/elemento-seta-direita-3);
+}
+
+.div-depoimentos-powerBi .slick-next,
+.div-depoimentos-powerBi .slick-next:focus,
+.div-depoimentos-powerBi .slick-next:hover {
+  background: url(https://www.hashtagtreinamentos.com/ELEMENTO-seta-direita-laranja);
+}
+
+.div-depoimentos-excel .slick-list,
+.div-depoimentos-home .slick-list,
+.div-depoimentos-powerBi .slick-list,
+.div-depoimentos-python .slick-list {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.div-depoimentos-excel .mini_video .player,
+.div-depoimentos-home .mini_video .player,
+.div-depoimentos-powerBi .mini_video .player,
+.div-depoimentos-python .mini_video .player {
+  width: 100%;
+  text-align: center;
+}
+
+.div-depoimentos-excel .mini_video .player img,
+.div-depoimentos-home .mini_video .player img,
+.div-depoimentos-powerBi .mini_video .player img,
+.div-depoimentos-python .mini_video .player img {
+  margin: 0 auto;
+  max-width: 30px;
+}
+
+.div-depoimentos-excel .slick-dots,
+.div-depoimentos-home .slick-dots,
+.div-depoimentos-powerBi .slick-dots,
+.div-depoimentos-python .slick-dots {
+  position: relative;
+  bottom: -15px;
+}
+
+.div-depoimentos-excel .slick-dots li button,
+.div-depoimentos-home .slick-dots li button,
+.div-depoimentos-powerBi .slick-dots li button,
+.div-depoimentos-python .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  color: transparent;
+  outline: 0;
+  opacity: 0.5;
+}
+
+.div-depoimentos-home .slick-dots li button {
+  background: #14577f;
+}
+
+.div-depoimentos-excel .slick-dots li button {
+  background: #486e65;
+}
+
+.div-depoimentos-python .slick-dots li button {
+  background: #1a5483;
+}
+
+.div-depoimentos-powerBi .slick-dots li button {
+  background: #ffc03d;
+}
+
+.div-depoimentos-excel .slick-dots li button:before,
+.div-depoimentos-home .slick-dots li button:before,
+.div-depoimentos-powerBi .slick-dots li button:before,
+.div-depoimentos-python .slick-dots li button:before {
+  display: none;
+}
+
+.div-depoimentos-excel .slick-dots li.slick-active button,
+.div-depoimentos-home .slick-dots li.slick-active button,
+.div-depoimentos-powerBi .slick-dots li.slick-active button,
+.div-depoimentos-python .slick-dots li.slick-active button {
+  opacity: 1;
+}
+
+.post-blog h4:hover,
+.texto-postadoem-home ul.post-categories li a {
+  color: #f7a70c;
+}
+
+.post-blog a {
+  text-decoration: none;
+}
+
+.botao-formulario:hover {
+  border-right-width: 0;
+  border-bottom-width: 0;
+}
+
+.foto-post-blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botao-formulario-newsletter:hover {
+  border: 0;
+}
+
+.icone-setadepoimento-home {
+  height: 39px;
+  width: 39px;
+}
+
+.botao-cursos-home:hover {
+  color: #993c38 !important;
+  background-color: #fff;
+  background-image: none;
+  text-decoration: none;
+  border-right-width: 0;
+  border-bottom-width: 0;
+}
+
+.botao-cursos-home.azul:hover {
+  color: #14577f;
+  background-color: #fff;
+  background-image: none;
+}
+
+.icone-titulo-conteudos-home.margin-left-20 {
+  padding-right: 20px;
+}
+
+.realce-roxo-home {
+  color: #7a40be;
+  font-weight: 600;
+}
+
+.icone-conteudos-home {
+  width: 18px;
+  margin-right: 7px;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.icone-diferenciais-home {
+  width: 100%;
+}
+
+.link-diferenciais-home {
+  display: inline;
+  text-decoration: none;
+}
+
+.realce-azul-home {
+  color: #005e88;
+  font-weight: 700;
+}
+
+.icone-oquefalam-home {
+  padding-right: 20px;
+}
+
+.imagem-namidia-home {
+  height: 29px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.imagem-post-blog {
+  margin-bottom: 10px;
+  max-height: 264px;
+  width: 470px;
+  object-fit: contain;
+}
+
+.imagem-diferenciais-home {
+  margin-top: 30px;
+}
+
+.icone-checkperguntas-home {
+  padding-top: 5px;
+  padding-right: 10px;
+}
+
+.logo-hash-rodape {
+  width: 180px;
+  min-width: 180px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.body-f4f5f7-font-404040-s19-h23-justify {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4f5f7;
+  color: #404040;
+  font-size: 19px;
+  line-height: 23px;
+  text-align: justify;
+}
+
+.secao-topo-home {
+  padding-top: 130px;
+  padding-bottom: 100px;
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/BACKGROUN-banner-01.png);
+  background-position: 50%0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.secao-topo-home.excel,
+.secao-topo-home--javascript,
+.secao-topo-home--htmlcss {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.secao-topo-home.excel {
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/12/backgroun-banner-01.png);
+}
+
+.secao-topo-home.excel.python {
+  background-image: url(https://www.hashtagtreinamentos.com/backgroun-banner-01-desktop);
+}
+
+.secao-topo-home--javascript {
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2023/05/curso-js-hero-fundo-1-1.webp);
+}
+
+.secao-topo-home--htmlcss {
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2023/10/curso-htmlcss-bg-hero-desktop-1.webp);
+}
+
+.container-1000-home {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.div-coluna-topo-home {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.div-coluna-1-topo-home {
+  width: 50%;
+}
+
+.titulo-home {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 35px;
+  line-height: 42px;
+  font-weight: 600;
+  text-align: justify;
+}
+
+.titulo-home--javascript {
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+.titulo-home.margin-bottom-20 {
+  margin-right: -20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.botao-cursos-home {
+  width: 100%;
+  height: 46px;
+  margin-top: 20px;
+  border-right: 4px solid #993c38;
+  border-bottom: 4px solid #993c38;
+  border-radius: 30px;
+  background-color: transparent;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#ff645e),
+    to(#ff9253)
+  );
+  background-image: linear-gradient(180deg, #ff645e, #ff9253);
+  box-shadow: 3px 3px 8px -2px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+  border-top: 0;
+  border-left: 0;
+  color: #fff;
+  padding: 9px 0;
+  display: block;
+}
+
+.div-coluna-2-topo-home {
+  width: 50%;
+  padding-left: 60px;
+}
+
+.secao-conteudos-home {
+  margin-bottom: 70px;
+  padding-top: 45px;
+  padding-bottom: 65px;
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/BACKGROUN-banner-02.png);
+  background-position: 50%0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.div-coluna-conteudos-home {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.div-coluna-1-conteudos-home {
+  position: relative;
+  align-self: end;
+  min-width: 46%;
+  margin-right: -37px;
+  padding-bottom: 50px;
+}
+
+.div-coluna-2-conteudos-home {
+  width: 100%;
+}
+
+.div-coluna-treinamentos-programacao-home,
+.div-titulo-conteudos-home {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.div-titulo-conteudos-home {
+  padding-left: 20px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.titulo-home.normal {
+  margin-right: -15px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.div-coluna-treinamentos-programacao-home {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.div-coluna-individual-treinamentos-programacao-home {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(calc(100% - 20px) / 2);
+  margin-top: 50px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 25px;
+  box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.caixa-treinamentos-programacao-home {
+  margin-top: -75px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#aa56e6),
+    to(#6d42b9)
+  );
+  background-image: linear-gradient(90deg, #aa56e6, #6d42b9);
+  box-shadow: 0 8px 15px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+
+.texto-titulo-conteudos-home {
+  padding: 8px 20px;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.div-cursos-conteudos-home {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: -20px;
+  margin-bottom: 15px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: center;
+  gap: 10px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.div-logocurso-conteudos-home {
+  width: 50px;
+  aspect-ratio: 1;
+  height: auto;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #e7e7e7;
+  box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.1);
+
+  & img {
+    width: 100%;
+  }
+}
+
+.div-logocurso-conteudos-home.vba {
+  padding: 6px;
+}
+
+.botao-conteudos-home {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%;
+  margin-bottom: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 35px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 40px;
+  background-color: #eee;
+  box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, 0.1);
+  color: #404040;
+  text-align: center;
+  text-decoration: none;
+}
+
+.texto-conteudos-home {
+  text-decoration: none;
+}
+
+.div-cursos-conteudos-home.programacao {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.secao-diferenciais-home {
+  margin-bottom: 70px;
+}
+
+.container-1100-home {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.container-1100-home.vertical-centralizado,
+.div-fundo-diferenciais-1-home,
+.div-fundo-diferenciais-home {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-1100-home.vertical-centralizado,
+.div-fundo-diferenciais-home {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.div-fundo-diferenciais-home {
+  padding-bottom: 50px;
+  border-radius: 40px;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 0 13px 2px rgba(0, 0, 0, 0.2);
+}
+
+.div-fundo-diferenciais-1-home {
+  width: 100%;
+  height: 310px;
+  padding-top: 65px;
+  padding-right: 70px;
+  padding-left: 70px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  border-radius: 40px 40px 0 0;
+  background-color: #005e88;
+  background-image: linear-gradient(
+    225deg,
+    rgba(89, 136, 217, 0.28),
+    rgba(92, 225, 250, 0.28)
+  );
+  opacity: 1;
+}
+
+.div-titulo-diferenciais-home {
+  width: 450px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 20px;
+  border-left: 5px solid #ffb20f;
+}
+
+.titulo-home.normal.branco {
+  color: #fff;
+  text-align: left;
+}
+
+.borda-fundo-diferenciais-home {
+  display: none;
+}
+
+.texto-diferenciais-cabecalho-home {
+  width: 360px;
+  padding-top: 5px;
+  padding-left: 18px;
+  color: #fff;
+  text-align: right;
+}
+
+.coluna-diferenciais-home,
+.coluna-todos-diferenciais-home {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.coluna-todos-diferenciais-home {
+  margin: -50px 20px 50px;
+}
+
+.coluna-diferenciais-home {
+  width: 33%;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 30px 30px 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.div-imagem-diferenciais-home {
+  width: 100px;
+  height: 100px;
+  margin-top: -80px;
+  padding: 16px;
+  border-radius: 20px;
+  background-color: #ffaf00;
+  box-shadow: inset 0 1px 5px 0 rgba(128, 88, 0, 0.5);
+}
+
+.subtitulo-home {
+  margin: 20px -11px 15px;
+  color: #005e88;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.texto-diferenciais-home {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.centralizado {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.titulo-home.normal.centralizado.titulo-empresas {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.secao-oquefalam-home {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/BACKGROUN-banner-04.png);
+  background-position: 50%0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.secao-oquefalam-home.excel {
+  background-image: url(https://www.hashtagtreinamentos.com/[BACKGROUN]-banner-05-V2);
+}
+
+.secao-oquefalam-home--javascript {
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2023/05/curso-js-fundo-depoimentos.webp);
+}
+
+.container-1000-home.flex-vertical-center {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.container-1000-home.flex-vertical-center,
+.div-depoimentos-excel,
+.div-depoimentos-home,
+.div-depoimentos-powerBi,
+.div-depoimentos-python,
+.titulo-oquefalam-home {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.titulo-oquefalam-home {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.div-depoimentos-excel,
+.div-depoimentos-home,
+.div-depoimentos-powerBi,
+.div-depoimentos-python {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.div-depoimento-home {
+  width: 300px;
+  max-width: 320px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 169px;
+}
+
+.botao-cursos-home.azul {
+  width: auto;
+  color: #fff;
+  height: auto;
+  margin-top: 0;
+  padding-right: 40px;
+  padding-left: 40px;
+  border-right-color: #14577f;
+  border-bottom-color: #14577f;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#196c9f),
+    to(#1a80a7)
+  );
+  background-image: linear-gradient(180deg, #196c9f, #1a80a7);
+}
+
+.secao-namidia-home {
+  margin-bottom: 100px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/BACKGROUND-Banner-05_1.png);
+  background-position: 50%0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-900-home {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.div-namidia-home {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.div-imagensmidia-home,
+.div-namidia-home {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.secao-postsblog-home {
+  margin-bottom: 100px;
+}
+
+.container-1200-home {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.div-linha-posts-blog,
+.div-posts-blog {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.div-posts-blog {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.div-fundo-diferenciais-home.div-posts-blog {
+  padding-right: 20px;
+  padding-bottom: 75px;
+  padding-left: 20px;
+}
+
+.caixa-treinamentos-programacao-home.caixa-posts-blog {
+  margin-top: -25px;
+  padding: 7px 25px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#feb914),
+    to(#f6a50b)
+  );
+  background-image: linear-gradient(90deg, #feb914, #f6a50b);
+}
+
+.div-linha-posts-blog {
+  margin-top: 40px;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.post-blog {
+  max-width: 520px;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 20px 25px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.texto-postadoem-home {
+  font-size: 15px;
+  line-height: 1;
+  text-align: left;
+}
+
+.texto-postadoem-home ul.post-categories {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.texto-postadoem-home ul.post-categories li {
+  display: inline-block;
+  font-weight: 600;
+}
+
+.subtitulo-home.texto-subtituloblog {
+  margin: 10px 0;
+  color: #404040;
+  text-align: left;
+}
+
+.texto-descricaopost-home {
+  font-size: 17px;
+  line-height: 20px;
+  text-align: justify;
+}
+
+.post-blog.segundo-post {
+  margin-top: 40px;
+}
+
+.secao-comoajudar-home {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/BACKGROUND-banner-07.png);
+  background-position: 50%0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.lista-perguntas-home,
+.titulo-hashteajudar-home {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.titulo-hashteajudar-home {
+  margin-bottom: 40px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.caixa-treinamentos-programacao-home.caixa-posts-blog.caixa-hashteajudar {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#14a1d5),
+    to(#1a8ad4)
+  );
+  background-image: linear-gradient(90deg, #14a1d5, #1a8ad4);
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.div-fundo-diferenciais-home.div-fundo-hashteajudar {
+  padding: 35px 30px 20px;
+  border-radius: 20px;
+}
+
+.lista-perguntas-home {
+  width: 100%;
+  margin-bottom: 15px;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.link-hashteajudar-home {
+  display: inline;
+  color: #008ff7;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.secao-respcomoteajudar-home {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.secao-mini-home,
+.secao-minicurso-home {
+  padding-top: 65px;
+  padding-bottom: 80px;
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/BACKGROUND-banner-08_1.png);
+  background-position: 50%0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.secao-minicurso-home--javascript,
+.secao-minicurso-home--htmlcss {
+  background-image: none;
+  background-position: 50%0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.secao-minicurso-home--javascript {
+  background-color: var(--roxo2);
+}
+
+.secao-minicurso-home--htmlcss {
+  background-color: var(--azul2);
+}
+
+.minicurso--div-seta {
+  display: flex;
+}
+
+.minicurso--icone-seta {
+  color: var(--amarelo1);
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.minicurso--icone-seta--htmlcss {
+  color: var(--laranja2);
+}
+
+.minicurso--icone-seta:last-child {
+  margin-left: -35px;
+}
+
+.secao-mini-home {
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/themes/hashtag/assets/img/powerBi/bannerpreto.png);
+}
+
+.centralizado,
+.titulo-home.normal.branco.centralizado {
+  text-align: center;
+}
+
+.form-minicursoexcel-home,
+.form-minicursopowerBi-home {
+  padding-top: 30px;
+}
+
+.formulario-deitado {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-size: 19px;
+  line-height: 23px;
+  font-family: montserrat;
+}
+
+.bloco-textoinput-formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.texto-titulo-formulario {
+  margin-bottom: 10px;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.input-formulario {
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  padding: 8px 12px;
+  color: #404040;
+  border: 0;
+  font-size: 14px;
+}
+
+.input-formulario.nome {
+  width: 250px;
+}
+
+.input-formulario.email {
+  width: 350px;
+}
+
+.botao-formulario {
+  background: #ffba29;
+  padding: 13px 35px;
+  height: 59px;
+  width: 174px;
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+  border-radius: 50px;
+  border: 0;
+  border-right: solid 5px #664a10;
+  border-bottom: solid 5px #664a10;
+  box-shadow: 4px 3px 8px -2px rgba(0, 0, 0, 0.3);
+}
+
+.rodape-dominiohash {
+  padding-top: 75px;
+  padding-bottom: 50px;
+  background-color: #f0f2f4;
+  font-family: Montserrat, sans-serif;
+  color: #404040;
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 400;
+  text-align: justify;
+  box-shadow: 0-2px 4px 2px var(--sombra2);
+  position: relative;
+}
+
+.div-colunas-rodape {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.div-coluna-rodape {
+  max-width: 50%;
+  padding-right: 30px;
+  padding-left: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+.div-coluna-rodape.coluna-imagem {
+  max-width: 260px;
+  padding-top: 25px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.titulo-rodape {
+  margin-bottom: 20px;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 600;
+}
+
+.subtitulo-rodape {
+  margin-bottom: 15px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.subtitulo-2-rodape {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.caixa-texto-rodape {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.material-icons {
+  display: inline-block;
+  font-family: Materialicons, sans-serif;
+}
+
+.icone-texto-rodape {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.icone-texto-rodape--link:link,
+.icone-texto-rodape--link:visited {
+  color: inherit;
+}
+
+.icone-texto-rodape--link:active,
+.icone-texto-rodape--link:hover {
+  color: var(--laranja1);
+}
+
+.material-icons.icone-texto-rodape {
+  padding-right: 10px;
+}
+
+.texto-rodap {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.link-rodape:link,
+.link-rodape:visited,
+.texto-rodap.centralizado a {
+  color: #1a77a4;
+  text-decoration: underline;
+}
+
+.link-rodape:link,
+.link-rodape:visited,
+.texto-rodap {
+  text-align: left;
+}
+
+.link-rodape:active,
+.link-rodape:hover {
+  color: var(--laranja1);
+  text-decoration: none;
+}
+
+.titulo-rodape.segundo-bloco {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.caixa-privacidade-rodape {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.div-coluna-rodape.coluna-form {
+  margin-top: -10px;
+}
+
+.formulario-deitado-newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-family: montserrat;
+  color: #404040;
+  padding: 40px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.15);
+}
+
+.titulo-formulario-newsletter {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.bloco-textoinput-formulario-newsletter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.texto-titulo-formulario-newsletter {
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+
+.input-formulario-newsletter {
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.15);
+  padding: 8px 12px;
+  color: #404040;
+  border: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.botao-formulario-newsletter {
+  background: #1a77a4;
+  padding: 10px 30px;
+  height: 51px;
+  width: 130px;
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+  border-radius: 50px;
+  border: 0;
+  border-right: solid 5px #0c374d;
+  border-bottom: solid 5px #0c374d;
+  box-shadow: 4px 3px 8px -2px rgba(0, 0, 0, 0.3);
+  margin-top: 15px;
+}
+
+.div-direitosreservados-rodape {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 40px;
+  border-top: 1px solid rgba(64, 64, 64, 0.5);
+}
+
+.texto-rodap.centralizado {
+  text-align: center;
+}
+
+.card-header-color {
+  background-color: #ffbf4b;
+  border: 0;
+  border-radius: 20px 20px 0 0 !important;
+  color: #fcf8f7;
+}
+
+.card-color {
+  box-shadow: 0-3px 5px rgb(0 0 0/25%);
+  border: 0;
+  border-radius: 20px 20px 10px 10px;
+}
+
+.color-title {
+  color: #fcf8f7;
+}
+
+.color-icon {
+  color: #fe9a23;
+}
+
+.solicitation-card {
+  height: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.px-6 {
+  padding-right: 2.3rem !important;
+  padding-left: 2.3rem !important;
+}
+
+.solicitation-card-form {
+  font-size: 18px;
+  color: #404040;
+  width: 100%;
+  align-items: center;
+  padding: 40px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: inset 0 0 10px 2px rgb(0 0 0/15%);
+}
+
+.img-responsive {
+  max-width: 100%;
+  display: block;
+}
+
+.mt-form {
+  margin-top: 2.3rem !important;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.border-radius-15 {
+  border-radius: 15px;
+}
+
+.solicitation-card-outros {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.br-50 {
+  border-radius: 50px;
+}
+
+.title-white {
+  color: #fcf8f7;
+}
+/*! patrocinio.php - Apenas CSS usado no Webflow - Código 'Ler Txt Classes Webflow' + Ajustes Manuais #################################################################################################*/
+.div-form-patrocinio.div-form-patrocinio-visivel {
+  margin-top: 25px;
+}
+
+.div-formulario-enviado.div-formulario-enviado-visivel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bloco-colunas-patrocinio.horizontal.margin-b-70 {
+  margin-bottom: 70px;
+}
+
+.bloco-colunas-patrocinio.horizontal.margin-b-50 {
+  margin-bottom: 50px;
+}
+
+.formulario-deitado-patrocinio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-family: montserrat;
+  color: #404040;
+  padding: 40px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.15);
+  height: max-content;
+}
+
+.bloco-textoinput-formulario-patrocinio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.titulo-formulario-patrocinio {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  color: #1a77a4;
+}
+
+.texto-titulo-formulario-patrocinio {
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+
+.input-formulario-patrocinio {
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.15);
+  padding: 8px 12px;
+  color: #404040;
+  border: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.botao-formulario-patrocinio {
+  background: #f1b32a;
+  padding: 10px 30px;
+  width: 130px;
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+  border-radius: 50px;
+  border: 0;
+  border-right: solid 5px #99721b;
+  border-bottom: solid 5px #99721b;
+  box-shadow: 4px 3px 8px -2px rgba(0, 0, 0, 0.3);
+  margin-top: 15px;
+}
+
+.botao-formulario-patrocinio:hover {
+  border: 0;
+}
+
+.textarea-form {
+  height: 75px;
+}
+
+.espacador {
+  height: 20px;
+}
+
+.body-patrocinio {
+  display: block;
+  font-family: Montserrat, sans-serif;
+  color: #404040;
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.secao-patrocinio {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 20px;
+  padding-left: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.secao-patrocinio.topo-patrocinio {
+  margin-top: 105px;
+  padding-top: 85px;
+  padding-bottom: 85px;
+  background-image: url(https://www.hashtagtreinamentos.com/BACKGROUND-BANNER-1-DESKTOP-1);
+  background-position: 50%0;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.container-patrocinio {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.container-patrocinio._w-800 {
+  max-width: 800px;
+}
+
+.bloco-colunas-patrocinio.horizontal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.coluna-patrocinio {
+  width: 50%;
+}
+
+.coluna-patrocinio,
+.coluna-patrocinio:hover {
+  text-decoration: none;
+}
+
+.coluna-patrocinio.esquerda {
+  padding-right: 20px;
+}
+
+.titulo-patrocinio {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #fff;
+  font-weight: 700;
+}
+
+.titulo-patrocinio.margin-b-30 {
+  margin-bottom: 30px;
+}
+
+.titulo-patrocinio.margin-b-30.margin-r--130 {
+  margin-right: -130px;
+}
+
+.subtitulo-patrocinio {
+  color: #fff;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.subtitulo-patrocinio.padding-r-15 {
+  padding-right: 15px;
+}
+
+.subtitulo-patrocinio.padding-r-15.margin-b-30 {
+  margin-bottom: 30px;
+}
+
+.botao-cursos-home.amarelo {
+  border-right-color: #99721b;
+  border-bottom-color: #99721b;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f1b32a),
+    to(#f1b32a)
+  );
+  background-image: linear-gradient(180deg, #f1b32a, #f1b32a);
+  color: #fff;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.amarelo {
+  background-color: transparent;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #05dcee;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.botao-cursos-home.amarelo.botao-patrocinio {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  height: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.botao-cursos-home.amarelo.botao-patrocinio.max-w-300 {
+  max-width: 300px;
+}
+
+.material-icons {
+  display: inline-block;
+  font-family: Materialicons, sans-serif;
+}
+
+.material-icons.padding-l-10 {
+  padding-left: 10px;
+}
+
+.coluna-patrocinio.direita {
+  padding-left: 20px;
+}
+
+.imagem-1-patrocinio {
+  margin-left: 80px;
+}
+
+.container-patrocinio._w-900 {
+  max-width: 900px;
+}
+
+.container-patrocinio._w-900.margin-t-65 {
+  margin-top: 65px;
+}
+
+.coluna-patrocinio.esquerda.flex-vertical-center,
+.div-titulo-patrocinio {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.coluna-patrocinio.esquerda.flex-vertical-center {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.div-titulo-patrocinio {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.div-titulo-patrocinio.margin-b-30 {
+  margin-bottom: 30px;
+}
+
+.imagem-titulo-patrocinio {
+  margin-right: 10px;
+}
+
+.subtitulo-patrocinio._404040,
+.titulo-patrocinio._404040 {
+  color: #404040;
+}
+
+.titulo-patrocinio._404040.line-h-42 {
+  line-height: 42px;
+}
+
+.div-formulario-enviado {
+  position: relative;
+  display: none;
+  width: 60%;
+  height: 50px;
+  margin-right: auto;
+  margin-bottom: -25px;
+  margin-left: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #00ad5d;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+
+.texto-form-patrocinio {
+  color: #fff;
+  font-weight: 700;
+}
+
+.script-form-patrocinio {
+  display: none;
+}
+
+.container-patrocinio.margin-t-100 {
+  margin-top: 100px;
+}
+
+.fundo-azul-patrocinio {
+  padding: 50px 90px 60px;
+  border-radius: 50px;
+  background-image: linear-gradient(53deg, #253a4b, #507da0);
+  box-shadow: inset 0 0 40px 8px rgba(0, 0, 0, 0.14);
+}
+
+.titulo-patrocinio.margin-b-50 {
+  margin-bottom: 50px;
+}
+
+.titulo-patrocinio.margin-b-50.centralizado {
+  text-align: center;
+}
+
+.botao-cursos-home.amarelo.botao-patrocinio.max-w-400.margin-lr-auto,
+.centralizado {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.div-barra-horizontal-patrocinio {
+  display: none;
+}
+
+.bloco-3-colunas-patrocinio {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+}
+
+.coluna-patrocinio._5-caixas {
+  width: 20%;
+}
+
+.coluna-patrocinio._5-caixas.fundo-branco {
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 15px 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.14);
+}
+
+.coluna-patrocinio._5-caixas.fundo-branco._3-caixas {
+  width: 33.333%;
+}
+
+.titulo-caixa-patrocinio {
+  color: #406480;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.texto-peq-caixa-patrocinio {
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.bloco-2-colunas-patrocinio {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+}
+
+.coluna-patrocinio._5-caixas.fundo-branco._2-caixas {
+  width: 50%;
+}
+
+.caixa-icone-patrocinio,
+.coluna-patrocinio.fundo-branco {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.coluna-patrocinio.fundo-branco {
+  padding-right: 25px;
+  padding-left: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.14);
+}
+
+.coluna-patrocinio.fundo-branco.max-h-220 {
+  height: 230px;
+}
+
+.coluna-patrocinio.fundo-branco.max-h-220.esquerda {
+  margin-right: 15px;
+}
+
+.caixa-icone-patrocinio {
+  width: 75px;
+  height: 60px;
+  margin-top: -30px;
+  margin-bottom: 25px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #f1b32a;
+  box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.24);
+}
+
+.texto-caixa-patrocinio {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.texto-caixa-patrocinio.margin-t-15 {
+  margin-top: 15px;
+}
+
+.coluna-patrocinio.fundo-branco.max-h-220.direita {
+  margin-left: 15px;
+}
+
+.botao-cursos-home.amarelo.botao-patrocinio.max-w-400 {
+  width: 400px;
+}
+
+.secao-patrocinio.final-patrocinio {
+  padding-bottom: 100px;
+}
+
+.div-barra-patrocinio {
+  width: 6px;
+  height: 56px;
+  margin-right: 20px;
+  border-radius: 3px;
+  background-color: #466e8c;
+}
+
+.texto-patrocinio.margin-b-50 {
+  margin-bottom: 50px;
+}
+
+.bloco-colunas-patrocinio.horizontal.max-w-650 {
+  max-width: 650px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bloco-colunas-patrocinio.horizontal.max-w-650.margin-b-10 {
+  margin-bottom: 10px;
+}
+
+.coluna-patrocinio.fundo-azul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 60px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 16px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#253a4b),
+    to(#507da0)
+  );
+  background-image: linear-gradient(0deg, #253a4b, #507da0);
+  box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.16);
+}
+
+.coluna-patrocinio.fundo-azul.esquerda,
+.icone-patrocinio-redesocial {
+  margin-right: 15px;
+}
+
+.coluna-patrocinio.fundo-azul.direita {
+  margin-left: 15px;
+}
+
+.imagem-devices-patrocinio {
+  margin-top: 80px;
+  margin-right: 29px;
+  margin-left: auto;
+  display: block;
+}
+
+.texto-patrocinio.max-w-550 {
+  max-width: 550px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.botao-cursos-home.amarelo.botao-patrocinio.max-w-400.margin-lr-auto.margin-b-90 {
+  margin-bottom: 90px;
+}
+
+.oquee-fundotitulo,
+.div-duvidas-patrocinio,
+.fundo-azul-duvidas-patrocinio,
+.fundo-laranja-duvidas-patrocinio {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.div-duvidas-patrocinio {
+  padding-bottom: 25px;
+  border-radius: 50px;
+  background-color: #fff;
+  box-shadow: inset 0 0 9px 0 rgba(0, 0, 0, 0.27);
+}
+
+.oquee-fundotitulo,
+.fundo-azul-duvidas-patrocinio,
+.fundo-laranja-duvidas-patrocinio {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background-image: linear-gradient(53deg, #507da0, #253a4b);
+}
+
+.botao-cursos-home.amarelo:hover {
+  border-right-width: 0;
+  border-bottom-width: 0;
+}
+/*!curso-de-excel.php - Apenas CSS usado no Webflow - Código 'Ler Txt Classes Webflow' + Ajustes Manuais ###############################################################################################*/
+.body-f4f5f7-font-404040-s19-h23-justify {
+  background-color: #f4f5f7;
+  color: #404040;
+  font-size: 19px;
+  line-height: 23px;
+  text-align: justify;
+}
+
+.body-f4f5f7-font-404040-s19-h23-justify.fonte-85 {
+  color: rgba(64, 64, 64, 0.85);
+}
+
+.container-1000-home {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.div-breadcrumb {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.texto-topo-home {
+  display: inline-block;
+}
+
+.texto-breadcrumb {
+  margin-top: 15px !important;
+  font-size: 15px !important;
+  text-align: left !important;
+  color: rgba(64, 64, 64, 0.85) !important;
+}
+
+.texto-breadcrumb a {
+  text-decoration: underline !important;
+  color: inherit !important;
+}
+
+.div-coluna-2-topo-home {
+  width: 50%;
+  padding-left: 60px;
+}
+
+.secao-minicurso-home.excel {
+  padding-right: 20px;
+  padding-left: 20px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#486e65),
+    to(#486e65)
+  );
+  background-image: linear-gradient(180deg, #486e65, #486e65);
+}
+
+.div-curso-excel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.div-curso-excel.align-center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.titulo-home.normal.branco.margin-r-150 {
+  margin-right: 150px;
+}
+
+.form-minicursoexcel-home {
+  padding-top: 30px;
+}
+
+.secao-curso-excel {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.secao-curso-excel.borda-sombreada {
+  box-shadow: inset 0-3px 20px -7px rgba(0, 0, 0, 0.27);
+}
+
+.container-1000-home.flex-vertical {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.container-1000-home.flex-vertical.row-gap-25 {
+  grid-row-gap: 25px;
+}
+
+.titulo-home.titulo-faq {
+  color: rgba(64, 64, 64, 0.85);
+  font-weight: 700;
+  text-align: center;
+}
+
+.linha-curso-excel {
+  width: 300px;
+  height: 3px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(64, 64, 64, 0.7);
+}
+
+.div-botoes-excel,
+.div-coluna-conteudos-home {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.div-botoes-excel {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  grid-column-gap: 20px;
+}
+
+.botao-cursos-home.excel {
+  width: auto;
+  margin-top: 0;
+  padding-right: 25px;
+  padding-left: 25px;
+  border-right-color: #2b9751;
+  border-bottom-color: #2b9751;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#36b864),
+    to(#36b864)
+  );
+  background-image: linear-gradient(180deg, #36b864, #36b864);
+}
+
+.botao-cursos-home.excel.cinza {
+  width: 230px;
+  padding-right: 21px;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  background-color: rgba(64, 64, 64, 0.85);
+  background-image: none;
+  color: #fff;
+}
+
+.botao-cursos-home.excel:hover {
+  color: #fff !important;
+}
+
+.secao-conteudos-home.excel {
+  margin-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #f9f9f9;
+  background-image: none;
+}
+
+.div-coluna-conteudos-home {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+
+  &.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    @media (max-width: 940px) {
+      grid-template-columns: 1fr;
+      max-width: 700px;
+      margin: auto;
+
+      & .div-coluna-1-conteudos-home {
+        order: 2;
+        padding-bottom: 0;
+
+        & img {
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+
+.div-coluna-conteudos-home.column-gap-40 {
+  grid-column-gap: 40px;
+}
+
+.titulo-home.normal.excel {
+  margin-right: 0;
+}
+
+.realce-curso,
+.realce-curso-excel {
+  font-weight: 600;
+}
+
+.realce-curso-excel {
+  color: #486e65;
+}
+
+.realce-curso--javascript {
+  color: var(--roxo2);
+}
+
+.realce-curso--htmlcss {
+  color: var(--azul2);
+}
+
+.img-curso-excel.min-w-381 {
+  min-width: 281px;
+  justify-self: center;
+}
+
+.img-joao {
+  margin-bottom: -24px;
+}
+
+.div-colunaind-curso-excel {
+  margin: auto;
+}
+
+.secao-curso.secao-titulo,
+.secao-curso-excel.secao-titulo {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-position: 50%0;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.secao-curso-excel.secao-titulo {
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2022/12/backgroun-banner-04.png);
+}
+
+.secao-curso--javascript.secao-titulo,
+.secao-curso--htmlcss.secao-titulo {
+  background-size: cover;
+}
+
+.secao-curso--javascript.secao-titulo {
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2023/05/curso-js-oquee.webp);
+}
+
+.secao-curso--htmlcss.secao-titulo {
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2023/10/curso-htmlcss-bg-oquee.webp);
+}
+
+.centralizado {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-900-excel {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-900-excel.flex-vertical {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-900-excel.flex-vertical.row-gap-50 {
+  grid-row-gap: 50px;
+}
+
+.container-900-excel.flex-vertical,
+.div-curso-excel.vertical {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.div-curso-excel.vertical.row-gap-15 {
+  grid-row-gap: 15px;
+}
+
+.div-curso-excel.vertical.row-gap-15.margin-lr-40 {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.div-curso-excel.column-gap-10 {
+  grid-column-gap: 10px;
+}
+
+.material-icons {
+  font-family: Materialicons, sans-serif;
+}
+
+.material-icons._82b59f {
+  color: #82b59f;
+}
+
+.texto-topo-home.align-left {
+  text-align: left;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.div-duvidas-patrocinio {
+  padding-bottom: 25px;
+  border-radius: 50px;
+  background-color: #fff;
+  box-shadow: inset 0 0 9px 0 rgba(0, 0, 0, 0.27);
+}
+
+.div-duvidas-patrocinio.excel {
+  border-radius: 20px;
+}
+
+.fundo-azul-duvidas-patrocinio,
+.fundo-laranja-duvidas-patrocinio {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background-image: linear-gradient(53deg, #507da0, #253a4b);
+}
+
+.oquee-fundotitulo,
+.fundo-azul-duvidas-patrocinio._82b59f,
+.fundo-laranja-duvidas-patrocinio._82b59f {
+  padding-right: 30px;
+  padding-left: 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #82b59f;
+  background-image: none;
+  mix-blend-mode: multiply;
+}
+
+.oquee-fundotitulo--javascript {
+  background-color: var(--roxo1);
+}
+
+.oquee-fundotitulo--htmlcss {
+  background-color: var(--azul2);
+}
+
+.fundo-laranja-duvidas-patrocinio._82b59f {
+  background-color: #ffc03d;
+}
+
+.material-icons.branco,
+.titulo-home.branco {
+  color: #fff;
+}
+
+.material-icons.branco.margin-b-2 {
+  display: block;
+  margin-bottom: -2px;
+}
+
+.subtitulo-home,
+.titulo-home.branco.size-26 {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.div-curso-excel.padding-lr-40 {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.img-curso-excel.margin-t-30.margin-b-100 {
+  margin-bottom: -146px;
+}
+
+.div-duvidas-patrocinio.excel.margin-t-85 {
+  margin-top: 85px;
+}
+
+.div-duvidas-patrocinio.excel.margin-t-85.padding-b-50 {
+  padding-bottom: 50px;
+}
+
+.subtitulo-home {
+  margin-right: -11px;
+  margin-left: -11px;
+  color: #005e88;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.subtitulo-home.excel {
+  margin-right: 0;
+  margin-left: 0;
+  color: rgba(64, 64, 64, 0.85);
+  font-weight: 700;
+}
+
+.margin-t-30 {
+  margin-top: 30px;
+}
+
+.img-curso-excel.margin-t-30.margin-b-30 {
+  margin-bottom: -30px;
+}
+
+.caixa-verde-curso-excel {
+  padding: 30px 40px;
+  border-radius: 20px;
+  background-color: #e5eee2;
+  box-shadow: inset 0 0 9px 0 rgba(0, 0, 0, 0.27);
+}
+
+.link-hashteajudar-home {
+  display: inline;
+  color: #008ff7;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.botao-cursos-home.excel.c4c5c5 {
+  border-right-color: #969696;
+  border-bottom-color: #969696;
+  background-color: #c4c5c5;
+  background-image: none;
+}
+
+.botao-cursos-home.excel.c4c5c5.margin-t-20 {
+  margin-top: 20px;
+}
+
+.container-dropdown {
+  width: 100%;
+}
+
+.container-dropdown._404040 {
+  background-color: rgba(64, 64, 64, 0.85);
+}
+
+.toggle-dropdown {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.icone-dropdown,
+.titulo-dropdown {
+  color: #fff;
+}
+
+.img-curso-excel.max-w-210 {
+  max-width: 210px;
+  margin-right: 40px;
+}
+
+.div-curso-excel.horizontal {
+  padding-bottom: 25px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.titulo-home.branco.size-26.excel {
+  text-align: left;
+}
+
+.secao-conteudos-home.excel.borda-sombreada {
+  box-shadow: inset 0-3px 20px -7px rgba(0, 0, 0, 0.27);
+}
+/*! Estilo dos formulários da página curso-de-excel.php */
+.formulario-empe {
+  justify-content: space-between;
+  row-gap: 20px;
+  font-size: 19px;
+  line-height: 23px;
+  font-family: montserrat;
+}
+
+.bloco-textoinput-formulario-excel-empe,
+.formulario-empe {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-deitado {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  column-gap: 20px;
+  font-size: 19px;
+  line-height: 23px;
+  font-family: montserrat;
+}
+
+.bloco-textoinput-formulario-excel {
+  display: flex;
+  flex-direction: column;
+  width: 38%;
+}
+
+.texto-titulo-formulario {
+  margin-bottom: 10px;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.texto-titulo-formulario.escuro {
+  color: rgba(64, 64, 64, 0.85);
+}
+
+.input-formulario-excel {
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  padding: 8px 12px;
+  color: #404040;
+  border: 0;
+  font-size: 14px;
+}
+
+.input-formulario-excel.email,
+.input-formulario-excel.nome {
+  width: 100%;
+}
+
+.botao-formulario-curso,
+.botao-formulario-excel {
+  height: 40px;
+  width: 174px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  border-radius: 50px;
+  border: 0;
+  box-shadow: 4px 3px 8px -2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.botao-formulario-excel {
+  background: #36b864;
+  border-right: solid 3px #486e65;
+  border-bottom: solid 3px #486e65;
+}
+
+.botao-formulario-curso--javascript {
+  background: var(--amarelo1);
+  border-right: solid 3px var(--amarelo2);
+  border-bottom: solid 3px var(--amarelo2);
+}
+
+.botao-formulario-curso--htmlcss {
+  background: var(--laranja2);
+  border-right: solid 3px var(--laranja3);
+  border-bottom: solid 3px var(--laranja3);
+}
+
+.botao-formulario-excel.python {
+  background: #ff9926;
+  border-right: solid 3px #8f7352;
+  border-bottom: solid 3px #8f7352;
+}
+
+.botao-formulario-excel:hover {
+  border: 0;
+  box-shadow: none;
+}
+/*! Estilo do dropdown da página curso-de-excel.php */
+.dropdown-acordeao {
+  background-color: rgba(64, 64, 64, 0.85);
+  color: #fff;
+  font-family: montserrat;
+  font-size: 19px;
+  cursor: pointer;
+  padding: 12px 40px 12px 20px;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  outline: 0 !important;
+  transition: 0.4s;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dropdown-acordeao::after {
+  content: "﹀";
+  color: #fff;
+  float: right;
+  margin-left: 5px;
+}
+
+.ativo::after {
+  content: "︿";
+  color: #fff;
+}
+
+.ativo,
+.dropdown-acordeao:hover {
+  background-color: #aaa;
+}
+
+.container-dropdown-acordeao {
+  padding: 15px;
+  font-family: montserrat;
+  font-size: 17px;
+  color: rgba(64, 64, 64, 0.85);
+  background-color: rgba(64, 64, 64, 0.1);
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.container-dropdown-acordeao p {
+  margin: 0;
+}
+
+.secao-minicurso-home.excel.python {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#1a5483),
+    to(#1a5483)
+  );
+  background-image: linear-gradient(180deg, #1a5483, #1a5483);
+}
+
+.realce-curso-excel.python {
+  color: #1a5483;
+}
+
+.img-curso-excel.min-w-381.python {
+  min-width: 317px;
+}
+
+.secao-curso-excel.secao-titulo.python {
+  background-image: url(https://www.hashtagtreinamentos.com/backgroun-banner-03);
+}
+
+.fundo-azul-duvidas-patrocinio._82b59f.python {
+  background-color: #4a99cd;
+}
+
+.material-icons._82b59f.python {
+  color: #4a99cd;
+}
+
+.caixa-verde-curso-excel.python {
+  background-color: #ede8e1;
+}
+
+.secao-oquefalam-home.excel.python {
+  background-image: url(https://www.hashtagtreinamentos.com/backgroun-banner-05);
+}
+
+.botao-cursos-home.excel.c4c5c5.margin-t-20.python {
+  border-right-color: #a87923;
+  border-bottom-color: #a87923;
+  background-color: #ffbf4a;
+}
+/*! curso-powerbi.php - Apenas CSS usado no Webflow - Código 'Ler Txt Classes Webflow' + Ajustes Manuais  ###########################################################################################*/
+.secao-topo-home.excel.powerbi {
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2023/02/BACKGROUN-banner-01.png);
+}
+
+.secao-minicurso-home.excel.powerbi {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#78623c),
+    to(#78623c)
+  );
+  background-image: linear-gradient(180deg, #78623c, #78623c);
+}
+
+.realce-curso-excel.powerbi {
+  color: #78623c;
+}
+
+.img-curso-excel.min-w-381.powerbi {
+  min-width: 317px;
+}
+
+.secao-curso-excel.secao-titulo.powerbi {
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2023/02/BACKGROUN-banner-03.png);
+}
+
+.fundo-azul-duvidas-patrocinio._82b59f.powerbi {
+  background-color: #ffc03d;
+}
+
+.material-icons._82b59f.powerbi {
+  color: #ffc03d;
+}
+
+.caixa-verde-curso-excel.powerbi {
+  background-color: #ede8e1;
+}
+
+.secao-oquefalam-home.excel.powerbi {
+  background-image: url(https://www.hashtagtreinamentos.com/wp-content/uploads/2023/02/BACKGROUN-banner-06.png);
+}
+
+.botao-cursos-home.excel.c4c5c5.margin-t-20.powerbi {
+  border-right-color: #a87923;
+  border-bottom-color: #a87923;
+  background-color: #ffbf4a;
+}
+
+.botao-formulario-excel.powerbi {
+  background: #ff9a06;
+  border-right: solid 3px #715111;
+  border-bottom: solid 3px #715111;
+}
+
+.img-curso-excel.max-w-210.powerbi {
+  min-width: 207px;
+}
+
+.img-curso-excel.margin-t-30.padding-lr-40.max-w-500 {
+  max-width: 500px;
+}
+
+.div-coluna-conteudos-home.powerbi,
+.header {
+  align-items: center;
+}
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  background: var(--branco);
+  width: 100%;
+  box-shadow: 0 2px 4px var(--sombra1);
+  z-index: 9997;
+}
+
+.header {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 2vw;
+  gap: 45px;
+}
+
+.header,
+.header-nav {
+  box-sizing: border-box;
+}
+
+.header-logo {
+  max-width: 100px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  box-sizing: border-box;
+  max-height: 100%;
+  flex: 0 0;
+  display: flex;
+  gap: 24px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-item {
+  position: relative;
+  display: flex;
+  align-items: start;
+  text-align: right;
+  padding: 5px 0;
+  gap: 5px;
+  color: var(--azul1);
+}
+
+.menu-item a:link,
+.menu-item a:visited,
+.sub-menu li a:link,
+.sub-menu li a:visited {
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--tempo-transicao) var(--tipo-transicao);
+}
+
+.menu-item a:active,
+.menu-item a:hover,
+.sub-menu li a:active,
+.sub-menu li a:hover {
+  color: var(--laranja1);
+}
+
+.sub-menu {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  border-radius: 10px;
+  list-style: none;
+  background-color: var(--branco);
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 0 4px 2px var(--sombra1);
+  width: max-content;
+  padding: 0;
+  z-index: 1;
+  margin-bottom: 0;
+}
+
+.sub-menu li {
+  border-bottom: solid 1px var(--cinza1);
+  padding: 7.5px 25px;
+  display: list-item;
+  text-align: left;
+}
+
+ul {
+  margin: 0;
+}
+
+.menu-item-has-children::after {
+  content: "▼";
+  font-size: 14px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.header-botao {
+  background: 0 0;
+  border: 0;
+  padding: 0;
+  display: none;
+}
+
+.header-botao:focus {
+  outline: 0;
+  box-shadow: 0 0 0 5px var(--laranja-foco);
+}
+
+.header-icon {
+  width: 30px;
+  height: 30px;
+  color: var(--azul1);
+  cursor: pointer;
+}
+
+.header-icon--close {
+  display: none;
+}
+
+.img-curso-js--oquee {
+  width: 460px;
+  max-width: 90%;
+  margin-top: 25px;
+}
+
+.img-curso-js--certificado {
+  width: 600px;
+  max-width: 90%;
+  margin-top: 25px;
+  border-radius: 25px;
+}
+
+/* Quem Somos */
+
+.secao-quemsomos {
+  padding: 0 40px;
+  margin-bottom: 48px;
+
+  & * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  & > .container-quemsomos {
+    width: 100%;
+    max-width: 100%;
+
+    & > .grid-quemsomos {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 16px;
+      row-gap: 32px;
+
+      & > .item-quemsomos {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 23px;
+
+        & > .img-quemsomos {
+          width: 100%;
+          aspect-ratio: 1/1;
+          background-position: 50%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 16px;
+        }
+
+        & > .textos-quemsomos {
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          gap: 10px;
+          line-height: 1;
+
+          & > .nome-quemsomos {
+            font-weight: 700;
+            font-size: 1.6em;
+          }
+
+          & > .cargo-quemsomos {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1279px) {
+    & > .container-quemsomos {
+      font-size: 14px;
+
+      & > .grid-quemsomos {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+
+  @media (max-width: 1040px) {
+    & > .container-quemsomos {
+      & > .grid-quemsomos {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    padding: 0 20px;
+
+    & > .container-quemsomos {
+      & > .grid-quemsomos {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  @media (max-width: 560px) {
+    & > .container-quemsomos {
+      font-size: 12px;
+    }
+  }
+}

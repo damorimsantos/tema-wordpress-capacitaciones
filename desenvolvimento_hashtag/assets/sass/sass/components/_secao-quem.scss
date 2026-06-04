@@ -1,0 +1,70 @@
+.quem {
+    line-height: 1.6;
+
+    & h2 {
+        line-height: normal;
+        align-self: center !important;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        margin: 0 $spc-400;
+
+        @include respond(mm) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repear(3, 1fr);
+        }
+    }
+
+    &__item {
+        padding: $spc-0 $spc-700;
+        @include flex($flow: column, $align: center, $gap: $spc-700);
+
+        @include respond(mm) {
+            padding: $spc-700 $spc-0;
+            max-width: 40rem;
+        }
+
+        &--meio {
+            border: 2px dashed #6b88ef;
+            border-top: 0;
+            border-bottom: 0;
+
+            @include respond(mm) {
+                border: 2px dashed #6b88ef;
+                border-right: 0;
+                border-left: 0;
+            }
+        }
+    }
+
+    &__circulo-verde {
+        background-color: #2ac890;
+        width: 7rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        @include flex($justify: center, $align: center);
+    }
+
+    &__caixa-suporte {
+        background-color: $clr-white;
+        color: $clr-black;
+        padding: $spc-900;
+        text-align: center;
+        width: 100%;
+        @include flex($flow: column, $align: center, $gap: $spc-400);
+        font-weight: 400;
+        border-radius: $border-radius-s;
+
+        @include respond(m) {
+            padding: $spc-700 $spc-800;
+            text-align: left;
+        }
+    }
+
+    &__paragrafo {
+        max-width: 70rem;
+    }
+}

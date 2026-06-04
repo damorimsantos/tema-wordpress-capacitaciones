@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "Montserrat";
+    src:
+        local("Montserrat"),
+        local("montserrat-light"),
+        url("/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/fonts/montserrat-light.woff2")
+            format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src:
+        local("Montserrat"),
+        local("Montserrat-Regular"),
+        url("/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/fonts/montserrat-regular.woff2")
+            format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src:
+        local("Montserrat-Medium"),
+        local("montserrat-medium"),
+        url("/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/fonts/montserrat-medium.woff2")
+            format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src:
+        local("Montserrat-SemiBold"),
+        local("montserrat-semibold"),
+        url("/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/fonts/montserrat-semibold.woff2")
+            format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src:
+        local("Montserrat-ExtraBold"),
+        local("montserrat-extrabold"),
+        url("/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/fonts/montserrat-extrabold.woff2")
+            format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    display: swap;
+}
+
+b,
+strong {
+    // font-weight: 600;
+    font-weight: 500;
+}
+
+h1,
+.h1 {
+    font-size: $fs-900;
+    margin: 0;
+
+    @include respond(m) {
+        font-size: $fs-700;
+    }
+}
+
+h2,
+.h2 {
+    font-size: $fs-800;
+    // font-weight: 400;
+    font-weight: 300;
+    text-align: center;
+
+    @include respond(m) {
+        font-size: $fs-600;
+    }
+}
+
+h3,
+.h3 {
+    font-size: $fs-700;
+    // font-weight: 400;
+    font-weight: 300;
+
+    @include respond(m) {
+        font-size: $fs-600;
+    }
+}
+
+.realce-azul {
+    color: $clr-blue-300;
+}
+
+.realce-azul--escuro {
+    color: $clr-blue-500;
+}
+
+.realce-verde {
+    color: $clr-green-300;
+}
+
+.semi-bold {
+    // font-weight: 600;
+    font-weight: 500;
+}
+
+.text-balance {
+    text-wrap: balance;
+}
+
+.nowrap {
+    white-space: nowrap;
+}

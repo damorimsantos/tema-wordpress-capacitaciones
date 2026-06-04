@@ -1,0 +1,75 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+// @include respond(g) {
+//   html {
+//     font-size: 56.25%;
+//   }
+// }
+
+// @include respond(m) {
+//   html {
+//     font-size: 50%;
+//   }
+// }
+
+body {
+  font-family: $text-font-stack;
+  font-size: $fs-400;
+  line-height: 1.2;
+  color: $clr-white;
+  background-color: $clr-bg-900;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $clr-bg-900;
+    border-radius: 100vh;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100vh;
+    background-color: lighten($clr-bg-600, 15%);
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: lighten($clr-bg-600, 10%);
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font: inherit;
+  min-width: 0;
+}
+
+button,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  font: inherit;
+}
+
+img,
+svg,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
