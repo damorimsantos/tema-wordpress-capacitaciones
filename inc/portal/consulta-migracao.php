@@ -16,7 +16,7 @@
  * Contrato do upstream (Bubble), campo `response`:
  *   { "migrado": true }   -> aluno ja migrado  -> portal novo
  *   { "migrado": false }  -> aluno nao migrado -> portal antigo
- *   { "isUser": false }   -> nao e aluno       -> 2a verificacao -> oferta (LP Excel)
+ *   { "isUser": false }   -> nao e aluno       -> 2a verificacao -> portal antigo
  *
  * Credencial (definir no wp-config.php de prod e no wp-config-ddev.php — NUNCA no repo):
  *   define('API_TOKEN_CONSULTA_MIGRACAO', '<token>');
@@ -54,17 +54,16 @@ function hashtag_portal_novo_endpoint()
 
 /**
  * URLs de destino. Filtraveis para ajuste sem editar codigo.
- *  - novo:      aluno ja migrado para a nova plataforma (por ora aponta para o
- *               portal novo do Brasil; Diego ajusta para o destino ES depois)
- *  - antigo:    aluno ainda no portal legado (versao /es)
- *  - nao_aluno: e-mail nao pertence a nenhum portal -> oferta (LP Excel)
+ *  - novo:   aluno ja migrado para a nova plataforma (por ora aponta para o
+ *            portal novo do Brasil; Diego ajusta para o destino ES depois)
+ *  - antigo: aluno no portal legado (versao /es) — tambem o destino de quem o
+ *            portal antigo nao reconhece (nao-aluno), apos a 2a verificacao
  */
 function hashtag_portal_destinos()
 {
     return apply_filters('hashtag_portal_destinos', [
-        'novo'      => 'https://login.hashtagtreinamentos.com/login',
-        'antigo'    => 'https://portalhashtag.com/login/es',
-        'nao_aluno' => 'https://lp.hashtagcapacitaciones.com/excel/pg-inscripcion?fonte=acceso-portal&src=portal-no-alumno',
+        'novo'   => 'https://login.hashtagtreinamentos.com/login',
+        'antigo' => 'https://portalhashtag.com/login/es',
     ]);
 }
 
@@ -194,8 +193,8 @@ function hashtag_portal_handle_consulta(WP_REST_Request $request)
     $resultado = hashtag_portal_decide($data);
 
     // 2a verificacao: o portal antigo nao conhece a pessoa. Quem comprou apos o
-    // inicio da migracao foi direto pro portal novo, sem passar pelo antigo —
-    // entao confirmamos no backoffice do portal novo antes de mandar pra oferta.
+    // inicio da migracao foi direto pro portal novo, sem passar pelo antigo — entao
+    // confirmamos no backoffice do portal novo; se nao estiver la, vai pro antigo.
     if ('nao_aluno' === $resultado['portal'] && true === hashtag_portal_verifica_novo($email)) {
         $destinos = hashtag_portal_destinos();
         $resultado = ['portal' => 'novo', 'url' => $destinos['novo']];
@@ -275,9 +274,10 @@ function hashtag_portal_decide($data)
             : ['portal' => 'antigo', 'url' => $destinos['antigo']];
     }
 
-    // Nao e aluno (isUser:false) ou resposta vazia: oferta (LP Excel).
+    // Nao e aluno (isUser:false) ou resposta vazia: portal antigo. O handler ainda
+    // roda a 2a verificacao (quem comprou ja na nova plataforma vai pro portal novo).
     if (empty($data) || (array_key_exists('isUser', $data) && ! hashtag_portal_truthy($data['isUser']))) {
-        return ['portal' => 'nao_aluno', 'url' => $destinos['nao_aluno']];
+        return ['portal' => 'nao_aluno', 'url' => $destinos['antigo']];
     }
 
     // Formato inesperado (o handler loga e responde erro suave).
