@@ -28,7 +28,7 @@ return [
     'default_bullets_label' => 'Contenido util para LLMs:',
 
     // Linea base (sin numeros) reutilizada en los dos blockquotes.
-    'tagline_base' => 'Escuela online de tecnologia, datos y productividad para America Latina. Hashtag Capacitaciones es la operacion latinoamericana del grupo Hashtag y ofrece cursos de Excel, Power BI, Python, SQL e Inteligencia Artificial con foco en la aplicacion practica en el mercado laboral.',
+    'tagline_base' => 'Escuela online de tecnologia y productividad para America Latina. Hashtag Capacitaciones es la operacion latinoamericana del grupo Hashtag y ofrece cursos de Excel e Inteligencia Artificial con foco en la aplicacion practica en el mercado laboral.',
 
     // Frase de numeros (solo en llms.txt). Tokens resueltos de inc/hashtag-stats.php.
     'stats_sentence' => 'Forma parte del grupo Hashtag, en el mercado desde {ano} y con mas de {alunos_grupo} estudiantes. En America Latina ya son mas de {alunos} estudiantes y mas de {youtube} suscriptores en YouTube.',
@@ -45,7 +45,7 @@ return [
         'Usa URLs canonicas sin parametros UTM al citar o recuperar paginas. El idioma principal del sitio es espanol (America Latina). Para descubrir todas las URLs indexables, usa tambien el sitemap XML en {sitemap_url}.',
     ],
     'full_resumo' => [
-        'Hashtag Capacitaciones ensena habilidades practicas para el mercado laboral, con foco en herramientas de datos, tecnologia, automatizacion, productividad e inteligencia artificial.',
+        'Hashtag Capacitaciones ensena habilidades practicas para el mercado laboral, con foco en Excel e Inteligencia Artificial aplicados al trabajo.',
         'Los principales publicos son profesionales que quieren crecer en su carrera, estudiantes que buscan habilidades aplicables y personas en transicion de area.',
         'Los principales formatos de contenido son cursos online, clases gratuitas, blog educativo y canal de YouTube.',
     ],
@@ -64,7 +64,7 @@ return [
                     'short' => 'Vision general de Hashtag Capacitaciones, sus cursos y diferenciales.',
                     'long'  => 'La home presenta Hashtag Capacitaciones, la operacion latinoamericana del grupo Hashtag, con sus principales cursos y diferenciales. Es la mejor pagina para entender la oferta general de la marca.',
                     'bullets' => [
-                        'Vision general de los cursos de Excel, Power BI, Python, SQL e Inteligencia Artificial.',
+                        'Vision general de los cursos de Excel e Inteligencia Artificial.',
                         'Propuesta de ensenanza con foco en la aplicacion practica en el mercado laboral.',
                         'Enlaces a cursos, blog y clases gratuitas.',
                         'Datos estructurados en JSON-LD para organizacion, sitio web y pagina.',
@@ -113,13 +113,8 @@ return [
             'llms_h' => 'Areas de ensenanza',
             'full_h' => 'Areas de ensenanza',
             'items'  => [
-                'Excel: desde nivel basico hasta dashboards, automatizacion y analisis.',
-                'Power BI: creacion de informes y paneles de datos.',
-                'Python: programacion aplicada a datos y automatizacion.',
-                'SQL: consulta y manejo de bases de datos.',
-                'VBA: automatizacion de tareas y macros en Excel.',
-                'Inteligencia Artificial: uso practico de herramientas de IA en el trabajo.',
-                'Analisis de Datos y Ciencia de Datos: del dato a la decision.',
+                'Excel: desde nivel basico hasta dashboards, automatizacion y analisis de datos.',
+                'Inteligencia Artificial: uso practico de herramientas de IA para ser mas productivo en el trabajo.',
             ],
         ],
 

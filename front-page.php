@@ -769,7 +769,7 @@ Template name: Home CapacitSaciones
                   </defs>
                 </svg>
                 <div class="caixa-youtube__seguidores caixa-pilula caixa-pilula--1">
-                  +115k suscriptores
+                  +178k suscriptores
                 </div>
               </div>
               <h3>Nuevos vídeos todos los <b>lunes, miércoles y viernes</b></h3>
@@ -979,16 +979,16 @@ Template name: Home CapacitSaciones
 
               <div class="ajudar__paragrafos">
                 <p>
-                  Hashtag Capacitaciones fue creada por Hashtag Treinamentos, una empresa brasileña que comenzó en 2016
+                  Hashtag Capacitaciones fue creada por Hashtag Treinamentos, una empresa brasileña que comenzó en 2015
                   y, actualmente, es una de las empresas más fuertes en capacitación profesional por medio de cursos
                   online.
                 </p>
                 <p>
-                  Tenemos más de 140 mil alumnos capacitados.
+                  Tenemos más de 205 mil alumnos capacitados.
                 </p>
                 <p>
-                  En nuestro canal de YouTube Hashtag Treinamentos, tenemos más de 1,5 millón de suscriptores. En
-                  nuestro canal Hashtag Capacitaciones, creado hace pocos meses, tenemos ya más de 110 mil suscriptores.
+                  En nuestro canal de YouTube Hashtag Treinamentos, tenemos más de 2 millones de suscriptores. En
+                  nuestro canal Hashtag Capacitaciones tenemos ya más de 178 mil suscriptores.
                   En ambos podrás ver muchas reseñas positivas, tanto de nuestros seguidores como de nuestros alumnos.
                 </p>
                 <p>

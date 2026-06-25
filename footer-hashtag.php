@@ -44,7 +44,7 @@
       </ul>
 
       <div class="footer__item footer__copyright">
-        © <span class="js-ano">2025</span>. Hashtag Capacitaciones. Todos los derechos reservados.
+        © <span class="js-ano"><?php echo esc_html( current_time( 'Y' ) ); ?></span>. Hashtag Capacitaciones. Todos los derechos reservados.
       </div>
 
       <div class="footer__redes">

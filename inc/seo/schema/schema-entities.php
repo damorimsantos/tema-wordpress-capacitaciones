@@ -121,15 +121,11 @@ if (!function_exists('hashtag_schema_org_knows_about')) {
     /** Topicos de expertise (knowsAbout) — curado (a Cap ainda nao tem catalogo). */
     function hashtag_schema_org_knows_about(): array
     {
+        // So as areas REAIS hoje (Diego 2026-06-25): a Cap vende Excel e IA.
+        // Adicionar outras (Power BI/Python/SQL...) so quando houver curso/landing real.
         return apply_filters('hashtag_schema_org_knows_about', [
             'Excel',
-            'Power BI',
-            'Python',
-            'SQL',
-            'VBA',
             'Inteligencia Artificial',
-            'Análisis de Datos',
-            'Ciencia de Datos',
         ]);
     }
 }
@@ -166,7 +162,7 @@ if (!function_exists('hashtag_schema_organization_node')) {
             'url'           => trailingslashit(home_url('/')),
             'logo'          => ['@id' => hashtag_schema_logo_id()],
             'image'         => ['@id' => hashtag_schema_logo_id()],
-            'description'   => 'Escuela online de tecnologia, datos y productividad para America Latina: cursos de Excel, Power BI, Python, SQL e Inteligencia Artificial enfocados en la aplicacion practica en el mercado laboral.',
+            'description'   => 'Escuela online de tecnologia y productividad para America Latina: cursos de Excel e Inteligencia Artificial enfocados en la aplicacion practica en el mercado laboral.',
             'areaServed'    => ['Latin America', 'CO', 'CL', 'MX', 'PE', 'AR', 'EC'],
             'sameAs'        => hashtag_schema_org_same_as(),
         ];

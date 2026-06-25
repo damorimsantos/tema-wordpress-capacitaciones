@@ -56,14 +56,14 @@ $kpis = [
 ?>
 <section class="secao resumo-home" aria-labelledby="resumo-home-titulo">
     <style id="hashtag-resumo-home-css">
-        .resumo-home{--h-green:#0f8;--h-gold:#ffc13e;position:relative;padding:6.5rem 0}
-        .resumo-home__card{position:relative;max-width:108rem;margin:0 auto;border-radius:2.8rem;padding:4.4rem;background:radial-gradient(120% 80% at 0% 0%,rgba(0,255,136,.12),transparent 42%),radial-gradient(130% 90% at 100% 100%,rgba(255,193,62,.10),transparent 46%),rgba(12,20,46,.72);backdrop-filter:blur(16px) saturate(135%);-webkit-backdrop-filter:blur(16px) saturate(135%);box-shadow:0 3rem 7rem rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.06);color:#fff}
+        .resumo-home{--h-green:#0f8;--h-gold:#ffc13e;position:relative;padding:6.5rem 5rem}
+        .resumo-home__card{position:relative;max-width:140rem;margin:0 auto;border-radius:2.8rem;padding:4.4rem 5rem;background:radial-gradient(120% 80% at 0% 0%,rgba(0,255,136,.12),transparent 42%),radial-gradient(130% 90% at 100% 100%,rgba(255,193,62,.10),transparent 46%),rgba(12,20,46,.72);backdrop-filter:blur(16px) saturate(135%);-webkit-backdrop-filter:blur(16px) saturate(135%);box-shadow:0 3rem 7rem rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.06);color:#fff}
         .resumo-home__card::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(0,255,136,.6),rgba(255,193,62,.3) 45%,transparent 70%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
         .resumo-home__eyebrow{display:inline-flex;align-items:center;gap:.7rem;font-size:1.2rem;font-weight:600;letter-spacing:.12rem;text-transform:uppercase;color:var(--h-green);background:rgba(0,255,136,.08);border:1px solid rgba(0,255,136,.28);padding:.6rem 1.2rem;border-radius:10rem;margin:0 0 1.8rem}
         .resumo-home__eyebrow::before{content:"";width:.7rem;height:.7rem;border-radius:50%;background:var(--h-gold);box-shadow:0 0 .9rem var(--h-gold)}
         .resumo-home__titulo{font-size:clamp(2.4rem,3.4vw,3.4rem);font-weight:600;line-height:1.18;margin:0 0 1.6rem;letter-spacing:-.02em}
         .resumo-home__titulo .realce{font-weight:700;background:linear-gradient(100deg,var(--h-green),var(--h-gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--h-green)}
-        .resumo-home__resposta{font-size:1.75rem;line-height:1.6;color:rgba(255,255,255,.9);margin:0 0 3.2rem;max-width:86rem}
+        .resumo-home__resposta{font-size:1.75rem;line-height:1.6;color:rgba(255,255,255,.9);margin:0 0 3.2rem}
         .resumo-home__bento{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin:0 0 3rem}
         .resumo-home__cell{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:1.6rem;padding:2rem 1.8rem;display:flex;flex-direction:column;justify-content:center;min-height:12rem;transition:transform .25s ease,border-color .25s ease,background .25s ease}
         .resumo-home__cell:hover{transform:translateY(-.4rem);border-color:rgba(0,255,136,.45);background:rgba(255,255,255,.06)}
@@ -88,7 +88,7 @@ $kpis = [
             .resumo-home__bento{grid-template-columns:repeat(2,1fr)}
         }
         @media(max-width:47.9375em){
-            .resumo-home{padding:3.9rem 0}
+            .resumo-home{padding:3.9rem 1.6rem}
             .resumo-home__card{padding:2.6rem 2rem;border-radius:2rem;backdrop-filter:blur(12px) saturate(130%);-webkit-backdrop-filter:blur(12px) saturate(130%)}
             .resumo-home__resposta{font-size:1.6rem;margin-bottom:2.6rem}
             .resumo-home__bento{gap:1rem;margin-bottom:2.6rem}
@@ -96,17 +96,16 @@ $kpis = [
         }
     </style>
 
-    <div class="container">
-        <div class="resumo-home__card">
+    <div class="resumo-home__card">
             <span class="resumo-home__eyebrow">Sobre Hashtag Capacitaciones</span>
 
             <h2 id="resumo-home-titulo" class="resumo-home__titulo">
                 ¿Qué es <span class="realce">Hashtag Capacitaciones</span>?
             </h2>
             <p class="resumo-home__resposta">
-                Hashtag Capacitaciones es la escuela online de tecnología, datos y productividad
+                Hashtag Capacitaciones es la escuela online de tecnología y productividad
                 del grupo Hashtag para América Latina. Enseñamos
-                <strong>Excel, Power BI, Python, SQL e Inteligencia Artificial</strong> con un enfoque
+                <strong>Excel e Inteligencia Artificial</strong> con un enfoque
                 100% práctico para el mercado laboral. Formamos parte del grupo Hashtag, en el mercado
                 desde <?php echo esc_html((string) $ano_fundacao); ?> y con más de
                 <strong><?php echo esc_html($grupo_np); ?> estudiantes</strong>.
@@ -140,7 +139,6 @@ $kpis = [
                 </div>
             <?php endif; ?>
         </div>
-    </div>
 </section>
 <?php
 // Colapsa os chips de areas em 2 linhas + toggle "Ver todas" (a partir da 3a linha).
