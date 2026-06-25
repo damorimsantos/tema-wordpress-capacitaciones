@@ -106,14 +106,62 @@ function Get-PythonExe {
     throw "Nenhum Python com paramiko encontrado. Instale com: py -m pip install --user paramiko"
 }
 
+# Campo do 1Password -> chave equivalente no .env / variavel de ambiente
+$script:SecretEnvMap = @{
+    'cloudways_email'  = 'CLOUDWAYS_EMAIL'
+    'cloudways_apikey' = 'CLOUDWAYS_API_KEY'
+    'cloudflare_token' = 'CLOUDFLARE_TOKEN'
+}
+
+# Le o .env uma vez e cacheia. Procura ao lado do script, depois na raiz do projeto.
+$script:DotEnv = $null
+function Import-DotEnv {
+    if ($null -ne $script:DotEnv) { return $script:DotEnv }
+    $script:DotEnv = @{}
+    $candidates = @((Join-Path $PSScriptRoot '.env'))
+    try { $candidates += (Join-Path (Find-ProjectRoot) '.env') } catch {}
+    foreach ($envPath in $candidates) {
+        if (-not (Test-Path -LiteralPath $envPath)) { continue }
+        foreach ($line in (Get-Content -LiteralPath $envPath -Encoding UTF8)) {
+            $t = $line.Trim()
+            if (-not $t -or $t.StartsWith('#')) { continue }
+            $eq = $t.IndexOf('=')
+            if ($eq -lt 1) { continue }
+            $k = $t.Substring(0, $eq).Trim()
+            $v = $t.Substring($eq + 1).Trim()
+            if ($v.Length -ge 2) {
+                $first = $v[0]; $last = $v[$v.Length - 1]
+                if (($first -eq '"' -and $last -eq '"') -or ($first -eq "'" -and $last -eq "'")) {
+                    $v = $v.Substring(1, $v.Length - 2)
+                }
+            }
+            if (-not $script:DotEnv.ContainsKey($k)) { $script:DotEnv[$k] = $v }
+        }
+        break  # usa o primeiro .env encontrado
+    }
+    return $script:DotEnv
+}
+
+# Resolve um secret: variavel de ambiente -> .env -> 1Password (op). Para na 1a fonte com valor.
 function Get-Secret([string]$field) {
+    $envKey = $script:SecretEnvMap[$field]
+    if ($envKey) {
+        $fromEnv = [Environment]::GetEnvironmentVariable($envKey)
+        if (-not [string]::IsNullOrWhiteSpace($fromEnv)) { return $fromEnv.Trim() }
+        $dot = Import-DotEnv
+        if ($dot.ContainsKey($envKey) -and -not [string]::IsNullOrWhiteSpace($dot[$envKey])) {
+            return $dot[$envKey].Trim()
+        }
+    }
+
+    # Fallback: 1Password (exige CLI ligada + biometria)
     if (-not (Get-Command op -ErrorAction SilentlyContinue)) {
-        throw "1Password CLI (op) nao encontrado no PATH."
+        throw "Secret '$field' nao esta em variavel de ambiente nem no .env, e o 1Password CLI (op) nao foi encontrado. Preencha scripts\.env (veja scripts\.env.example)."
     }
     $ref = "op://$Vault/$Item/$field"
     $val = & op read --account $Account $ref 2>$null
     if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($val)) {
-        throw "op read falhou para '$ref'. op autenticado? item/campo existem nesse vault?"
+        throw "op read falhou para '$ref'. op autenticado? item/campo existem nesse vault? (ou preencha scripts\.env)"
     }
     return ($val | Out-String).Trim()
 }

@@ -19,3 +19,10 @@ deploy/id_*
 # Python bytecode (scripts/ helpers)
 __pycache__/
 *.pyc
+
+# Secrets locais (scripts/.env tem credencial em texto plano) — nunca versionar
+*.env
+!*.env.example
+
+# Chave da service account do GSC
+scripts/gsc/*.json
