@@ -8,6 +8,7 @@ tema). Esta pasta guarda a **cópia versionada** deles para histórico/git.
 | `hashtag-security-headers.php` | Security headers (X-Frame-Options, X-Content-Type-Options, Referrer-Policy, COOP/CORP, Permissions-Policy, remove X-Powered-By) + **CSP** (hoje em **report-only**) + hardening (405 em métodos exóticos, `DISALLOW_FILE_EDIT`, bloqueio de user-enum `/wp/v2/users`). | SFTP `node .vscode/upload_sftp_files.mjs wp-content/mu-plugins/hashtag-security-headers.php` |
 | `hashtag-security-hardening.php` | Remove o `generator` (version disclosure) do WP. | SFTP `node .vscode/upload_sftp_files.mjs wp-content/mu-plugins/hashtag-security-hardening.php` |
 | `hashtag-mailer.php` | Transporte SMTP transacional (substitui post-smtp). **INERTE** até as constantes `HASHTAG_SMTP_*` existirem no wp-config. | SFTP `node .vscode/upload_sftp_files.mjs wp-content/mu-plugins/hashtag-mailer.php` |
+| `hashtag-theme-modules.php` | **Loader** dos módulos novos do tema (`inc/seo/*`, `inc/media/*`...) via `after_setup_theme` — evita tocar no `functions.php` (que diverge de prod). Lista em `$modules`. | SFTP `node .vscode/upload_sftp_files.mjs wp-content/mu-plugins/hashtag-theme-modules.php` |
 
 ## Regras
 

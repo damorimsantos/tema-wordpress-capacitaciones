@@ -15,9 +15,7 @@ $is_web_story = in_array($current_post_type, ['web-story', 'web_story', 'web-sto
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>
-    <?php wp_title('|', true, 'right'); ?>
-  </title>
+  <!-- titulo emitido por wp_head() (add_theme_support title-tag) + Rank Math -->
 
   <!-- CSS -->
    <!-- não mexer aqui codex, deixe os comentários -->
