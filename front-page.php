@@ -2365,22 +2365,9 @@ Template name: Home CapacitSaciones
     }
 </script> -->
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "Hashtag Capacitaciones",
-    "url": "https://www.hashtagcapacitaciones.com",
-    <
-    !--
-    "logo": "https://www.hashtagtreinamentos.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2019/04/logo_nova.png.webp",
-    -- >
-    "sameAs": [
-      "https://www.instagram.com/hashtagcapacitaciones",
-      "https://www.youtube.com/channel/UCX0YWZfjcj31zllHDhmmlQw"
-    ]
-  }
-  </script>
+  <!-- JSON-LD da home agora vem do grafo nativo (inc/seo/schema/*). O bloco
+       EducationalOrganization inline aqui era duplicado e estava INVALIDO (comentario
+       malformado dentro do JSON) — removido. Ver Schema (Grafo Nativo) no CLAUDE.md. -->
 
 </body>
 

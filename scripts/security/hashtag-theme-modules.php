@@ -31,6 +31,13 @@ add_action( 'after_setup_theme', static function () {
 		'/inc/seo/lowercase-url-redirect.php',
 		'/inc/seo/asset-404-no-guess.php',
 		'/inc/seo/blog-filter-noindex.php',
+		// Fase 3 — Schema (grafo nativo). schema-graph PRIMEIRO (define register +
+		// neutraliza RM), depois entities/providers. (Course das landings = fase futura
+		// com catalogo; hoje as landings ganham WebPage limpo, melhor que o Article
+		// errado que o RM emitia.)
+		'/inc/seo/schema/schema-graph.php',
+		'/inc/seo/schema/schema-entities.php',
+		'/inc/seo/schema/schema-post.php',
 	);
 
 	/**
