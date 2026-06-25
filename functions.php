@@ -244,6 +244,7 @@ include('inc/cpt/inscricoes.php');
 
 //AJAX
 include('ajax/turmas.php');
+include('ajax/hash_oferta_ia.php');
 
 add_theme_support('rank-math-breadcrumbs');
 ?>

@@ -28,6 +28,15 @@ if (! defined('ABSPATH')) {
     exit;
 }
 
+// Endurecimento compartilhado dos endpoints REST publicos (origin estrito,
+// rate-limit janela dupla, Turnstile inerte). Guard file_exists: SFTP nao e
+// atomico, e os call-sites tem fallback function_exists.
+$hashtag_rest_hardening = get_template_directory() . '/inc/security/rest-hardening.php';
+if (file_exists($hashtag_rest_hardening)) {
+    require_once $hashtag_rest_hardening;
+}
+unset($hashtag_rest_hardening);
+
 /**
  * Endpoint upstream (Bubble Workflow API) que resolve a migracao por e-mail.
  * Aceita GET com ?email= e exige Authorization: Bearer <token>.
@@ -114,12 +123,26 @@ add_action('rest_api_init', function () {
  */
 function hashtag_portal_handle_consulta(WP_REST_Request $request)
 {
-    // ---- Origin / Referer ----------------------------------------------
-    $source = $request->get_header('origin') ?: $request->get_header('referer');
-    if ($source) {
-        $host = wp_parse_url($source, PHP_URL_HOST);
-        if ($host && ! in_array(strtolower($host), hashtag_portal_allowed_hosts(), true)) {
-            return new WP_REST_Response(['ok' => false, 'error' => 'origin'], 403);
+    $ip = hashtag_portal_client_ip();
+
+    // ---- Origin / Referer ESTRITO (rejeita AUSENCIA) -------------------
+    // Preferir o helper compartilhado (barra curl/bot que omitem Origin). Sem
+    // ele (deploy parcial), cai no check fraco legado (so divergencia).
+    if (function_exists('hashtag_sec_reject_bad_origin')) {
+        $blocked = hashtag_sec_reject_bad_origin($request, hashtag_portal_allowed_hosts());
+        if ($blocked) {
+            if (function_exists('hashtag_sec_log_block')) {
+                hashtag_sec_log_block('consulta-portal', 'origin', $ip);
+            }
+            return $blocked;
+        }
+    } else {
+        $source = $request->get_header('origin') ?: $request->get_header('referer');
+        if ($source) {
+            $host = wp_parse_url($source, PHP_URL_HOST);
+            if ($host && ! in_array(strtolower($host), hashtag_portal_allowed_hosts(), true)) {
+                return new WP_REST_Response(['ok' => false, 'error' => 'origin'], 403);
+            }
         }
     }
 
@@ -133,15 +156,33 @@ function hashtag_portal_handle_consulta(WP_REST_Request $request)
         return new WP_REST_Response(['ok' => false, 'error' => 'bot'], 200);
     }
 
-    // ---- Rate limit por IP (anti-flood) --------------------------------
-    $ip = hashtag_portal_client_ip();
-    if ($ip) {
+    // ---- Rate limit por IP (janela dupla: minuto + hora) ---------------
+    if (function_exists('hashtag_sec_rate_limit')) {
+        $rl = hashtag_sec_rate_limit('hashtag_portal', $ip, 8, 40);
+        if ($rl) {
+            if (function_exists('hashtag_sec_log_block')) {
+                hashtag_sec_log_block('consulta-portal', 'rate', $ip);
+            }
+            return $rl;
+        }
+    } elseif ($ip) {
         $bucket = 'hashtag_portal_rl_' . md5($ip);
         $hits = (int) get_transient($bucket);
         if ($hits >= 12) {
             return new WP_REST_Response(['ok' => false, 'error' => 'rate', 'message' => 'Demasiados intentos. Espera unos instantes e intenta de nuevo.'], 429);
         }
         set_transient($bucket, $hits + 1, MINUTE_IN_SECONDS);
+    }
+
+    // ---- Turnstile (anti-bot) — INERTE ate ter secret no wp-config -----
+    if (function_exists('hashtag_turnstile_verify')) {
+        $ts_token = isset($params['turnstileToken']) ? $params['turnstileToken'] : '';
+        if (! hashtag_turnstile_verify($ts_token, $ip)) {
+            if (function_exists('hashtag_sec_log_block')) {
+                hashtag_sec_log_block('consulta-portal', 'turnstile', $ip);
+            }
+            return new WP_REST_Response(['ok' => false, 'error' => 'challenge', 'message' => 'No fue posible verificar tu solicitud. Recarga la pagina e intenta de nuevo.'], 403);
+        }
     }
 
     // ---- Validacao -----------------------------------------------------
