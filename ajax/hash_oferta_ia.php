@@ -10,12 +10,20 @@ function hashOfertaIa()
         wp_send_json_error(array('message' => 'E-mail invalido.'), 400);
     }
 
+    // Token da API hash-core: constante no wp-config (NUNCA hardcoded — vazou no git, rotacionar).
+    //   define('HASHTAG_OFERTA_IA_TOKEN', '<token>');
+    $oferta_ia_token = defined('HASHTAG_OFERTA_IA_TOKEN') ? HASHTAG_OFERTA_IA_TOKEN : '';
+    if ('' === $oferta_ia_token) {
+        error_log('[hash-oferta-ia] HASHTAG_OFERTA_IA_TOKEN ausente no wp-config.');
+        wp_send_json_error(array('message' => 'Servicio no disponible en este momento.'), 503);
+    }
+
     $response = wp_remote_post(
         'https://hash-core-production-68f512f989bd.herokuapp.com/rest/v1/hash-oferta-users/',
         array(
             'timeout' => 15,
             'headers' => array(
-                'Authorization' => 'Token 1e7fd2e579a8f42bf42e77ca345be1966d58c831',
+                'Authorization' => 'Token ' . $oferta_ia_token,
                 'Content-Type' => 'application/json',
             ),
             'body' => wp_json_encode(
