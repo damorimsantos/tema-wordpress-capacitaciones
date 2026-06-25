@@ -56,8 +56,8 @@ $kpis = [
 ?>
 <section class="secao resumo-home" aria-labelledby="resumo-home-titulo">
     <style id="hashtag-resumo-home-css">
-        .resumo-home{--h-green:#0f8;--h-gold:#ffc13e;position:relative;padding:6.5rem 5rem}
-        .resumo-home__card{position:relative;max-width:140rem;margin:0 auto;border-radius:2.8rem;padding:4.4rem 5rem;background:radial-gradient(120% 80% at 0% 0%,rgba(0,255,136,.12),transparent 42%),radial-gradient(130% 90% at 100% 100%,rgba(255,193,62,.10),transparent 46%),rgba(12,20,46,.72);backdrop-filter:blur(16px) saturate(135%);-webkit-backdrop-filter:blur(16px) saturate(135%);box-shadow:0 3rem 7rem rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.06);color:#fff}
+        .resumo-home{--h-green:#0f8;--h-gold:#ffc13e;position:relative;padding:6.5rem 0}
+        .resumo-home__card{position:relative;max-width:108rem;margin:0 auto;border-radius:2.8rem;padding:4.4rem;background:radial-gradient(120% 80% at 0% 0%,rgba(0,255,136,.12),transparent 42%),radial-gradient(130% 90% at 100% 100%,rgba(255,193,62,.10),transparent 46%),rgba(12,20,46,.72);backdrop-filter:blur(16px) saturate(135%);-webkit-backdrop-filter:blur(16px) saturate(135%);box-shadow:0 3rem 7rem rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.06);color:#fff}
         .resumo-home__card::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(0,255,136,.6),rgba(255,193,62,.3) 45%,transparent 70%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
         .resumo-home__eyebrow{display:inline-flex;align-items:center;gap:.7rem;font-size:1.2rem;font-weight:600;letter-spacing:.12rem;text-transform:uppercase;color:var(--h-green);background:rgba(0,255,136,.08);border:1px solid rgba(0,255,136,.28);padding:.6rem 1.2rem;border-radius:10rem;margin:0 0 1.8rem}
         .resumo-home__eyebrow::before{content:"";width:.7rem;height:.7rem;border-radius:50%;background:var(--h-gold);box-shadow:0 0 .9rem var(--h-gold)}
@@ -88,7 +88,7 @@ $kpis = [
             .resumo-home__bento{grid-template-columns:repeat(2,1fr)}
         }
         @media(max-width:47.9375em){
-            .resumo-home{padding:3.9rem 1.6rem}
+            .resumo-home{padding:3.9rem 0}
             .resumo-home__card{padding:2.6rem 2rem;border-radius:2rem;backdrop-filter:blur(12px) saturate(130%);-webkit-backdrop-filter:blur(12px) saturate(130%)}
             .resumo-home__resposta{font-size:1.6rem;margin-bottom:2.6rem}
             .resumo-home__bento{gap:1rem;margin-bottom:2.6rem}
@@ -96,7 +96,8 @@ $kpis = [
         }
     </style>
 
-    <div class="resumo-home__card">
+    <div class="container">
+        <div class="resumo-home__card">
             <span class="resumo-home__eyebrow">Sobre Hashtag Capacitaciones</span>
 
             <h2 id="resumo-home-titulo" class="resumo-home__titulo">
@@ -139,6 +140,7 @@ $kpis = [
                 </div>
             <?php endif; ?>
         </div>
+    </div>
 </section>
 <?php
 // Colapsa os chips de areas em 2 linhas + toggle "Ver todas" (a partir da 3a linha).
