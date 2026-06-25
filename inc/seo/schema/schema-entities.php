@@ -128,7 +128,7 @@ if (!function_exists('hashtag_schema_org_knows_about')) {
             'SQL',
             'VBA',
             'Inteligencia Artificial',
-            'Analisis de Datos',
+            'Análisis de Datos',
             'Ciencia de Datos',
         ]);
     }

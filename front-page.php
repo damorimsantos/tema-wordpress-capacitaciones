@@ -599,7 +599,11 @@ Template name: Home CapacitSaciones
       </div>
     </section>
 
-
+    <?php
+    // Bloco answer-first da marca (AEO/GEO) — apos a secao de cursos, espelha o hashtag.
+    // Regra 0 (governanca de paginas): so vai pra prod com aprovacao do Diego.
+    get_template_part('template-parts/home/resumo-aeo-home');
+    ?>
 
     <!-- <section class="secao quem">
       <div class="container">

@@ -25,6 +25,8 @@ add_action( 'after_setup_theme', static function () {
 
 	// Ordem importa quando ha dependencia entre modulos (motor antes dos providers).
 	$modules = array(
+		// Fonte unica de numeros (answer-first/llms/schema). Carregar primeiro.
+		'/inc/hashtag-stats.php',
 		// Fase 2 — SEO Core
 		'/inc/seo/title-tag-support.php',
 		'/inc/seo/sitemap-canonical.php',
