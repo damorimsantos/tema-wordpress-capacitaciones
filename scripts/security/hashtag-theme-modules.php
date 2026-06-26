@@ -42,6 +42,11 @@ add_action( 'after_setup_theme', static function () {
 		'/inc/seo/schema/schema-post.php',
 		// Fase 5 — Performance: substituicao do WP Rocket (trata site-wide na Cap).
 		'/inc/perf/wp-rocket-replacement.php',
+		// Fase 5 — Performance: perf do post de blog (single 'post'). Defer do embed
+		// ActiveCampaign (INP) + strip do css2 render-blocking + dequeue Roboto.
+		// Definir hashtag_is_post_perf() aqui faz o wp-rocket-replacement excluir o
+		// post do tratamento generico (por design) -> este modulo repoe o dns-prefetch.
+		'/inc/perf/post-perf.php',
 		// Fase 5 — Otimizador de imagens nativo (substitui Imagify; paridade com o
 		// hashtag -> AVIF OFF/WebP-only/alpha-safe). Gera irmaos .webp no upload +
 		// entrega <picture> no the_content. Autocontido (sem dep de outros modulos).
