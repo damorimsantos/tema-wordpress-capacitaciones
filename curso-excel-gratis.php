@@ -137,13 +137,17 @@ Template name: Curso de Excel Gratis
           </a>
         </div>
 
-        <img class="hero__conjunto-imgs"
-          src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Página Curso Excel Grátis/conjunto-hero.webp"
-          alt="Tablet com o Excel e smartphone com a plataforma Excel Impressionador" />
+        <picture>
+          <source type="image/avif"
+            srcset="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/P%C3%A1gina%20Curso%20Excel%20Gr%C3%A1tis/conjunto-hero.avif" />
+          <img class="hero__conjunto-imgs" decoding="sync" fetchpriority="high"
+            src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Página Curso Excel Grátis/conjunto-hero.webp"
+            alt="Tablet con Excel y smartphone con la plataforma Excel Impresionante" />
+        </picture>
       </div>
 
       <img class="luz luz-hero"
-        src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/luz-hero.png" />
+        src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Global/luz-hero.avif" />
     </section>
 
     <!-- <section class="secao hero">
@@ -254,10 +258,14 @@ Template name: Curso de Excel Gratis
         </h2>
 
         <div class="semana__img-texto">
-          <img loading="lazy"
-            src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Página Curso Excel Grátis/excel-IMPRESIONANTE.webp"
-            alt="Título de notícia dizendo: 'Demanda por profissionais na área de dados cresce quase 500%; salários chegam a R$ 22mil'"
-            class="semana__img-curso ef-slide ef-slide--visivel" />
+          <picture>
+            <source type="image/avif"
+              srcset="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/P%C3%A1gina%20Curso%20Excel%20Gr%C3%A1tis/excel-IMPRESIONANTE.avif" />
+            <img loading="lazy"
+              src="/wp-content/themes/hashtag/desenvolvimento_hashtag/assets/imgs/Página Curso Excel Grátis/excel-IMPRESIONANTE.webp"
+              alt="Titular de noticia: 'La demanda de profesionales en el área de datos crece casi 500%; los salarios llegan a R$ 22 mil'"
+              class="semana__img-curso ef-slide ef-slide--visivel" />
+          </picture>
 
           <div class="semana__paragrafos ef-slide ef-slide--visivel">
             <p>
