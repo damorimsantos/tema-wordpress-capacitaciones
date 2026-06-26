@@ -47,6 +47,8 @@ return (static function () {
                 'utm_campaign'        => 'capacitacion',
                 'link'                => $home . '/', // oferta = home (sem landing /curso-excel propria)
                 'schema_url'          => $home . '/',
+                // Descricao p/ Course schema (C3.4). ES com tildes (guia "Espanhol Do Site").
+                'schema_description'  => 'Curso online de Excel de Hashtag Capacitaciones: aprende desde lo basico hasta lo avanzado (formulas, funciones, graficos, tablas dinamicas y automatizacion) con un enfoque practico aplicado al mercado laboral.',
                 'icon'                => $icone . '/icone-excel.svg',
                 'card_image'          => '', // sem foto da Olivia nos assets; card home e popup
                 'teacher'             => 'Olivia',

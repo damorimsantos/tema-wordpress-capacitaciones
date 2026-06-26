@@ -34,9 +34,8 @@ add_action( 'after_setup_theme', static function () {
 		'/inc/seo/asset-404-no-guess.php',
 		'/inc/seo/blog-filter-noindex.php',
 		// Fase 3 — Schema (grafo nativo). schema-graph PRIMEIRO (define register +
-		// neutraliza RM), depois entities/providers. (Course das landings = fase futura
-		// com catalogo; hoje as landings ganham WebPage limpo, melhor que o Article
-		// errado que o RM emitia.)
+		// neutraliza RM), depois entities/providers. (schema-course depende do catalogo
+		// -> carregado DEPOIS de inc/cursos/, no fim desta lista.)
 		'/inc/seo/schema/schema-graph.php',
 		'/inc/seo/schema/schema-entities.php',
 		'/inc/seo/schema/schema-post.php',
@@ -57,6 +56,10 @@ add_action( 'after_setup_theme', static function () {
 		// os renderers ficam dormentes ate o wiring visual (C6.3, Regra 0).
 		'/inc/cursos/course-catalog.php',
 		'/inc/cursos/template-tags.php',
+		// Fase 3 — Course schema (C3.4). DEPOIS do catalogo (consome Hashtag_Course_Catalog)
+		// e de schema-graph (usa hashtag_schema_register). So o curso visivel (Excel) recebe
+		// Course; a oferta do Excel e a home -> o no sai na front-page.
+		'/inc/seo/schema/schema-course.php',
 	);
 
 	/**
