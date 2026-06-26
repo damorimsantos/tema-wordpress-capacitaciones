@@ -162,8 +162,11 @@ function my_acf_settings_dir($dir)
 //add_filter('acf/settings/show_admin', '__return_false');
 
 
-// 4. Include ACF
-include_once(get_stylesheet_directory() . '/inc/acf/acf.php');
+// 4. Opcoes do Site — substituto NATIVO do ACF (inc/acf removido). Define get_field/the_field.
+$hashtag_site_options = get_stylesheet_directory() . '/inc/options/site-options.php';
+if (file_exists($hashtag_site_options)) {
+    require_once $hashtag_site_options;
+}
 
 
 add_filter('acf/settings/save_json', 'my_acf_json_save_point');
@@ -210,17 +213,10 @@ if (function_exists('register_sidebar'))
         )
     );
 
-if (function_exists('acf_add_options_page')) {
-
-    acf_add_options_page(array(
-        'page_title'     => 'Opções do Site',
-        'menu_title'    => 'Opções do Site',
-        'menu_slug'     => 'opcoes-do-site',
-        'capability'    => 'edit_posts',
-        'redirect'        => false,
-        'icon_url' => '',
-        'position' => 2,
-    ));
+// Painel "Opcoes do Site" nativo (substitui a options page do ACF; mesmo slug).
+$hashtag_site_options_admin = get_stylesheet_directory() . '/inc/options/site-options-admin.php';
+if (file_exists($hashtag_site_options_admin)) {
+    require_once $hashtag_site_options_admin;
 }
 
 add_filter('sanitize_file_name', 'sa_sanitize_spanish_chars', 10);
