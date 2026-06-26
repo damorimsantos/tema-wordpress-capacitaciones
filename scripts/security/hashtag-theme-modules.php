@@ -40,6 +40,8 @@ add_action( 'after_setup_theme', static function () {
 		'/inc/seo/schema/schema-graph.php',
 		'/inc/seo/schema/schema-entities.php',
 		'/inc/seo/schema/schema-post.php',
+		// Fase 5 — Performance: substituicao do WP Rocket (trata site-wide na Cap).
+		'/inc/perf/wp-rocket-replacement.php',
 	);
 
 	/**
