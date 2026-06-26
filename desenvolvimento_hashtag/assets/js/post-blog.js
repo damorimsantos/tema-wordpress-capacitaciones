@@ -701,7 +701,7 @@ const initPostBlog = () => {
   // Resolve os dados de tracking do banner a partir da categoria do post.
   // O script antigo usava `categoria` para utm_campaign e `curso` para conversion.
   const resolveBannerTrackingConfig = (categoryText = "") => {
-    const normalizedCategory = normalizeCategoryName(categoryText);
+    const normalizedCategory = normalizeLabel(categoryText);
     const trackingAliases = {
       "inteligencia artificial": { curso: "ia", categoria: "treinamento" },
       ia: { curso: "ia", categoria: "treinamento" },
