@@ -51,6 +51,12 @@ add_action( 'after_setup_theme', static function () {
 		// hashtag -> AVIF OFF/WebP-only/alpha-safe). Gera irmaos .webp no upload +
 		// entrega <picture> no the_content. Autocontido (sem dep de outros modulos).
 		'/inc/media/image-optimizer.php',
+		// Fase 6 — Catalogo single-source dos cursos (C6.2). Engine (define a classe +
+		// le o data file via __DIR__) ANTES dos template-tags (wrappers globais).
+		// Hoje so a camada de DADOS e consumida (schema-course C3.4 / llms / answer-first);
+		// os renderers ficam dormentes ate o wiring visual (C6.3, Regra 0).
+		'/inc/cursos/course-catalog.php',
+		'/inc/cursos/template-tags.php',
 	);
 
 	/**
