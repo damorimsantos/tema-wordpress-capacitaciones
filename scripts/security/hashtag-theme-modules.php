@@ -42,6 +42,10 @@ add_action( 'after_setup_theme', static function () {
 		'/inc/seo/schema/schema-post.php',
 		// Fase 5 — Performance: substituicao do WP Rocket (trata site-wide na Cap).
 		'/inc/perf/wp-rocket-replacement.php',
+		// Fase 5 — Otimizador de imagens nativo (substitui Imagify; paridade com o
+		// hashtag -> AVIF OFF/WebP-only/alpha-safe). Gera irmaos .webp no upload +
+		// entrega <picture> no the_content. Autocontido (sem dep de outros modulos).
+		'/inc/media/image-optimizer.php',
 	);
 
 	/**
